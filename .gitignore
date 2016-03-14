@@ -1,0 +1,35 @@
+# Ignore protege catalog xml files
+/vitalhome-aimp/vital-license/
+### VITALSIGNS MANAGED START ###
+
+# Ignore protege catalog xml files
+**/catalog-v*.xml
+/vitalhome-aimp/domain-groovy-jar-deployed/
+/vitalhome-aimp/domain-json-schema-deployed/
+/vitalhome-aimp/domain-ontology-deployed/
+/vitalhome-aimp/vital-config/
+/vitalhome-aimp/vital-domain-schema/
+/vitalhome-aimp/vital-dynamodb/
+/vitalhome-aimp/vital-json/
+/vitalhome-aimp/vital-license/
+/vitalhome-aimp/vital-lucene/
+/vitalhome-aimp/vital-ontology/
+/vitalhome-aimp/vital-sparql/
+/vitalhome-aimp/vitalflow-inference/
+/vitalhome-aimp/vitalflow-integrator/
+/vitalhome-aimp/vitalflow-logger/
+/vitalhome-aimp/vitalflow-nlp/
+/vitalhome-aimp/vitalflow-predict/
+/vitalhome-aimp/vitalhadoop/
+/vitalhome-aimp/vitalpredict/
+/vitalhome-aimp/vitalprime/
+/vitalhome-aimp/vitalservice/
+/vitalhome-aimp/vitalsigns/
+/vitalhome-aimp/vitalutil/
+/vitalhome-aimp/vital-sql/
+/vitalhome-aimp/aspen/
+/vitalhome-aimp/aspen-datascripts/
+/vitalhome-aimp/vital-groovy/
+/vitalhome-aimp/vital-cytoscape/
+/vitalhome-aimp/vital-vertx/
+### VITALSIGNS MANAGED END   ###
