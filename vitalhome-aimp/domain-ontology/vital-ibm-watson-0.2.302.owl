@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vital.ai/ontology/vital-ibm-watson#"
+     xml:base="http://vital.ai/ontology/vital-ibm-watson"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://vital.ai/ontology/vital-ibm-watson">
+        <owl:versionInfo rdf:datatype="&xsd;string">0.2.302</owl:versionInfo>
+        <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">com.vitalai.domain.ibmwatson</vital-core:hasDefaultPackage>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital-nlp"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasAchievementStrivingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasAchievementStrivingValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasActivityLevelValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasActivityLevelValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Extraversion"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasAdventurousnessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasAdventurousnessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Openness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasAltruismValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasAltruismValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasArtisticInterestsValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasArtisticInterestsValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Openness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasAssertivenessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasAssertivenessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Extraversion"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasAuthorityChallengingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasAuthorityChallengingValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Openness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasCautiousnessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasCautiousnessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasChallengeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasChallengeValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasCheerfulnessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasCheerfulnessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Extraversion"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasClosenessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasClosenessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasConservationValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasConservationValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Values"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasCooperationValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasCooperationValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasCuriosityValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasCuriosityValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasDutifulnessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasDutifulnessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasEmotionalityValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasEmotionalityValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Openness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasExcitementSeekingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasExcitementSeekingValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Extraversion"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasExcitementValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasExcitementValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Extraversion"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasFieryValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasFieryValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasGregariousnessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasGregariousnessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Extraversion"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasHarmonyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasHarmonyValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasHedonismValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasHedonismValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Values"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasIdealValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasIdealValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasImaginationValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasImaginationValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Openness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasImmoderationValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasImmoderationValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasIntellectValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasIntellectValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Openness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasLibertyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasLibertyValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasLoveValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasLoveValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasMelancholyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasMelancholyValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasModestyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasModestyValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasOpennessToChangeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasOpennessToChangeValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Values"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Openness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasOrderlinessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasOrderlinessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasOutgoingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasOutgoingValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Extraversion"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasPracticalityValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasPracticalityValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasProneToWorryValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasProneToWorryValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasSelfConsciousnessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasSelfConsciousnessValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasSelfDisciplineValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasSelfDisciplineValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasSelfEfficacyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasSelfEfficacyValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasSelfEnhancementValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasSelfEnhancementValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Values"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasSelfExpressionValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasSelfExpressionValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasSelfTranscendenceValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasSelfTranscendenceValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Values"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasStabilityValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasStabilityValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasStructureValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasStructureValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Needs"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasSusceptibleToStressValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasSusceptibleToStressValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasSympathyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasSympathyValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasTrustValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasTrustValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#hasUncompromisingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasUncompromisingValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#Agreeableness -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#Agreeableness">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#Big5 -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#Big5">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#Conscientiousness -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#Edge_hasPersonalityInsight -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#Edge_hasPersonalityInsight">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#EmotionalRange -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#Extraversion -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#Extraversion">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#Needs -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#Needs">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#Openness -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#Openness">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-ibm-watson#Values -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-ibm-watson#Values">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
