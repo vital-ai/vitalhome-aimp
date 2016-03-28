@@ -4,6 +4,7 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
@@ -11,14 +12,207 @@
 
 <rdf:RDF xmlns="http://vital.ai/ontology/vital-aimp#"
      xml:base="http://vital.ai/ontology/vital-aimp"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-aimp">
         <owl:versionInfo>0.1.0</owl:versionInfo>
+        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
         <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatMessage -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatMessage">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ChatMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPDevice">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AnswerMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#BB8Device -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BB8Device">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SpheroDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ChatMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ChatMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#CommandMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CommandMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DeviceActivateMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeviceActivateMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DeviceMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DeviceDeactivateMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeviceDeactivateMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DeviceMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DeviceMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeviceMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DeviceMotionMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeviceMotionMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DeviceMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DeviceSettingMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeviceSettingMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DeviceMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DeviceStatusMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeviceStatusMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DeviceMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HueLightDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HueLightDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#LightDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#InformationMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#InformationMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#JiboDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#JiboDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#RobotDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#LightDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#LightDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#QuestionMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#RobotDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RobotDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SpheroDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SpheroDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#RobotDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SwitchDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SwitchDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
 </rdf:RDF>
 
 
