@@ -28,6 +28,27 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasRequestURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRequestURI">
+        <rdfs:comment>Used to specify the URI of a message that the current message is in response to.  may not be 1 to 1 within a client as an incoming message might cause multiple outgoing response messages, plus the response message(s) may be replicated across all endpoints.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -72,6 +93,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ActivateMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ActivateMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AnswerMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage">
@@ -88,6 +117,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#BinaryMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BinaryMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ChatMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ChatMessage">
@@ -100,6 +137,14 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CommandMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DeactiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeactiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
     </owl:Class>
     
 
@@ -184,6 +229,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#MotionMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MotionMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#QuestionMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage">
@@ -200,6 +253,22 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SettingsMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SettingsMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SpeechMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SpeechMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BinaryMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#SpheroDevice -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SpheroDevice">
@@ -208,10 +277,26 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#StatusMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#StatusMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#SwitchDevice -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SwitchDevice">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#WeMoSwitch -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WeMoSwitch">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SwitchDevice"/>
     </owl:Class>
 </rdf:RDF>
 
