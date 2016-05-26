@@ -505,9 +505,9 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserProfile"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -523,8 +523,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserProfile"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -644,6 +644,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AnonymousProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnonymousProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
+        <rdfs:comment xml:lang="en">anonymous profile (not authenticated)</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Answer -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Answer">
@@ -672,6 +681,15 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BB8Device">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SpheroDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#BaseProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BaseProfile">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+        <rdfs:comment xml:lang="en">abstract profile class</rdfs:comment>
     </owl:Class>
     
 
@@ -1024,7 +1042,8 @@
     <!-- http://vital.ai/ontology/vital-aimp#UserProfile -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserProfile">
-        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
+        <rdfs:comment xml:lang="en">an authenticated profile</rdfs:comment>
     </owl:Class>
     
 
