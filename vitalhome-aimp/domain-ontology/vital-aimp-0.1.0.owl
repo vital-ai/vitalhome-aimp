@@ -1143,6 +1143,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#UserChatRequestMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserChatRequestMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">a prompt from the user for the bot to start the conversation</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#UserCommandMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserCommandMessage">
