@@ -1139,6 +1139,24 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ThinkingMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ThinkingMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">a message sent by the bot that it is in the middle of  processing a request and will come back with a response later on</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#TickMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TickMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">a ping from the agent sent at any time</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#TrueFalseAnswer -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseAnswer">
