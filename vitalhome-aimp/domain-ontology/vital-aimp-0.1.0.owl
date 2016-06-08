@@ -155,8 +155,15 @@
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAuthSessionID">
         <rdfs:comment xml:lang="en">non-anonymous sessions also have authSessionID set
 it is necessary for expired sessions cleanup job</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Session"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 

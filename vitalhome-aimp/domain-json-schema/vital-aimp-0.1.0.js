@@ -93,6 +93,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -174,6 +177,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -434,6 +440,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -641,6 +650,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -780,6 +792,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasChatMessage" : {
         "type" : "string"
@@ -985,6 +1000,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -1066,6 +1084,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -1149,6 +1170,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -1230,6 +1254,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -1313,6 +1340,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -1394,6 +1424,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -1477,6 +1510,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -1558,6 +1594,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -1756,6 +1795,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasImageURL" : {
         "type" : "string"
       },
@@ -1862,6 +1904,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasCommand" : {
         "type" : "string"
       },
@@ -1947,6 +1992,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -2028,6 +2076,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasImageURL" : {
         "type" : "string"
@@ -2133,6 +2184,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#hasAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasDirectionsEndAddress" : {
@@ -2250,6 +2304,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -2332,6 +2389,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -2413,6 +2473,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -2499,6 +2562,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -2582,6 +2648,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#hasAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasLatitude" : {
@@ -2732,6 +2801,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -2982,6 +3054,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -3242,6 +3317,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -3446,6 +3524,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -3527,6 +3608,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -3664,6 +3748,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -3860,6 +3947,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -3941,6 +4031,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -4152,6 +4245,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -4240,6 +4336,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -4321,6 +4420,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasCommand" : {
         "type" : "string"
@@ -4406,6 +4508,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -4498,6 +4603,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -4580,6 +4688,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -4661,6 +4772,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -4805,6 +4919,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -4886,6 +5003,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -4971,6 +5091,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
@@ -5087,7 +5210,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAuthSessionID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Session" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#Session" ],
     "shortName" : "authSessionID",
     "multipleValues" : false,
     "type" : "StringProperty"
