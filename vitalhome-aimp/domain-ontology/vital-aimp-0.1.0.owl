@@ -1180,6 +1180,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#UpdateSessionMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UpdateSessionMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">an internal message that is signalling the need to refresh cached session data</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage">
