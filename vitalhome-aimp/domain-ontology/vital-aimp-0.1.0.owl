@@ -202,6 +202,23 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatMode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatMode">
+        <rdfs:comment xml:lang="en">ChatModeMessage values: &apos;on&apos;, &apos;off&apos;</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChatModeMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasChoiceLabel -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChoiceLabel">
@@ -815,6 +832,14 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#ChatMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ChatMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ChatModeMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ChatModeMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
