@@ -103,6 +103,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasObjectURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasObjectURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#GetObjectMessage"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasRequestURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRequestURI">
@@ -290,6 +298,38 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasFactClassname -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFactClassname">
+        <rdfs:comment xml:lang="en">to remove facts matching class canonical name</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasFactScope -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFactScope">
+        <rdfs:comment xml:lang="en">one of:
+profile, session, dialog
+
+when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FactsListMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetFactsMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SetFactMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasFalseLabel -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFalseLabel">
@@ -386,8 +426,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasPropertyName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPropertyName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -396,8 +443,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPropertyValue">
         <rdfs:comment xml:lang="en">this property should be used for generic PropertyFact instances that cannot be more specific</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -414,6 +468,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasQueryString -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQueryString">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#MetaQLMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -710,6 +773,25 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isIncludeDependentObjects -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isIncludeDependentObjects">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#GetObjectMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isIncludeSubclasses -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isIncludeSubclasses">
+        <rdfs:comment xml:lang="en">to be used with factclassname</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isQuestionClosed -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isQuestionClosed">
@@ -925,6 +1007,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogSession -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogSession">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+        <rdfs:comment xml:lang="en">a dialog session that may have associated facts</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DoublePropertyFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DoublePropertyFact">
@@ -939,6 +1030,42 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Choice"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasDialogSession -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasDialogSession">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogSession"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#FactsListMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FactsListMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">contains a graph of facts graphs for profile, session or dialog session (may have a few graphs)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GetFactsMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GetFactsMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GetObjectMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+        <rdfs:comment xml:lang="en">return object by URI with optionally linked objects - query constructed via taxonomy edges</rdfs:comment>
     </owl:Class>
     
 
@@ -1063,6 +1190,14 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#LightDevice">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#MetaQLMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
     </owl:Class>
     
 
@@ -1209,6 +1344,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#UnsetFactMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+        <rdfs:comment xml:lang="en">this  message that may be used to remove particular facts (from message payload) or remove scoped facts based on property name/ factClass</rdfs:comment>
     </owl:Class>
     
 
