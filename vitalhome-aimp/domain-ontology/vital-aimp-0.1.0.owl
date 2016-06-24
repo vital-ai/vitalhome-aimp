@@ -106,7 +106,14 @@
     <!-- http://vital.ai/ontology/vital-aimp#hasObjectURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasObjectURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#GetObjectMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -176,6 +183,16 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasBindingNames -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBindingNames">
+        <vital-core:hasMultipleValues rdf:datatype="&xsd;boolean">true</vital-core:hasMultipleValues>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasBooleanValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBooleanValue">
@@ -185,6 +202,7 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BooleanPropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseAnswer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -292,8 +310,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasDoubleValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDoubleValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DoublePropertyFact"/>
         <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DoublePropertyFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -358,8 +383,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     <!-- http://vital.ai/ontology/vital-aimp#hasIntegerValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasIntegerValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#IntegerPropertyFact"/>
         <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IntegerPropertyFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -376,6 +408,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLimit">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
@@ -423,6 +464,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasOffset -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOffset">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasPropertyName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPropertyName">
@@ -443,15 +493,8 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPropertyValue">
         <rdfs:comment xml:lang="en">this property should be used for generic PropertyFact instances that cannot be more specific</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -541,6 +584,7 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserStatusMessage"/>
                 </owl:unionOf>
             </owl:Class>
@@ -552,8 +596,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     <!-- http://vital.ai/ontology/vital-aimp#hasStringValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasStringValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#StringPropertyFact"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#StringPropertyFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -637,6 +688,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasTotalResults -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTotalResults">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
@@ -776,8 +836,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     <!-- http://vital.ai/ontology/vital-aimp#isIncludeDependentObjects -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isIncludeDependentObjects">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#GetObjectMessage"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1070,6 +1137,14 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HaleyArticleMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage">
@@ -1198,6 +1273,14 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
