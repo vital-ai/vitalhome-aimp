@@ -583,6 +583,7 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserStatusMessage"/>
@@ -1018,6 +1019,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#CurrentBotMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CurrentBotMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">notifies the session of current bot, vital-core:hasName property</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DeactiveMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeactiveMessage">
@@ -1079,6 +1089,17 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogSession">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
         <rdfs:comment xml:lang="en">a dialog session that may have associated facts</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogStatusMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogStatusMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">a message sent whenever the current bot changes (or when default is assigned)
+status values: begin, closed, end
+closed means user closed the dialog but it can be resumed</rdfs:comment>
     </owl:Class>
     
 
