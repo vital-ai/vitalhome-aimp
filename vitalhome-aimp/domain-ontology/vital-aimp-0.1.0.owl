@@ -807,6 +807,23 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isGoBackSelected -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGoBackSelected">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserDialogAppMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isHelpRequested -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isHelpRequested">
