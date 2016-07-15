@@ -569,6 +569,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasScore -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScore">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSearchString -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSearchString">
@@ -1337,6 +1346,42 @@ closed means user closed the dialog but it can be resumed</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasPredictionElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasPredictionElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#PredictionFact"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasRecommendationElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasRecommendationElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#SolutionFact"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ResultListFact"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#InformationMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#InformationMessage">
@@ -1401,6 +1446,14 @@ closed means user closed the dialog but it can be resumed</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#PredictionFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PredictionFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#PropertyFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact">
@@ -1421,6 +1474,14 @@ closed means user closed the dialog but it can be resumed</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ResultListFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ResultListFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
     </owl:Class>
     
 
@@ -1453,6 +1514,14 @@ closed means user closed the dialog but it can be resumed</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SettingsMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SolutionFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SolutionFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
     </owl:Class>
     
 
