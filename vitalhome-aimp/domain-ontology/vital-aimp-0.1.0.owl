@@ -22,7 +22,7 @@
         <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vitalai-com</vital-core:hasDefaultGroupId>
         <owl:versionInfo>0.1.0</owl:versionInfo>
         <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
-        <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital-social"/>
     </owl:Ontology>
     
 
@@ -1539,6 +1539,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DirectMessageReceived -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DirectMessageReceived">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DoublePropertyFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DoublePropertyFact">
@@ -1589,6 +1597,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FactsListMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:comment xml:lang="en">contains a graph of facts graphs for profile, session or dialog session (may have a few graphs)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#FavoriteTweet -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FavoriteTweet">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
@@ -1867,6 +1883,22 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SendDirectMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SendDirectMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SendTweet -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SendTweet">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Session -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Session">
@@ -1969,6 +2001,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#TweetReceived -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TweetReceived">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
