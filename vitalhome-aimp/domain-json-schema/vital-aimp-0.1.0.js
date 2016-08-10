@@ -5574,6 +5574,97 @@ var vital_aimp_0_1_0_schema = {
     "required" : [ "URI", "type" ],
     "additionalProperties" : false
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#MapObject",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "http://vital.ai/ontology/vital-aimp#MapObject",
+    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#MapObject",
+    "type" : "object",
+    "properties" : {
+      "URI" : {
+        "type" : "string"
+      },
+      "type" : {
+        "enum" : [ "http://vital.ai/ontology/vital-aimp#MapObject" ]
+      },
+      "types" : {
+        "type" : "array",
+        "minItems" : 1,
+        "items" : {
+          "type" : "string"
+        },
+        "uniqueItems" : true
+      },
+      "http://vital.ai/ontology/vital#hasCertainty" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasDegree" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasPageRank" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasDirectionsEndAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasDirectionsJSONResponse" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasDirectionsStartAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLongitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasNeLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasNeLongitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSearchString" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSwLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSwLongitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasZoomLevel" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasProvenance" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#isActive" : {
+        "type" : "boolean"
+      }
+    },
+    "required" : [ "URI", "type" ],
+    "additionalProperties" : false
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#MetaQLMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
     "$schema" : "http://json-schema.org/draft-04/schema#",
@@ -8634,10 +8725,80 @@ var vital_aimp_0_1_0_schema = {
     },
     "required" : [ "URI", "type" ],
     "additionalProperties" : false
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#WeatherForecast",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "http://vital.ai/ontology/vital-aimp#WeatherForecast",
+    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#WeatherForecast",
+    "type" : "object",
+    "properties" : {
+      "URI" : {
+        "type" : "string"
+      },
+      "type" : {
+        "enum" : [ "http://vital.ai/ontology/vital-aimp#WeatherForecast" ]
+      },
+      "types" : {
+        "type" : "array",
+        "minItems" : 1,
+        "items" : {
+          "type" : "string"
+        },
+        "uniqueItems" : true
+      },
+      "http://vital.ai/ontology/vital#hasCertainty" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasDegree" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasPageRank" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLongitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSearchString" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasWeatherJSONResponse" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasProvenance" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#isActive" : {
+        "type" : "boolean"
+      }
+    },
+    "required" : [ "URI", "type" ],
+    "additionalProperties" : false
   } ],
   "properties" : [ {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAddress",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "address",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -8716,19 +8877,19 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDirectionsEndAddress",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "directionsEndAddress",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDirectionsJSONResponse",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "directionsJSONResponse",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDirectionsStartAddress",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "directionsStartAddress",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -8794,7 +8955,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLatitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "latitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -8819,7 +8980,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLongitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "longitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -8831,13 +8992,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasNeLatitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "neLatitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasNeLongitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "neLongitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -8909,7 +9070,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSearchString",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "searchString",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -8957,13 +9118,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSwLatitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "swLatitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSwLongitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "swLongitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -9029,13 +9190,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasWeatherJSONResponse",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "weatherJSONResponse",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasZoomLevel",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "zoomLevel",
     "multipleValues" : false,
     "type" : "FloatProperty"

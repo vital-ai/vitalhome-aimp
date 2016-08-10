@@ -205,6 +205,8 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -355,8 +357,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasDirectionsEndAddress -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDirectionsEndAddress">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -365,8 +374,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDirectionsJSONResponse">
         <rdfs:comment xml:lang="en">an string containing full google directions service json response</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -374,8 +390,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasDirectionsStartAddress -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDirectionsStartAddress">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -516,6 +539,8 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -560,6 +585,8 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -580,8 +607,15 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasNeLatitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasNeLatitude">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
         <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -589,8 +623,15 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasNeLongitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasNeLongitude">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
         <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -685,6 +726,8 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -789,8 +832,15 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasSwLatitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSwLatitude">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
         <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -798,8 +848,15 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasSwLongitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSwLongitude">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
         <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -951,8 +1008,15 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasWeatherJSONResponse -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasWeatherJSONResponse">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -960,8 +1024,15 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasZoomLevel -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasZoomLevel">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
         <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1803,6 +1874,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#MapObject -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MapObject">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#MetaQLMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLMessage">
@@ -2131,6 +2210,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WeMoSwitch">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SwitchDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#WeatherForecast -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
 </rdf:RDF>
 
