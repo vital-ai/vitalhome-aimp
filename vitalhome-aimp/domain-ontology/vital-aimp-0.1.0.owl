@@ -1915,6 +1915,24 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ListChannelsRequestMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListChannelsRequestMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">a request to list channels</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ListChannelsResultsMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListChannelsResultsMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">contains list of Channels</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#MapObject -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MapObject">
