@@ -509,6 +509,22 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasEchoUserID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEchoUserID">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserProfile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserProfileMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasFactClassName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFactClassName">

@@ -9549,6 +9549,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasPageRank" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasEchoUserID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasUserID" : {
         "type" : "string"
       },
@@ -9617,6 +9620,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasEchoUserID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
@@ -10129,6 +10135,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "doubleValue",
     "multipleValues" : false,
     "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasEchoUserID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#UserProfile", "http://vital.ai/ontology/vital-aimp#UserProfileMessage" ],
+    "shortName" : "echoUserID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasFactClassName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogQuestion" ],
