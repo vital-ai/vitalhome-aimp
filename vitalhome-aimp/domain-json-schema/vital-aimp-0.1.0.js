@@ -1096,6 +1096,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasSlackChannelID" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSlackEventType" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
         "type" : "string"
       },
@@ -1752,6 +1755,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackChannelID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage" ],
     "shortName" : "slackChannelID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackEventType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage" ],
+    "shortName" : "slackEventType",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
