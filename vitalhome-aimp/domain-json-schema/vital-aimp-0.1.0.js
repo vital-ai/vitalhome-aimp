@@ -10,89 +10,12 @@ var vital_aimp_0_1_0_schema = {
   "schemas" : [ {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#AIMPDevice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#AIMPDevice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
         "type" : "string"
       },
@@ -128,364 +51,42 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ActivateMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ActivateMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ActivateMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ActivateMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AnonymousProfile",
     "parent" : "http://vital.ai/ontology/vital-aimp#BaseProfile",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#AnonymousProfile",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#AnonymousProfile",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#AnonymousProfile" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Answer",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#Answer",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#Answer",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#Answer" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AnswerChoice",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#AnswerChoice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#AnswerChoice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#AnswerChoice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#isAnswerSkipped" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AnswerMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#AnswerMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#AnswerMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#isAnswerSkipped" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isGoBackSelected" : {
@@ -494,2317 +95,237 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isHelpRequested" : {
         "type" : "boolean"
       },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#isQuestionClosed" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#BB8Device",
     "parent" : "http://vital.ai/ontology/vital-aimp#SpheroDevice",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#BB8Device",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#BB8Device",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#BB8Device" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#BaseProfile",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#BaseProfile",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#BaseProfile",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#BaseProfile" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasUserID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasUserName" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#BinaryMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#BinaryMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#BinaryMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#BinaryMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#BooleanPropertyFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#BooleanPropertyFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#BooleanPropertyFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#BooleanPropertyFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#hasBooleanValue" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ButtonClickedMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ButtonClickedMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ButtonClickedMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ButtonClickedMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasButton" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasButtonURI" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Channel",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#Channel",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#Channel",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#Channel" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ChatMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ChatMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ChatMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ChatMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasChatMessage" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ChatModeMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ChatModeMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ChatModeMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ChatModeMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasChatMode" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Choice",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#Choice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#Choice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#Choice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasChoiceLabel" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasChoiceValue" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ChoiceAnswer",
     "parent" : "http://vital.ai/ontology/vital-aimp#Answer",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ChoiceAnswer",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ChoiceAnswer",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ChoiceAnswer" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CloseSessionMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#CommandMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CurrentBotMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#CurrentBotMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#CurrentBotMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#CurrentBotMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeactiveMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DeactiveMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DeactiveMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DeactiveMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeviceActivateMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#DeviceMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DeviceActivateMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DeviceActivateMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DeviceActivateMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasDeviceName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeviceDeactivateMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#DeviceMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DeviceDeactivateMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DeviceDeactivateMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DeviceDeactivateMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasDeviceName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeviceMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DeviceMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DeviceMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DeviceMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDeviceName" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeviceMotionMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#DeviceMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DeviceMotionMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DeviceMotionMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DeviceMotionMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasDeviceName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeviceSettingMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#DeviceMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DeviceSettingMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DeviceSettingMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DeviceSettingMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasDeviceName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeviceStateChangeMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#DeviceMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DeviceStateChangeMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DeviceStateChangeMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DeviceStateChangeMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasDeviceName" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDeviceNewState" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasDeviceOldState" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeviceStatusMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#DeviceMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DeviceStatusMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DeviceStatusMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DeviceStatusMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasDeviceName" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDeviceStatus" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogBegin",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogBegin",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogBegin",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogBegin" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogDatascript",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogDatascript",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogDatascript",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogDatascript" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasFunctionName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasServiceName" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogElement",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogElement",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogElement" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasId" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogEnd",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogEnd",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogEnd",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogEnd" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogGenerator",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogGenerator",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogGenerator",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogGenerator" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogInnerMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogInnerMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogInnerMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogInnerMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasMessageSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isProcessed" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogPassThrough",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogPassThrough",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogPassThrough",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogPassThrough" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogPredict",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogPredict",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogPredict",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogPredict" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogQuery",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogQuery",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogQuery",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogQuery" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasResultListFactURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasServiceName" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#isCreateResultListFact" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogQuestion",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogQuestion",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogQuestion",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogQuestion" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasFactClassName" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasFactPropertyName" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasParentFactURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasValidationType" : {
@@ -2812,971 +333,101 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isSent" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogQuestionEnd",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogQuestionEnd",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogQuestionEnd",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogQuestionEnd" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogQuestionStart",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogQuestionStart",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogQuestionStart",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogQuestionStart" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogRecommendations",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogRecommendations",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogRecommendations",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogRecommendations" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasSolutionFactURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isCreateSolutionFact" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogRestartQuestion",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogRestartQuestion",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogRestartQuestion",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogRestartQuestion" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasQuestionID" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogResume",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogResume",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogResume",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogResume" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogSerialize",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogSerialize",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogSerialize",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogSerialize" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogSession",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogSession",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogSession",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogSession" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogStatusMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogStatusMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogStatusMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogStatusMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogSwitchBot",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogSwitchBot",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogSwitchBot",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogSwitchBot" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogText",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DialogText",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DialogText",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DialogText" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasId" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStateSerialized" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DirectMessageReceived",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DirectMessageReceived",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DirectMessageReceived",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DirectMessageReceived" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DoublePropertyFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#DoublePropertyFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#DoublePropertyFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#DoublePropertyFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDoubleValue" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasChoice",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#Edge_hasChoice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#Edge_hasChoice",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Choice" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasChoice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasDialogSession",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#Edge_hasDialogSession",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#Edge_hasDialogSession",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#BaseProfile" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#DialogSession" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasDialogSession" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#EmbeddedCard",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#EmbeddedCard",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#EmbeddedCard",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#EmbeddedCard" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasButton" : {
         "type" : "string"
       },
@@ -3788,635 +439,78 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#EntityMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#EntityMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#EntityMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#FacebookIncomingMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#FacebookMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#FacebookMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasFacebookUserID" : {
         "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#EntityMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#FacebookOutgoingMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#FacebookMessage",
+    "properties" : {
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#FactsListMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#FactsListMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#FactsListMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#FactsListMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasFactScope" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#FavoriteTweet",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#FavoriteTweet",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#FavoriteTweet",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#FavoriteTweet" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#GetFactsMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#GetFactsMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#GetFactsMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#GetFactsMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasFactScope" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#GetObjectMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#GetObjectMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#GetObjectMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#GetObjectMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasObjectURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#isIncludeDependentObjects" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasObjectURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#isIncludeDependentObjects" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyArticleMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasImageURL" : {
         "type" : "string"
       },
@@ -4426,22 +520,10 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasPublicationDate" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasSearchString" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasShortDescription" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasThumbnailImageURL" : {
@@ -4452,293 +534,66 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyAudioMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasDurationSeconds" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasThumbnailImageURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasTitle" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasUrl" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyChartMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasChartData" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChartOptions" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChartType" : {
+        "type" : "string"
+      }
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyCommandMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyCommandMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyCommandMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyCommandMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasCommand" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyDialogAppMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyDialogAppMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyDialogAppMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyDialogAppMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyImageMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyImageMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyImageMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyImageMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasImageURL" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPublicationDate" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasSearchString" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasShortDescription" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasThumbnailImageURL" : {
@@ -4749,87 +604,13 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyMapMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyMapMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyMapMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasAddress" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasDirectionsEndAddress" : {
@@ -4853,13 +634,7 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasNeLongitude" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasSearchString" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSwLatitude" : {
@@ -4868,553 +643,104 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasSwLongitude" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasZoomLevel" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyPaymentConfirmationMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAmount" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital-aimp#hasRecipient" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+      "http://vital.ai/ontology/vital-aimp#hasTitle" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyProductMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyProductMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyProductMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyProductMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyQuestionDialogAppMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyQuestionDialogAppMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyQuestionDialogAppMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleySearchResultsMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasSearchString" : {
         "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyQuestionDialogAppMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyStatusMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyTextMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyTextMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyTextMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyTranslationMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasSourceLanguage" : {
         "type" : "string"
       },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyTextMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital-aimp#hasSourceText" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+      "http://vital.ai/ontology/vital-aimp#hasTargetLanguage" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
+      "http://vital.ai/ontology/vital-aimp#hasTargetText" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyTweetMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyVideoMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasDurationSeconds" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasThumbnailImageURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasTitle" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasUrl" : {
+        "type" : "string"
+      }
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasAddress" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasLatitude" : {
@@ -5423,323 +749,46 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasLongitude" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasSearchString" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasWeatherJSONResponse" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HueLightDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#LightDevice",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HueLightDevice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HueLightDevice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HueLightDevice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasPredictionElement",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasPredictionElement",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HyperEdge_hasPredictionElement",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#PredictionFact" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HyperEdge_hasPredictionElement" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasHyperEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasHyperEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasRecommendationElement",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasRecommendationElement",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HyperEdge_hasRecommendationElement",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#SolutionFact" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-core#VITAL_Node" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HyperEdge_hasRecommendationElement" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasHyperEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasHyperEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#ResultListFact" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasScore" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasHyperEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasHyperEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ImageObject",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ImageObject",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ImageObject",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ImageObject" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasImageURL" : {
         "type" : "string"
       },
@@ -5760,503 +809,45 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#InformationMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#InformationMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#InformationMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#InformationMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#IntegerPropertyFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#IntegerPropertyFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#IntegerPropertyFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#IntegerPropertyFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#hasIntegerValue" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#JiboDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#RobotDevice",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#JiboDevice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#JiboDevice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#JiboDevice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#LightDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#LightDevice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#LightDevice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#LightDevice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ListChannelsRequestMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ListChannelsRequestMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ListChannelsRequestMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ListChannelsRequestMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ListChannelsResultsMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ListChannelsResultsMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ListChannelsResultsMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ListChannelsResultsMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#MapObject",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#MapObject",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#MapObject",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#MapObject" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasAddress" : {
         "type" : "string"
       },
@@ -6292,228 +883,30 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasZoomLevel" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#MemoryFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#StringPropertyFact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#MemoryFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#MemoryFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#MemoryFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasStringValue" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#MetaQLMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#MetaQLMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#MetaQLMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#MetaQLMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasQueryString" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasBindingNames" : {
         "type" : "array",
         "items" : {
           "type" : "string"
         }
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasLimit" : {
         "type" : "number"
@@ -6521,423 +914,57 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasOffset" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasTotalResults" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#MotionMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#MotionMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#MotionMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#MotionMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion",
     "parent" : "http://vital.ai/ontology/vital-aimp#Question",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#isMultivalue" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#PredictionFact",
     "parent" : "http://vital.ai/ontology/vital#VITAL_Fact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#PredictionFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#PredictionFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#PredictionFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
     "parent" : "http://vital.ai/ontology/vital#VITAL_Fact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#PropertyFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#PropertyFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Question",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#Question",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#Question",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#Question" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#QuestionMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#QuestionMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#QuestionMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#QuestionMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
         "type" : "string"
       },
@@ -6949,684 +976,85 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasPreviousAnswer" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#QuestionsPageMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPage" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasTotalPages" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#QuestionsPageNavigationMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AnswerMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#QuestionsPageNavigationMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#QuestionsPageNavigationMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageNavigationMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasRequestedPage" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isAnswerSkipped" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isGoBackSelected" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHelpRequested" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isQuestionClosed" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasQuestionURI" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ResultListFact",
     "parent" : "http://vital.ai/ontology/vital#VITAL_Fact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ResultListFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ResultListFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ResultListFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#RobotDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#RobotDevice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#RobotDevice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#RobotDevice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SearchResult",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLongitude" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
+      "http://vital.ai/ontology/vital-aimp#hasShortDescription" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+      "http://vital.ai/ontology/vital-aimp#hasTitle" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
+      "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SendDirectMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#SendDirectMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#SendDirectMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#SendDirectMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SendTweet",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#SendTweet",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#SendTweet",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#SendTweet" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Session",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#Session",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#Session",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#Session" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
         "type" : "string"
       },
@@ -7641,1058 +1069,118 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasUserID" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SetFactMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#SetFactMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#SetFactMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#SetFactMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasFactScope" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SettingsMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#SettingsMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#SettingsMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SlackIncomingMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#SlackMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SlackMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasSlackChannelID" : {
         "type" : "string"
       },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#SettingsMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
+      "http://vital.ai/ontology/vital-aimp#hasSlackUserID" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SlackOutgoingMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#SlackMessage",
+    "properties" : {
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SolutionFact",
     "parent" : "http://vital.ai/ontology/vital#VITAL_Fact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#SolutionFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#SolutionFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#SolutionFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SpeechMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#BinaryMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#SpeechMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#SpeechMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#SpeechMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SpheroDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#RobotDevice",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#SpheroDevice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#SpheroDevice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#SpheroDevice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#StatusMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#StatusMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#StatusMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#StatusMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#StringPropertyFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#StringPropertyFact",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#StringPropertyFact",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#StringPropertyFact" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#isEnabled" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasStringValue" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SwitchDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#SwitchDevice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#SwitchDevice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#SwitchDevice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ThinkingMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#ThinkingMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#ThinkingMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#ThinkingMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TickMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#TickMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#TickMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#TickMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TrueFalseAnswer",
     "parent" : "http://vital.ai/ontology/vital-aimp#Answer",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#TrueFalseAnswer",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#TrueFalseAnswer",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#TrueFalseAnswer" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasBooleanValue" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TrueFalseQuestion",
     "parent" : "http://vital.ai/ontology/vital-aimp#Question",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#TrueFalseQuestion",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#TrueFalseQuestion",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#TrueFalseQuestion" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasFalseLabel" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasTrueLabel" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TweetReceived",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#TweetReceived",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#TweetReceived",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#TweetReceived" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UnsetFactMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UnsetFactMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UnsetFactMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UnsetFactMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasBooleanValue" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasDoubleValue" : {
         "type" : "number"
@@ -8709,501 +1197,50 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasStringValue" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#isIncludeSubclasses" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UpdateSessionMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UpdateSessionMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UpdateSessionMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UpdateSessionMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#isGoBackSelected" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isHelpRequested" : {
         "type" : "boolean"
       },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#isQuestionClosed" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserChatRequestMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserChatRequestMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserChatRequestMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserChatRequestMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserCommandMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserCommandMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasCommand" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserDialogAppMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserDialogAppMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserDialogAppMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserDialogAppMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#isAnswerSkipped" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isGoBackSelected" : {
@@ -9212,738 +1249,66 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isHelpRequested" : {
         "type" : "boolean"
       },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-aimp#isQuestionClosed" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserLeftApp",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserLeftApp",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserLeftApp",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserLeftApp" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserLoggedIn",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserLoggedIn",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserLoggedIn",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserLoggedIn" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserLoggedOut",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserLoggedOut",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserLoggedOut",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserLoggedOut" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserProfile",
     "parent" : "http://vital.ai/ontology/vital-aimp#BaseProfile",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserProfile",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserProfile",
-    "type" : "object",
     "properties" : {
-      "URI" : {
+      "http://vital.ai/ontology/vital-aimp#hasEchoUserID" : {
         "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserProfile" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserProfileMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserProfileMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserProfileMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
+      "http://vital.ai/ontology/vital-aimp#hasEchoUserID" : {
         "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserProfileMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserStatusMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserStatusMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserStatusMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserStatusMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserTextMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#UserTextMessage",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#UserTextMessage",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#UserTextMessage" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasText" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isHistoryMessage" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#WeMoSwitch",
     "parent" : "http://vital.ai/ontology/vital-aimp#SwitchDevice",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#WeMoSwitch",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#WeMoSwitch",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#WeMoSwitch" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#WeatherForecast",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-aimp#WeatherForecast",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-aimp#WeatherForecast",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-aimp#WeatherForecast" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-aimp#hasAddress" : {
         "type" : "string"
       },
@@ -9958,31 +1323,8 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasWeatherJSONResponse" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   } ],
   "properties" : [ {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountURI",
@@ -9996,6 +1338,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "address",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAmount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyPaymentConfirmationMessage" ],
+    "shortName" : "amount",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAuthSessionID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#Session" ],
@@ -10045,6 +1393,24 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "channelURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChartData",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyChartMessage" ],
+    "shortName" : "chartData",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChartOptions",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyChartMessage" ],
+    "shortName" : "chartOptions",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChartType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyChartMessage" ],
+    "shortName" : "chartType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasChatMessage",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ChatMessage" ],
@@ -10129,6 +1495,24 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "doubleValue",
     "multipleValues" : false,
     "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasDurationSeconds",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyAudioMessage", "http://vital.ai/ontology/vital-aimp#HaleyVideoMessage" ],
+    "shortName" : "durationSeconds",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasEchoUserID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#UserProfile", "http://vital.ai/ontology/vital-aimp#UserProfileMessage" ],
+    "shortName" : "echoUserID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasFacebookUserID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookMessage" ],
+    "shortName" : "facebookUserID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasFactClassName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogQuestion" ],
@@ -10216,7 +1600,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLongitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#SearchResult", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "longitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -10311,6 +1695,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasRecipient",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyPaymentConfirmationMessage" ],
+    "shortName" : "recipient",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasRequestURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
     "shortName" : "requestURI",
@@ -10336,7 +1726,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSearchString",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleySearchResultsMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "searchString",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -10354,8 +1744,26 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasShortDescription",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#ImageObject" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#SearchResult" ],
     "shortName" : "shortDescription",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackChannelID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage" ],
+    "shortName" : "slackChannelID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackTeamID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage" ],
+    "shortName" : "slackTeamID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackUserID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage" ],
+    "shortName" : "slackUserID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -10364,6 +1772,18 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "solutionFactURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSourceLanguage",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyTranslationMessage" ],
+    "shortName" : "sourceLanguage",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSourceText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyTranslationMessage" ],
+    "shortName" : "sourceText",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasStateSerialized",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogElement" ],
@@ -10395,6 +1815,18 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "DoubleProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasTargetLanguage",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyTranslationMessage" ],
+    "shortName" : "targetLanguage",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasTargetText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyTranslationMessage" ],
+    "shortName" : "targetText",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#Answer", "http://vital.ai/ontology/vital-aimp#Question" ],
     "shortName" : "text",
@@ -10408,13 +1840,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasThumbnailImageURL",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#ImageObject" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyAudioMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#HaleyVideoMessage", "http://vital.ai/ontology/vital-aimp#ImageObject" ],
     "shortName" : "thumbnailImageURL",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasTitle",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#ImageObject" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyAudioMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#HaleyPaymentConfirmationMessage", "http://vital.ai/ontology/vital-aimp#HaleyVideoMessage", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#SearchResult" ],
     "shortName" : "title",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -10438,7 +1870,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasUrl",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmbeddedCard", "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#ImageObject" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmbeddedCard", "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyAudioMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#HaleyVideoMessage", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#SearchResult" ],
     "shortName" : "url",
     "multipleValues" : false,
     "type" : "StringProperty"
