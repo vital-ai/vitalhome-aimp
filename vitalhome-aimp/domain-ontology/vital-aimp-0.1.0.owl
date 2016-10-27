@@ -326,8 +326,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasBodyPlain -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBodyPlain">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -476,6 +483,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasDateSent -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDateSent">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Sms"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -821,8 +837,15 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasMessageID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMessageID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -961,8 +984,15 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasRecipient -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRecipient">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyPaymentConfirmationMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyPaymentConfirmationMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1021,8 +1051,15 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasSender -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSender">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1544,6 +1581,15 @@ the map is serialized as json map</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isIncludeSubclasses">
         <rdfs:comment xml:lang="en">to be used with factclassname</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isMms -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isMms">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Sms"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -2476,6 +2522,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#MmsAttachment -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MmsAttachment">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#FileNode"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#MotionMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MotionMessage">
@@ -2591,6 +2645,14 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SendSms -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SendSms">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#SendTweet -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SendTweet">
@@ -2643,6 +2705,22 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SlackOutgoingMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Sms -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Sms">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SmsReceived -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SmsReceived">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
