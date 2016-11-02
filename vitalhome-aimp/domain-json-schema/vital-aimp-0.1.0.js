@@ -570,6 +570,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EmailsList",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#EmbeddedCard",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -1365,6 +1370,12 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasQuantityData" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasShippingFee" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasTax" : {
+        "type" : "number"
       }
     }
   }, {
@@ -2247,6 +2258,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasShippingFee",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ShoppingCart" ],
+    "shortName" : "shippingFee",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasShortDescription",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CalendarEntry", "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#Movie", "http://vital.ai/ontology/vital-aimp#ProgressItem", "http://vital.ai/ontology/vital-aimp#SearchResult" ],
     "shortName" : "shortDescription",
@@ -2366,6 +2383,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "targetText",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasTax",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ShoppingCart" ],
+    "shortName" : "tax",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#Answer", "http://vital.ai/ontology/vital-aimp#Question" ],

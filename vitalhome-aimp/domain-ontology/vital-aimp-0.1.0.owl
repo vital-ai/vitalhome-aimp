@@ -1270,6 +1270,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasShippingFee -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasShippingFee">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ShoppingCart"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasShortDescription -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasShortDescription">
@@ -1483,6 +1492,15 @@ the map is serialized as json map</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTargetText">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Translation"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasTax -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTax">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ShoppingCart"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
@@ -2431,6 +2449,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmailReceived">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPEmailMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#EmailsList -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmailsList">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     
 
