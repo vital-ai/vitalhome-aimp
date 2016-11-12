@@ -135,9 +135,11 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EnlargeCardCommand"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#NextAudioCommand"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PlayAudioCommand"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PlayVideoCommand"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#RemoveCardCommand"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ShrinkCardCommand"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#StopAudioCommand"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#StopVideoCommand"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -870,6 +872,16 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasInteractionMode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasInteractionMode">
+        <rdfs:comment xml:lang="en">all, direct</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#InteractionModeMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasItemStatus -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasItemStatus">
@@ -1385,6 +1397,7 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1900,8 +1913,15 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#isPlaying -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isPlaying">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AudioObject"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2512,6 +2532,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasUserAvatar -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasUserAvatar">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#UserAvatar"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#EmailAttachment -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmailAttachment">
@@ -2998,6 +3028,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#InteractionModeMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#InteractionModeMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#JiboDevice -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#JiboDevice">
@@ -3131,6 +3169,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#PlayAudioCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PlayAudioCommand">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PlayVideoCommand -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PlayVideoCommand">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
     </owl:Class>
     
@@ -3403,6 +3449,14 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#StopVideoCommand -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#StopVideoCommand">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#StringPropertyFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#StringPropertyFact">
@@ -3492,6 +3546,14 @@ with error message</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
         <vital-core:hasEdgeSrcDomain xml:lang="en">structured answer to multichoice question from the user</vital-core:hasEdgeSrcDomain>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#UserAvatar -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserAvatar">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#FileNode"/>
     </owl:Class>
     
 
