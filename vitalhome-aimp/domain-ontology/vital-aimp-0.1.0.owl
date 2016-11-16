@@ -688,15 +688,8 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasEchoUserID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEchoUserID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AmazonEchoAccount"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserProfile"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserProfileMessage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -807,6 +800,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasGeolocation -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGeolocation">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&vital-core;geoLocation"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasId -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasId">
@@ -882,6 +884,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasIpAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasIpAddress">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasItemStatus -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasItemStatus">
@@ -948,6 +959,16 @@ static for all copies</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLink">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmbeddedCard"/>
         <rdfs:subPropertyOf rdf:resource="http://vital.ai/ontology/vital-aimp#hasUrl"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLocalTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLocalTime">
+        <rdfs:comment xml:lang="en">sender local in ISO 8601 format with UTC offset: YYYY-MM-DDThh:mm:ss±hh:mm</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -1620,6 +1641,16 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasTimezone -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTimezone">
+        <rdfs:comment xml:lang="en">optional timezone (if available)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasTitle -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTitle">
@@ -2001,6 +2032,14 @@ the map is serialized as json map</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ActivateMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AmazonEchoAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AmazonEchoAccount">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     
 
@@ -2528,6 +2567,17 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogSession"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasExternalAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasExternalAccount">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AmazonEchoAccount"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
     </owl:Class>
     
 
