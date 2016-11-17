@@ -1813,6 +1813,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#UserProfile",
     "parent" : "http://vital.ai/ontology/vital-aimp#BaseProfile",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasEchoUserID" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#UserProfileMessage",
@@ -2127,7 +2130,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "FloatProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasEchoUserID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AmazonEchoAccount" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AmazonEchoAccount", "http://vital.ai/ontology/vital-aimp#UserProfile" ],
     "shortName" : "echoUserID",
     "multipleValues" : false,
     "type" : "StringProperty"

@@ -688,8 +688,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasEchoUserID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEchoUserID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AmazonEchoAccount"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AmazonEchoAccount"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
