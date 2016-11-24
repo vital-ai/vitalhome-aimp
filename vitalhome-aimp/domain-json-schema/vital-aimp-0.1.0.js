@@ -350,6 +350,17 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DataModificationEvent",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasClassURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasObjectURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeactiveMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
     "properties" : {
@@ -2054,6 +2065,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasClassURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DataModificationEvent" ],
+    "shortName" : "classURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasColor",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Device" ],
     "shortName" : "color",
@@ -2344,7 +2361,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasObjectURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GetObjectMessage", "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#GetObjectMessage", "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage" ],
     "shortName" : "objectURI",
     "multipleValues" : false,
     "type" : "URIProperty"
