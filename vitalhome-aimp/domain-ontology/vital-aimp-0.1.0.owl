@@ -1223,6 +1223,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasQueueName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQueueName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasRecipient -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRecipient">
@@ -2334,6 +2343,14 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DeviceStatusRequestMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DeviceStatusRequestMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DeviceMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogBegin -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogBegin">
@@ -3020,6 +3037,20 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasChannelCard">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
         <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasMessagePayload -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasMessagePayload">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <rdfs:comment xml:lang="en">connects AIMPMessage node to all payload objects</rdfs:comment>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
         <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     
@@ -3723,6 +3754,25 @@ with error message</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&vital-core;VITAL_Edge">
+        <rdfs:comment xml:lang="en">connects an aimp message to all its payload objects</rdfs:comment>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
