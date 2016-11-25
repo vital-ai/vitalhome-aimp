@@ -353,10 +353,16 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#DataModificationEvent",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasClassURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasQueueName" : {
         "type" : "string"
       }
     }
@@ -1915,7 +1921,7 @@ var vital_aimp_0_1_0_schema = {
   } ],
   "properties" : [ {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#DataModificationEvent" ],
     "shortName" : "accountURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -2457,7 +2463,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasQueueName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#DataModificationEvent" ],
     "shortName" : "queueName",
     "multipleValues" : false,
     "type" : "StringProperty"
