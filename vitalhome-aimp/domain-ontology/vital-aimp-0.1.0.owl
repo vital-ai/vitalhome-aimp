@@ -608,15 +608,6 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasDefaultBotID -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDefaultBotID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-aimp#hasDeviceName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDeviceName">
@@ -1985,7 +1976,7 @@ the map is serialized as json map</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDefaultBot">
         <rdfs:comment xml:lang="en">this property is set in channel-&gt;bot edges</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasBot"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasChannelBot"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -1995,7 +1986,7 @@ the map is serialized as json map</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isEnabled">
         <rdfs:comment xml:lang="en">this property is set in channel-&gt;bot edges</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasBot"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasChannelBot"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -2014,6 +2005,7 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#isGlobalBot -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGlobalBot">
+        <rdfs:comment xml:lang="en">true if this bot is an app global bot (not linked to a particular account)</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
@@ -2774,8 +2766,6 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
-        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
-        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
     </owl:Class>
     
 
@@ -2787,6 +2777,17 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasChannelBot -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasChannelBot">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
     </owl:Class>
     
