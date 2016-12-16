@@ -1919,6 +1919,7 @@ the map is serialized as json map</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SwitchEnclosingPageToURL"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
                 </owl:unionOf>
             </owl:Class>
@@ -4162,6 +4163,14 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SwitchDevice">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SwitchEnclosingPageToURL -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SwitchEnclosingPageToURL">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
     </owl:Class>
     
 
