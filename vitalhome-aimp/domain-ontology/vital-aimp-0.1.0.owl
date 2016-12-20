@@ -1208,6 +1208,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasNotificationJsonBody -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasNotificationJsonBody">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EnclosingPageNotification"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasOffset -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOffset">
@@ -2574,6 +2583,15 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ContextChangedMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ContextChangedMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">indicates that the enclosing page context has changed</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#CurrentBotMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CurrentBotMessage">
@@ -3168,6 +3186,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmbeddedCard">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#EnclosingPageNotification -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EnclosingPageNotification">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
     </owl:Class>
     
 

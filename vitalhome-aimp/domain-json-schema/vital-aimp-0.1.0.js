@@ -382,6 +382,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ContextChangedMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CurrentBotMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
@@ -935,6 +940,14 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EnclosingPageNotification",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Card",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasNotificationJsonBody" : {
         "type" : "string"
       }
     }
@@ -2763,6 +2776,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasNewStatus",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyFacebookStatusPanelMessage", "http://vital.ai/ontology/vital-aimp#HaleyTwitterStatusPanelMessage" ],
     "shortName" : "newStatus",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasNotificationJsonBody",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EnclosingPageNotification" ],
+    "shortName" : "notificationJsonBody",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
