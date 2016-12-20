@@ -882,8 +882,13 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FactsListMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetFactsMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SetFactMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
                 </owl:unionOf>
@@ -1905,6 +1910,15 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasTruthValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTruthValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TruthPropertyFact"/>
+        <rdfs:range rdf:resource="&vital-core;truth"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasUrl -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasUrl">
@@ -1915,6 +1929,7 @@ the map is serialized as json map</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmbeddedCard"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EnclosingPageURLButtonClickedMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
@@ -3157,6 +3172,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#EnclosingPageURLButtonClickedMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EnclosingPageURLButtonClickedMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Endpoint -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Endpoint">
@@ -4213,6 +4236,14 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#TruthPropertyFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TruthPropertyFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
     </owl:Class>
     
 
