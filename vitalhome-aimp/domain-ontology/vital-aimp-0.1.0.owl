@@ -192,8 +192,16 @@
     <!-- http://vital.ai/ontology/vital-aimp#hasEndpointURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEndpointURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#CloseIFrame"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#OpenIFrame"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -2262,6 +2270,22 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isPurgeSession -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isPurgeSession">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#CloseIFrame"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#OpenIFrame"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isQuestionClosed -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isQuestionClosed">
@@ -2559,6 +2583,15 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#CloseIFrame -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CloseIFrame">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+        <rdfs:comment xml:lang="en">closes iframe with given endpoint URI</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ClosePanelCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ClosePanelCommand">
@@ -2722,6 +2755,15 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogCallDialog -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogCallDialog">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+        <rdfs:comment xml:lang="en">call another dialog from this dialog (name property)</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogCondition -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition">
@@ -2758,6 +2800,24 @@ revert ( DialogElement thisElement, AgentContext context -&gt; void)</rdfs:comme
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogEnd">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogExitBot -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitBot">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+        <rdfs:comment xml:lang="en">exits current bot</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogExitDialog -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+        <rdfs:comment xml:lang="en">just exits the dialog (switch to default dialog)</rdfs:comment>
     </owl:Class>
     
 
@@ -2955,6 +3015,15 @@ closed means user closed the dialog but it can be resumed</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogElement"/>
         <rdfs:comment xml:lang="en">closures:
 switchBot(DialogSwitchBot thisElement, AgentContext context -&gt; String)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogSwitchToBot -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogSwitchToBot">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+        <rdfs:comment xml:lang="en">switches to another bot (by name)</rdfs:comment>
     </owl:Class>
     
 
@@ -3828,6 +3897,15 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#NextAudioCommand">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#OpenIFrame -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#OpenIFrame">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+        <rdfs:comment xml:lang="en">open iframe with given endpoint URI</rdfs:comment>
     </owl:Class>
     
 

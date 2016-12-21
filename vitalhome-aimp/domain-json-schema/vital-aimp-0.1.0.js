@@ -364,6 +364,17 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CloseIFrame",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Card",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasEndpointURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isPurgeSession" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ClosePanelCommand",
     "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
     "properties" : {
@@ -530,6 +541,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogCallDialog",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogCondition",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogPart",
     "properties" : {
@@ -577,6 +593,16 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogEnd",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogExitBot",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogExitDialog",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
     "properties" : {
     }
   }, {
@@ -731,6 +757,11 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogSwitchBot",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogSwitchToBot",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
     "properties" : {
     }
   }, {
@@ -1612,6 +1643,17 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasCardURI" : {
         "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#OpenIFrame",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Card",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasEndpointURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isPurgeSession" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -2581,7 +2623,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasEndpointURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#CloseIFrame", "http://vital.ai/ontology/vital-aimp#OpenIFrame" ],
     "shortName" : "endpointURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -3322,6 +3364,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isProcessed",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogInnerMessage" ],
     "shortName" : "processed",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isPurgeSession",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CloseIFrame", "http://vital.ai/ontology/vital-aimp#OpenIFrame" ],
+    "shortName" : "purgeSession",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
