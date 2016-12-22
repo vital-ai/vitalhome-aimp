@@ -178,6 +178,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPageElementMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage"/>
@@ -947,8 +948,16 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasId">
         <rdfs:comment xml:lang="en">dialog element id
 static for all copies</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogElement"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButton"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -985,8 +994,15 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasIndex -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasIndex">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
         <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPageElementMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1819,6 +1835,7 @@ the map is serialized as json map</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Answer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
@@ -2170,6 +2187,15 @@ the map is serialized as json map</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isGoodbyePage -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGoodbyePage">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -2755,6 +2781,23 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogButton -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogButton">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+        <rdfs:comment xml:lang="en">clicking this button should send context changed message immediately</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogCallDialog -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogCallDialog">
@@ -2836,6 +2879,14 @@ generateDialog(DialogGenerator thisElement, AgentContext context -&gt; boolean)<
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogInnerMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogPageElementMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogPageElementMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
@@ -3035,6 +3086,14 @@ switchBot(DialogSwitchBot thisElement, AgentContext context -&gt; String)</rdfs:
         <rdfs:comment xml:lang="en">closures:
 available(DialogText dialogText, AgentContext context -&gt; boolean)
 text(AgentContext context -&gt; String)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogTextCard -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextCard">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
     </owl:Class>
     
 
