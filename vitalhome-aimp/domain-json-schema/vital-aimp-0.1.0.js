@@ -1684,6 +1684,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#NotificationMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#OpenIFrame",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
