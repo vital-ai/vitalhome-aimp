@@ -227,6 +227,9 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#isGlobalBot" : {
         "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isInactiveTicksReceiver" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -364,6 +367,11 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ChoiceAnswer",
     "parent" : "http://vital.ai/ontology/vital-aimp#Answer",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ClearChatHistory",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
     }
   }, {
@@ -565,6 +573,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogChatRules",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogCondition",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogPart",
     "properties" : {
@@ -597,6 +610,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasServiceName" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogDatascriptAction",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogElement",
@@ -641,6 +659,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogLoop",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogPageElementMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
@@ -678,6 +701,16 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogPredictAction",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogProcess",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogQuery",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
     "properties" : {
@@ -690,6 +723,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isCreateResultListFact" : {
         "type" : "boolean"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogQueryAction",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogQuestion",
@@ -719,6 +757,11 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogQuestionStart",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogRecommend",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
     "properties" : {
     }
   }, {
@@ -785,6 +828,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogSubroutine",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogSwitchBot",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogElement",
     "properties" : {
@@ -817,6 +865,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DialogWorkflow",
+    "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DirectMessageReceived",
@@ -1036,6 +1089,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isChannelRandomized" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isDefaultEndpoint" : {
         "type" : "boolean"
       }
     }
@@ -3341,6 +3397,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isDefaultEndpoint",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Endpoint" ],
+    "shortName" : "defaultEndpoint",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isEnabled",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasBotDialog", "http://vital.ai/ontology/vital-aimp#Edge_hasChannelBot" ],
     "shortName" : "enabled",
@@ -3386,6 +3448,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isHistoryMessage",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
     "shortName" : "historyMessage",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isInactiveTicksReceiver",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
+    "shortName" : "inactiveTicksReceiver",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

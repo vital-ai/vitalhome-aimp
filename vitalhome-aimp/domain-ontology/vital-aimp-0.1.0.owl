@@ -2136,6 +2136,16 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isDefaultEndpoint -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDefaultEndpoint">
+        <rdfs:comment xml:lang="en">for randomized channel with multiple endpoints this property should be set in exactly one endpoint so that bot config order is correct (default bot)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isEnabled">
@@ -2231,6 +2241,16 @@ the map is serialized as json map</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isHistoryMessage">
         <rdfs:comment xml:lang="en">a flag that indicates the content message comes from the history and shouldn&apos;t be rendered in the chat stream etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isInactiveTicksReceiver -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isInactiveTicksReceiver">
+        <rdfs:comment xml:lang="en">whether bot should also receive tick signals when inactive</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -2618,6 +2638,15 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ClearChatHistory -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ClearChatHistory">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+        <rdfs:comment xml:lang="en">simply orders the bot to clear history and chat messages panel</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#CloseIFrame -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CloseIFrame">
@@ -2816,6 +2845,14 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogChatRules -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogCondition -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition">
@@ -2834,6 +2871,14 @@ validate(DialogDatascript thisElement, AgentContext context -&gt; boolean)
 processResults(DialogDatascript thisElement, AgentContext context, ResultList results -&gt; void)
 available(DialogDatascript dd, AgentContext context -&gt; boolean)
 onException(DialogDatascript thisElement, AgentContext context, Exception exception -&gt; void)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogDatascriptAction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
     </owl:Class>
     
 
@@ -2892,6 +2937,14 @@ generateDialog(DialogGenerator thisElement, AgentContext context -&gt; boolean)<
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogLoop -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogLoop">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogPageElementMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogPageElementMessage">
@@ -2937,6 +2990,22 @@ onException(DialogPredict thisElement, AgentContext context, Exception exception
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogPredictAction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogPredictAction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogProcess -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogProcess">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogQuery -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogQuery">
@@ -2946,6 +3015,14 @@ available(DialogQuery thisElement, AgentContext context -&gt; boolean)
 createQuery(DialogQuery thisElement, AgentContext context -&gt; VitalQuery)
 handleResults(DialogQuery thisElement, AgentContext context, ResultList results -&gt; void)
 onException(DialogQuerythisElement, AgentContext context, Exception exception -&gt; void)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogQueryAction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
     </owl:Class>
     
 
@@ -2976,6 +3053,14 @@ textResponseProcessor(DialogQuestion question, AgentContext context, String answ
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogQuestionStart">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogRecommend -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogRecommend">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
     </owl:Class>
     
 
@@ -3069,6 +3154,14 @@ closed means user closed the dialog but it can be resumed</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogSubroutine -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogSubroutine">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogSwitchBot -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogSwitchBot">
@@ -3110,6 +3203,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#DialogTextMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogWorkflow -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogWorkflow">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
     </owl:Class>
     
