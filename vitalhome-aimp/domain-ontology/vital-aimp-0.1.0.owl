@@ -583,6 +583,17 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasClearScope -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasClearScope">
+        <rdfs:comment xml:lang="en">all
+history (default)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ClearChatHistory"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasColor -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasColor">
@@ -1803,6 +1814,15 @@ the map is serialized as json map</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTargetPronounciation">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Translation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasTargetStep -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTargetStep">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogLoop"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     

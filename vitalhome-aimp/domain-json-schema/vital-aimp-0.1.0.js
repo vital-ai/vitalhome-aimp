@@ -373,6 +373,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#ClearChatHistory",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasClearScope" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CloseIFrame",
@@ -662,6 +665,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogLoop",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasTargetStep" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogPageElementMessage",
@@ -2604,6 +2610,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasClearScope",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ClearChatHistory" ],
+    "shortName" : "clearScope",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasColor",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Device" ],
     "shortName" : "color",
@@ -3244,6 +3256,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasTargetPronounciation",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Translation" ],
     "shortName" : "targetPronounciation",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasTargetStep",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogLoop" ],
+    "shortName" : "targetStep",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
