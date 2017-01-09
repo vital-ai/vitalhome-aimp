@@ -1902,6 +1902,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasTextToSpeak" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isSkippable" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -3532,6 +3535,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isSent",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogQuestion" ],
     "shortName" : "sent",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isSkippable",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "skippable",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   } ]
