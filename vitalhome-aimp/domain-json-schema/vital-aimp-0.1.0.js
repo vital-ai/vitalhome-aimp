@@ -225,10 +225,10 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Bot",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isGlobalBot" : {
+      "http://vital.ai/ontology/vital-aimp#isAcceptSystemTicks" : {
         "type" : "boolean"
       },
-      "http://vital.ai/ontology/vital-aimp#isInactiveTicksReceiver" : {
+      "http://vital.ai/ontology/vital-aimp#isGlobalBot" : {
         "type" : "boolean"
       }
     }
@@ -1953,6 +1953,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#RealtimeTickMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#TickMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#RemoveCardCommand",
     "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
     "properties" : {
@@ -2041,6 +2046,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasChatMode" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLastActivityTime" : {
+        "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
         "type" : "string"
@@ -2195,6 +2203,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SystemTickMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#TickMessage",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ThinkingMessage",
@@ -2871,6 +2884,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "DateProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLastActivityTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Session" ],
+    "shortName" : "lastActivityTime",
+    "multipleValues" : false,
+    "type" : "LongProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLatitude",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "latitude",
@@ -3382,6 +3401,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "FloatProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isAcceptSystemTicks",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
+    "shortName" : "acceptSystemTicks",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isAnswerSkipped",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerChoice", "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#UserDialogAppMessage" ],
     "shortName" : "answerSkipped",
@@ -3469,12 +3494,6 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isHistoryMessage",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
     "shortName" : "historyMessage",
-    "multipleValues" : false,
-    "type" : "BooleanProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#isInactiveTicksReceiver",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
-    "shortName" : "inactiveTicksReceiver",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

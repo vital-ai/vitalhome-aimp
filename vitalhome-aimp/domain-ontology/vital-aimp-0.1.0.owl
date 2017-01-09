@@ -1087,6 +1087,16 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasLastActivityTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLastActivityTime">
+        <rdfs:comment xml:lang="en">last time a session message was received (no tick)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Session"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasLatitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLatitude">
@@ -2091,6 +2101,16 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isAcceptSystemTicks -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAcceptSystemTicks">
+        <rdfs:comment xml:lang="en">whether bot should also accept system tick signals</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isAnswerSkipped -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAnswerSkipped">
@@ -2261,16 +2281,6 @@ the map is serialized as json map</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isHistoryMessage">
         <rdfs:comment xml:lang="en">a flag that indicates the content message comes from the history and shouldn&apos;t be rendered in the chat stream etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
-        <rdfs:range rdf:resource="&xsd;boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#isInactiveTicksReceiver -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isInactiveTicksReceiver">
-        <rdfs:comment xml:lang="en">whether bot should also receive tick signals when inactive</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -4277,6 +4287,14 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#RealtimeTickMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RealtimeTickMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#TickMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#RemoveCardCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RemoveCardCommand">
@@ -4510,6 +4528,15 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SystemTickMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SystemTickMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#TickMessage"/>
+        <rdfs:comment xml:lang="en">a ping from the agent sent to an account</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ThinkingMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ThinkingMessage">
@@ -4523,7 +4550,7 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TickMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
-        <rdfs:comment xml:lang="en">a ping from the agent sent at any time</rdfs:comment>
+        <rdfs:comment xml:lang="en">a ping from the agent sent at any time to a channel</rdfs:comment>
     </owl:Class>
     
 
