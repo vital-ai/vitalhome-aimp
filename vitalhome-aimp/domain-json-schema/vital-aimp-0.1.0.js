@@ -968,7 +968,7 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasDialogSession",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#BaseProfile" ],
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#BaseProfile", "http://vital.ai/ontology/vital-aimp#Channel" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#DialogSession" ],
     "properties" : {
     }
@@ -999,6 +999,23 @@ var vital_aimp_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Login", "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#UserProfile" ],
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasProfileSession",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#BaseProfile" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Session" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasSessionChannel",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#Session" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLastActivityTime" : {
+        "type" : "number"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasUserAvatar",
@@ -2047,7 +2064,7 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasChatMode" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasLastActivityTime" : {
+      "http://vital.ai/ontology/vital-aimp#hasLastLeftAppMessageTime" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
@@ -2885,8 +2902,14 @@ var vital_aimp_0_1_0_schema = {
     "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLastActivityTime",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Session" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasSessionChannel" ],
     "shortName" : "lastActivityTime",
+    "multipleValues" : false,
+    "type" : "LongProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLastLeftAppMessageTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Session" ],
+    "shortName" : "lastLeftAppMessageTime",
     "multipleValues" : false,
     "type" : "LongProperty"
   }, {

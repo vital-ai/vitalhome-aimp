@@ -1091,6 +1091,16 @@ static for all copies</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLastActivityTime">
         <rdfs:comment xml:lang="en">last time a session message was received (no tick)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasSessionChannel"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLastLeftAppMessageTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLastLeftAppMessageTime">
+        <rdfs:comment xml:lang="en">set when a user left message arrives, shoud be cleared when a non-tick message for this session arrives</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Session"/>
         <rdfs:range rdf:resource="&xsd;long"/>
     </owl:DatatypeProperty>
@@ -3371,6 +3381,7 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasDialogSession">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogSession"/>
     </owl:Class>
     
@@ -3414,6 +3425,26 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#UserProfile"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasProfileSession -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasProfileSession">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Session"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasSessionChannel -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasSessionChannel">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Session"/>
     </owl:Class>
     
 
@@ -4380,6 +4411,7 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Session">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+        <rdfs:comment xml:lang="en">represents a user session that may be linked to multiple channels</rdfs:comment>
     </owl:Class>
     
 
