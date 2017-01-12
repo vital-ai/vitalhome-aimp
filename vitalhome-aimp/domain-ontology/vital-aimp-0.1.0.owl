@@ -116,6 +116,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1218,8 +1219,15 @@ static for all copies</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMessageSerialized">
         <rdfs:comment xml:lang="en">json-serialized list of message objects</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogInnerMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogInnerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1470,6 +1478,7 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1714,6 +1723,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasStackTrace -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasStackTrace">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasStartDate -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasStartDate">
@@ -1886,6 +1904,7 @@ the map is serialized as json map</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Answer"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2457,6 +2476,14 @@ the map is serialized as json map</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ActivateMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentError -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentError">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
     </owl:Class>
     
 
@@ -3541,6 +3568,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ErrorNode -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#FacebookIncomingMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FacebookIncomingMessage">
@@ -4204,6 +4239,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorAreYouAliveMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorMessage"/>
         <rdfs:comment xml:lang="en">sent to processor to check if it&apos;s alive</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ProcessorError -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorError">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
     </owl:Class>
     
 
