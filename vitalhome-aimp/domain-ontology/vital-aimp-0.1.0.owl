@@ -4070,6 +4070,22 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#JoinChannel -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#JoinChannel">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#LeaveChannel -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#LeaveChannel">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#LightDevice -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#LightDevice">
