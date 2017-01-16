@@ -3649,6 +3649,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#GetJoinedChannels -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GetJoinedChannels">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#GetObjectMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectMessage">
@@ -4108,6 +4116,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListChannelsResultsMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:comment xml:lang="en">contains list of Channels</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ListJoinedChannelsResultsMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListJoinedChannelsResultsMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
