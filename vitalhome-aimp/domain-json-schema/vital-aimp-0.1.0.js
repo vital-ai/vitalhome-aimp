@@ -1202,6 +1202,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#FileQuestion",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Question",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#FileUploadObject",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
@@ -2123,6 +2128,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasUserID" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SessionEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SetFactMessage",

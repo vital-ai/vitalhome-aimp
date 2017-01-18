@@ -3625,6 +3625,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#FileQuestion -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FileQuestion">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:comment xml:lang="en">file question, stringpropertyfact contains space separated 
+filenodeURI length name</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#FileUploadObject -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FileUploadObject">
@@ -4487,6 +4497,15 @@ with error message</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Session">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
         <rdfs:comment xml:lang="en">represents a user session that may be linked to multiple channels</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SessionEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SessionEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+        <rdfs:comment xml:lang="en">an authenticated session endpoint for direct service access</rdfs:comment>
     </owl:Class>
     
 
