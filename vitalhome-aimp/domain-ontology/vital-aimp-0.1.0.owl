@@ -173,6 +173,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatRuleSetURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatRuleSetURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ChatRule"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#ChatRuleSet"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasClassURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasClassURI">
@@ -598,6 +607,33 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatRuleID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatRuleID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ChatRule"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatRulePattern -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatRulePattern">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ChatRule"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatRuleResponse -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatRuleResponse">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ChatRule"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -1274,6 +1310,15 @@ static for all copies</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasRelationship"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -2772,6 +2817,22 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ChatRule -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ChatRule">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ChatRuleSet -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ChatRuleSet">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#CheckItem -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CheckItem">
@@ -3049,6 +3110,14 @@ onException(DialogDatascript thisElement, AgentContext context, Exception except
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogDownloadFile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogElement -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogElement">
@@ -3223,6 +3292,14 @@ textResponseProcessor(DialogQuestion question, AgentContext context, String answ
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogRecommend -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogRecommend">
@@ -3274,6 +3351,14 @@ applicable:(DialogRestartQuestion drq, AgentContext context -&gt; boolean)</rdfs
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogRow">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
     </owl:Class>
     
 
@@ -3374,6 +3459,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogUploadFile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogWorkflow -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogWorkflow">
@@ -3437,6 +3530,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasChatRuleSet -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasChatRuleSet">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ChatRuleSet"/>
     </owl:Class>
     
 
