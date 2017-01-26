@@ -891,6 +891,16 @@ expression</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasEmailAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEmailAddress">
+        <vital-core:hasMultipleValues rdf:datatype="&xsd;boolean">true</vital-core:hasMultipleValues>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailEndpoint"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEndDate">
@@ -946,10 +956,28 @@ expression</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasFacebookPageToken -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFacebookPageToken">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasFacebookUserID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFacebookUserID">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasFacebookVerifyToken -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFacebookVerifyToken">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -1380,6 +1408,24 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasOAuthSecret -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOAuthSecret">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TwitterEndpoint"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasOAuthToken -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOAuthToken">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TwitterEndpoint"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasOffset -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOffset">
@@ -1418,6 +1464,15 @@ static for all copies</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPg">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Movie"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasPhoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPhoneNumber">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SmsEndpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -1765,6 +1820,15 @@ static for all copies</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackTeamID">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackToken -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackToken">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackEndpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -2606,6 +2670,14 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#APIEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#APIEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ActivateMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ActivateMessage">
@@ -2614,10 +2686,26 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AdUnitEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AdUnitEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AgentError -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentError">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AlexaEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AlexaEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
     </owl:Class>
     
 
@@ -3736,6 +3824,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#EmailEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmailEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#EmailMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage">
@@ -3838,6 +3934,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#FacebookEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FacebookEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
     </owl:Class>
     
 
@@ -4832,6 +4936,14 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SlackEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SlackEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#SlackIncomingMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SlackIncomingMessage">
@@ -4860,6 +4972,14 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Sms">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SmsEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SmsEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
     </owl:Class>
     
 
@@ -5007,6 +5127,14 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TweetReceived">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#TwitterEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TwitterEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
     </owl:Class>
     
 

@@ -90,13 +90,28 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#APIEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ActivateMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AdUnitEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentError",
     "parent" : "http://vital.ai/ontology/vital-aimp#ErrorNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AlexaEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
     "properties" : {
     }
   }, {
@@ -1125,6 +1140,17 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EmailEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasEmailAddress" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#EmailMessage",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -1273,6 +1299,17 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#FacebookEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasFacebookPageToken" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasFacebookVerifyToken" : {
         "type" : "string"
       }
     }
@@ -2317,6 +2354,14 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SlackEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasSlackToken" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SlackIncomingMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#SlackMessage",
     "properties" : {
@@ -2364,6 +2409,14 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isMms" : {
         "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SmsEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasPhoneNumber" : {
+        "type" : "string"
       }
     }
   }, {
@@ -2497,6 +2550,17 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#TweetReceived",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TwitterEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasOAuthSecret" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasOAuthToken" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#URIPropertyFact",
@@ -3002,6 +3066,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasEmailAddress",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailEndpoint" ],
+    "shortName" : "emailAddress",
+    "multipleValues" : true,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasEndDate",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CalendarEntry", "http://vital.ai/ontology/vital-aimp#CalendarObject" ],
     "shortName" : "endDate",
@@ -3044,9 +3114,21 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasFacebookPageToken",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint" ],
+    "shortName" : "facebookPageToken",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasFacebookUserID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookMessage" ],
     "shortName" : "facebookUserID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasFacebookVerifyToken",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint" ],
+    "shortName" : "facebookVerifyToken",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -3255,6 +3337,18 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasOAuthSecret",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterEndpoint" ],
+    "shortName" : "oAuthSecret",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasOAuthToken",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterEndpoint" ],
+    "shortName" : "oAuthToken",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasObjectURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#GetObjectMessage", "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage" ],
     "shortName" : "objectURI",
@@ -3294,6 +3388,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPg",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Movie" ],
     "shortName" : "pg",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasPhoneNumber",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SmsEndpoint" ],
+    "shortName" : "phoneNumber",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -3480,6 +3580,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackTeamID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage" ],
     "shortName" : "slackTeamID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackToken",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackEndpoint" ],
+    "shortName" : "slackToken",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
