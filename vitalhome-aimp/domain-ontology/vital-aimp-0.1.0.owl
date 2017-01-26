@@ -891,16 +891,6 @@ expression</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasEmailAddress -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEmailAddress">
-        <vital-core:hasMultipleValues rdf:datatype="&xsd;boolean">true</vital-core:hasMultipleValues>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailEndpoint"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-aimp#hasEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEndDate">
@@ -956,28 +946,10 @@ expression</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasFacebookPageToken -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFacebookPageToken">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-aimp#hasFacebookUserID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFacebookUserID">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookMessage"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#hasFacebookVerifyToken -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFacebookVerifyToken">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -1820,15 +1792,6 @@ static for all copies</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackTeamID">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#hasSlackToken -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackToken">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackEndpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -3739,6 +3702,7 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasIFrameTemplate">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AdUnitEndpoint"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#IFrameTemplate"/>
     </owl:Class>
