@@ -341,6 +341,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasThreadURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasThreadURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasUriValue -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasUriValue">
@@ -553,6 +561,16 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChannels">
         <vital-core:hasMultipleValues rdf:datatype="&xsd;boolean">true</vital-core:hasMultipleValues>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Device"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChannelsHistory -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChannelsHistory">
+        <rdfs:comment xml:lang="en">an ordered list of URI values representing the channels the message was previously on</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -939,6 +957,7 @@ expression</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1106,6 +1125,24 @@ static for all copies</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasInputFactScope -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasInputFactScope">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasInputPropertyName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasInputPropertyName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -1306,6 +1343,7 @@ static for all copies</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogInnerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1497,7 +1535,10 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GraphObjectFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ListFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
@@ -1660,7 +1701,7 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasScore -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScore">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HyperEdge_hasListFactElement"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
@@ -1962,6 +2003,15 @@ the map is serialized as json map</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasTargetChannel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTargetChannel">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -2520,6 +2570,16 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isOpenInitially -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isOpenInitially">
+        <rdfs:comment xml:lang="en">if true the iframe will be open on first load</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isPlaying -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isPlaying">
@@ -2629,6 +2689,14 @@ the map is serialized as json map</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ListFact"/>
     </owl:Class>
     
 
@@ -3081,6 +3149,14 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DialogAd -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogAd">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DialogAssignFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact">
@@ -3251,6 +3327,14 @@ generateDialog(DialogGenerator thisElement, AgentContext context -&gt; boolean)<
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogPassThrough">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DialogPayment -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
     </owl:Class>
     
 
@@ -3869,6 +3953,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#EntityFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EntityFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#GraphObjectFact"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#EntityMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EntityMessage">
@@ -4022,6 +4114,14 @@ filenodeURI length name</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GraphObjectFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GraphObjectFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
     </owl:Class>
     
 
@@ -4324,48 +4424,38 @@ filenodeURI length name</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasGraphObjectFactElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasGraphObjectFactElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#GraphObjectFact"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasListFactElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasListFactElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ListFact"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasMessagePayload -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasMessagePayload">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
         <rdfs:comment xml:lang="en">connects AIMPMessage node to all payload objects</rdfs:comment>
         <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasPredictionElement -->
-
-    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasPredictionElement">
-        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
-        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#PredictionFact"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasRecommendationElement -->
-
-    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasRecommendationElement">
-        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
-        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#SolutionFact"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement -->
-
-    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasResultElement">
-        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
-        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ResultListFact"/>
         <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
         <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
         <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
@@ -4468,6 +4558,14 @@ filenodeURI length name</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListChannelsResultsMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:comment xml:lang="en">contains list of Channels</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ListFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
     </owl:Class>
     
 
@@ -4613,7 +4711,7 @@ filenodeURI length name</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#PredictionFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PredictionFact">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ListFact"/>
     </owl:Class>
     
 
@@ -4753,6 +4851,15 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#RelationFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RelationFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ListFact"/>
+        <rdfs:comment xml:lang="en">groups entity---relationedge--&gt;entity triple</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#RelationshipProperty -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RelationshipProperty">
@@ -4789,7 +4896,7 @@ with error message</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#ResultListFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ResultListFact">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ListFact"/>
     </owl:Class>
     
 
@@ -4959,7 +5066,7 @@ with error message</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#SolutionFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SolutionFact">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ListFact"/>
     </owl:Class>
     
 
