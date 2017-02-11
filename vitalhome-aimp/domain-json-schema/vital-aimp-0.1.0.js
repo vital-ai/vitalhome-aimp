@@ -1387,7 +1387,7 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#FavoriteTweet",
-    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#TwitterMessage",
     "properties" : {
     }
   }, {
@@ -2336,7 +2336,7 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SendTweet",
-    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#TwitterMessage",
     "properties" : {
     }
   }, {
@@ -2566,6 +2566,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TrendResult",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TrueFalseAnswer",
     "parent" : "http://vital.ai/ontology/vital-aimp#Answer",
     "properties" : {
@@ -2594,8 +2599,11 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TweetReceived",
-    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#TwitterMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasCampaignURIs" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TwitterEndpoint",
@@ -2606,6 +2614,84 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasOAuthToken" : {
         "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TwitterMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#TwitterMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLongitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasMaxTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasMinTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasQueryString" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasRadius" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasRequestType" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasTweetIDs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "number"
+        }
+      },
+      "http://vital.ai/ontology/vital-aimp#isCountOnly" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#TwitterMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasIntegerValue" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLongitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasMaxTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasMinTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasRadius" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasRequestType" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasStatus" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasTweetIDs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "number"
+        }
+      },
+      "http://vital.ai/ontology/vital-aimp#isCountOnly" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -2889,6 +2975,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "calendars",
     "multipleValues" : true,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasCampaignURIs",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TweetReceived" ],
+    "shortName" : "campaignURIs",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasCardType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmbeddedCard" ],
@@ -3257,7 +3349,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasIntegerValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IntegerPropertyFact", "http://vital.ai/ontology/vital-aimp#UnsetFactMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IntegerPropertyFact", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage", "http://vital.ai/ontology/vital-aimp#UnsetFactMessage" ],
     "shortName" : "integerValue",
     "multipleValues" : false,
     "type" : "IntegerProperty"
@@ -3299,7 +3391,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "LongProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLatitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "latitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -3336,10 +3428,16 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLongitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "longitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMaxTimestamp",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
+    "shortName" : "maxTimestamp",
+    "multipleValues" : false,
+    "type" : "LongProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#Sms" ],
@@ -3352,6 +3450,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "messageSerialized",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMinTimestamp",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
+    "shortName" : "minTimestamp",
+    "multipleValues" : false,
+    "type" : "LongProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasRelationship" ],
@@ -3498,7 +3602,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasQueryString",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#MetaQLMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#MetaQLMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage" ],
     "shortName" : "queryString",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -3518,6 +3622,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasQueueName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#ErrorNode" ],
     "shortName" : "queueName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasRadius",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
+    "shortName" : "radius",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -3544,6 +3654,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "relationshipSetURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasRequestType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
+    "shortName" : "requestType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasRequestURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage" ],
@@ -3684,7 +3800,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasStatus",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogStatusMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage", "http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage", "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage", "http://vital.ai/ontology/vital-aimp#UserStatusMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogStatusMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage", "http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage", "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage", "http://vital.ai/ontology/vital-aimp#UserStatusMessage" ],
     "shortName" : "status",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -3821,6 +3937,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "TruthProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasTweetIDs",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
+    "shortName" : "tweetIDs",
+    "multipleValues" : true,
+    "type" : "LongProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasUriValue",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#URIPropertyFact" ],
     "shortName" : "uriValue",
@@ -3884,6 +4006,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isChannelRandomized",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Endpoint" ],
     "shortName" : "channelRandomized",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isCountOnly",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
+    "shortName" : "countOnly",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
