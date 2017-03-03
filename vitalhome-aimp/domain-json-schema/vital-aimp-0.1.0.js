@@ -1420,6 +1420,45 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#GeoLocationAnswer",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Answer",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasGeolocation" : {
+        "type" : "object",
+        "properties" : {
+          "longitude" : {
+            "type" : "number"
+          },
+          "latitude" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "longitude", "latitude" ],
+        "additionalProperties" : false
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#GeoLocationPropertyFact",
+    "parent" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGeolocation" : {
+        "type" : "object",
+        "properties" : {
+          "longitude" : {
+            "type" : "number"
+          },
+          "latitude" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "longitude", "latitude" ],
+        "additionalProperties" : false
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#GetFactsMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
     "properties" : {
@@ -2184,6 +2223,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasPropertyType" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionType" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
         "type" : "string"
       },
@@ -2724,6 +2766,19 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasFactScope" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasGeolocation" : {
+        "type" : "object",
+        "properties" : {
+          "longitude" : {
+            "type" : "number"
+          },
+          "latitude" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "longitude", "latitude" ],
+        "additionalProperties" : false
+      },
       "http://vital.ai/ontology/vital-aimp#hasIntegerValue" : {
         "type" : "number"
       },
@@ -2731,6 +2786,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasStringValue" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasTruthValue" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isIncludeSubclasses" : {
@@ -2892,7 +2950,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAddress",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GeoLocationPropertyFact", "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "address",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -3313,7 +3371,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGeolocation",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#GeoLocationAnswer", "http://vital.ai/ontology/vital-aimp#GeoLocationPropertyFact", "http://vital.ai/ontology/vital-aimp#UnsetFactMessage" ],
     "shortName" : "geolocation",
     "multipleValues" : false,
     "type" : "GeoLocationProperty"
@@ -3616,6 +3674,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasQuestionID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogRestartQuestion" ],
     "shortName" : "questionID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasQuestionType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "questionType",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -3938,7 +4002,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasTruthValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TruthPropertyFact" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TruthPropertyFact", "http://vital.ai/ontology/vital-aimp#UnsetFactMessage" ],
     "shortName" : "truthValue",
     "multipleValues" : false,
     "type" : "TruthProperty"

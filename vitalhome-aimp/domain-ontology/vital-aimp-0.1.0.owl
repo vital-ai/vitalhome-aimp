@@ -395,6 +395,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GeoLocationPropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
@@ -1069,8 +1070,17 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     <!-- http://vital.ai/ontology/vital-aimp#hasGeolocation -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGeolocation">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="&vital-core;geoLocation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GeoLocationAnswer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GeoLocationPropertyFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1684,6 +1694,18 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasQuestionType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQuestionType">
+        <rdfs:comment xml:lang="en">text (default)
+geolocation
+...</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasQueueName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQueueName">
@@ -2286,8 +2308,15 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasTruthValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTruthValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TruthPropertyFact"/>
         <rdfs:range rdf:resource="&vital-core;truth"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TruthPropertyFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -4209,6 +4238,22 @@ filenodeURI length name</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FormDialog">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Dialog"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GeoLocationAnswer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GeoLocationAnswer">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Answer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GeoLocationPropertyFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GeoLocationPropertyFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
     </owl:Class>
     
 
