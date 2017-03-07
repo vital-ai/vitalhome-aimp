@@ -116,6 +116,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
                 </owl:unionOf>
             </owl:Class>
@@ -3914,6 +3915,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogSession"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasEmailAttachment -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasEmailAttachment">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailAttachment"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
     </owl:Class>
     
 
