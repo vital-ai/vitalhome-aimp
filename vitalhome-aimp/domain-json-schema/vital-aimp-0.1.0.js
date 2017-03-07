@@ -1350,6 +1350,12 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#FacebookEndpoint",
     "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasGettingStartedText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGreetingText" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#FacebookIncomingMessage",
@@ -3375,6 +3381,18 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "geolocation",
     "multipleValues" : false,
     "type" : "GeoLocationProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGettingStartedText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint" ],
+    "shortName" : "gettingStartedText",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGreetingText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint" ],
+    "shortName" : "greetingText",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasId",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogButton", "http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage", "http://vital.ai/ontology/vital-aimp#DialogElement" ],
