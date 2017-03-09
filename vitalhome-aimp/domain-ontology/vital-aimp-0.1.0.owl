@@ -1027,6 +1027,7 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascript"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FactsListMessage"/>
@@ -1613,6 +1614,7 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
@@ -1839,6 +1841,15 @@ geolocation
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScore">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HyperEdge_hasListFactElement"/>
         <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasScriptBody -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScriptBody">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -2500,6 +2511,16 @@ the map is serialized as json map</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isChannelRandomized">
         <rdfs:comment xml:lang="en">with randomized channel (for anonymous case) the default bot property should be set</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isConsumeImmediately -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isConsumeImmediately">
+        <rdfs:comment xml:lang="en">whether message entering this step should be evaluated or the dialog should stop and wait for another message</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -5175,6 +5196,15 @@ with error message</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SessionEndpoint">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
         <rdfs:comment xml:lang="en">an authenticated session endpoint for direct service access</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SessionExpiredMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SessionExpiredMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">current session is expired and the ui should be refreshed / reloaded</rdfs:comment>
     </owl:Class>
     
 
