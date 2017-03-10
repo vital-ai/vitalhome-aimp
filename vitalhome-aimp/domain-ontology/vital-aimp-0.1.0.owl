@@ -1030,6 +1030,7 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascript"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FactsListMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetFactsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
@@ -1549,6 +1550,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasParameterValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasParameterValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DataScriptInput"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasPg -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPg">
@@ -1618,6 +1628,7 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GraphObjectFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ListFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
@@ -1803,11 +1814,16 @@ geolocation
         <rdfs:comment xml:lang="en">twitter request types:
 &apos;lookuptweets&apos; -&gt; tweetIDs property required
 &apos;searchtweets&apos; longitude/latitude optional
-&apos;trendingdata&apos;, longitude/latitude required</rdfs:comment>
+&apos;trendingdata&apos;, longitude/latitude required
+
+sendAIMP:
+&apos;json&apos; (default)
+&apos;fact&apos;</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage"/>
                 </owl:unionOf>
@@ -1848,8 +1864,15 @@ geolocation
     <!-- http://vital.ai/ontology/vital-aimp#hasScriptBody -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScriptBody">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataScript"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2628,6 +2651,15 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isGlobalDatascript -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGlobalDatascript">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DataScript"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isGlobalDialog -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGlobalDialog">
@@ -3248,6 +3280,22 @@ the map is serialized as json map</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
         <rdfs:comment xml:lang="en">base class for all data modification events - separate queues</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DataScript -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DataScript">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DataScriptInput -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DataScriptInput">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogPart"/>
     </owl:Class>
     
 
@@ -3888,6 +3936,26 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasDataScript -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasDataScript">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DataScript"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasDataScriptInput -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasDataScriptInput">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DataScriptInput"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasDialog -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasDialog">
@@ -4049,6 +4117,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#RelationshipSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasSelectedDataScript -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasSelectedDataScript">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DataScript"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
     </owl:Class>
     
 
