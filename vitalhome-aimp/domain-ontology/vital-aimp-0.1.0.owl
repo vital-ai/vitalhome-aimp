@@ -659,6 +659,21 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatRuleProcessingType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatRuleProcessingType">
+        <rdfs:comment xml:lang="en">availble options/types: 
+wait_for_text_and_immediately_return_the_text_in_a_fact (no processing)
+wait_for_text_and_process_it_with_all_associated_chat_rulesets
+wait_for_text_and_process_it_with_a_single_selected_ruleset
+process_input_fact_text_with_all_associated_chat_rulesets
+process_input_fact_text_with_a_single_selected_ruleset</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasChatRuleResponse -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatRuleResponse">
@@ -1177,8 +1192,15 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasInputFactScope -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasInputFactScope">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1186,8 +1208,15 @@ static for all copies</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasInputPropertyName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasInputPropertyName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1205,6 +1234,24 @@ static for all copies</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasIntent -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasIntent">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Intent"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasIntentPropertyName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasIntentPropertyName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -1527,6 +1574,25 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasOutputCardsPropertyName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOutputCardsPropertyName">
+        <rdfs:comment xml:lang="en">(list fact)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasOutputMessagePropertyName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOutputMessagePropertyName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasPage -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPage">
@@ -1556,6 +1622,15 @@ static for all copies</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasParameterValue">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DataScriptInput"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasParseString -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasParseString">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Intent"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -2134,8 +2209,15 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasStatusPropertyName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasStatusPropertyName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
-        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2904,6 +2986,15 @@ the map is serialized as json map</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSendAsAttachment -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSendAsAttachment">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ImageObject"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -4896,6 +4987,14 @@ filenodeURI length name</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#IntegerPropertyFact">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Intent -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Intent">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     
 
