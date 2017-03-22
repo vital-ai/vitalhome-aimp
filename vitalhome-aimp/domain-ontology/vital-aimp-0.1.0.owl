@@ -118,6 +118,7 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Task"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -178,8 +179,15 @@
     <!-- http://vital.ai/ontology/vital-aimp#hasChannelURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChannelURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -2401,12 +2409,30 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasTimeoutPropertyName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTimeoutPropertyName">
+        <rdfs:comment xml:lang="en">a fact that is set to true when receive aimp times out (no message received within a period)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasTimeoutSeconds -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTimeoutSeconds">
-        <rdfs:comment xml:lang="en">datascript timeout in seconds, default 10</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+        <rdfs:comment xml:lang="en">datascript timeout in seconds, default 10
+receive aimp message, no default timeout</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2531,7 +2557,7 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasUserID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasUserID">
-        <rdfs:comment xml:lang="en">userid (amazon ID or other)</rdfs:comment>
+        <rdfs:comment xml:lang="en">userid, weak key between vital:Login and vital-aimp:UserProfile</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain>
             <owl:Class>
@@ -2539,6 +2565,7 @@ the map is serialized as json map</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Task"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2609,6 +2636,15 @@ the map is serialized as json map</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#haslLastRunTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#haslLastRunTimestamp">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Task"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
     </owl:DatatypeProperty>
     
 
@@ -2993,7 +3029,8 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#isSendAsAttachment -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSendAsAttachment">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ImageObject"/>
+        <rdfs:comment xml:lang="en">a setting respected by some of the endpoints to send responses as attachments rather than inline elements</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -3013,6 +3050,15 @@ the map is serialized as json map</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSkippable">
         <rdfs:comment xml:lang="en">the question can be skipped, leaving previous value unchanged</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isTimeoutEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isTimeoutEnabled">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -5656,6 +5702,14 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Task -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Task">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ThinkingMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ThinkingMessage">
@@ -5670,6 +5724,15 @@ with error message</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TickMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:comment xml:lang="en">a ping from the agent sent at any time to a channel</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#TimeoutMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TimeoutMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">used with DialogReceiveAIMPMessage, generated on the agent to side to handle timeouts</rdfs:comment>
     </owl:Class>
     
 
