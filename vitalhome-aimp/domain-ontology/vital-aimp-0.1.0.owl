@@ -790,6 +790,24 @@ expression</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasDebugMessageAfter -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDebugMessageAfter">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasDebugMessageBefore -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDebugMessageBefore">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogAction"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasDeviceName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDeviceName">
@@ -2676,6 +2694,16 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isBroadcastOnly -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isBroadcastOnly">
+        <rdfs:comment xml:lang="en">determines if message should be sent to both bot and channel recipients or be broadcasted to channel recipients only (output)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isChannelRandomized -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isChannelRandomized">
@@ -2726,6 +2754,15 @@ receive aimp message, no default timeout</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isCreateSolutionFact">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogRecommendations"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isDebugEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDebugEnabled">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Dialog"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
