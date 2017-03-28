@@ -126,6 +126,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasAssetURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAssetURI">
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#Asset"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AssetMessage"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasBotURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBotURI">
@@ -421,6 +430,24 @@
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAmount">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PaymentConfirmation"/>
         <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAssetID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAssetID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Asset"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAssetType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAssetType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Asset"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -1151,6 +1178,16 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasHumidity -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasHumidity">
+        <rdfs:comment xml:lang="en">percents</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AssetConditionMessage"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasId -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasId">
@@ -1400,6 +1437,15 @@ static for all copies</rdfs:comment>
         <rdfs:comment xml:lang="en">sender local in ISO 8601 format with UTC offset: YYYY-MM-DDThh:mm:ss±hh:mm</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLocation">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AssetLocationMessage"/>
+        <rdfs:range rdf:resource="&vital-core;geoLocation"/>
     </owl:DatatypeProperty>
     
 
@@ -2273,6 +2319,15 @@ the map is serialized as json map</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSubpropertyName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSubpropertyName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSwLatitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSwLatitude">
@@ -2354,6 +2409,16 @@ the map is serialized as json map</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTax">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ShoppingCart"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTemperature">
+        <rdfs:comment xml:lang="en">fahrenheits</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AssetConditionMessage"/>
         <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
@@ -3092,6 +3157,15 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isSubpropertyEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSubpropertyEnabled">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isTimeoutEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isTimeoutEnabled">
@@ -3238,6 +3312,38 @@ receive aimp message, no default timeout</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Asset -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Asset">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AssetConditionMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AssetConditionMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AssetMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AssetLocationMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AssetLocationMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AssetMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AssetMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AssetMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
@@ -4098,6 +4204,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DoublePropertyFact">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAssetNode -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAssetNode">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Asset"/>
     </owl:Class>
     
 

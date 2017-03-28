@@ -201,6 +201,54 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Asset",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAssetID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAssetType" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AssetConditionMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AssetMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasHumidity" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasTemperature" : {
+        "type" : "number"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AssetLocationMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AssetMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLocation" : {
+        "type" : "object",
+        "properties" : {
+          "longitude" : {
+            "type" : "number"
+          },
+          "latitude" : {
+            "type" : "number"
+          }
+        },
+        "required" : [ "longitude", "latitude" ],
+        "additionalProperties" : false
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AssetMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAssetURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AudioObject",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
@@ -743,6 +791,12 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSubpropertyName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isSubpropertyEnabled" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -1116,6 +1170,13 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasDoubleValue" : {
         "type" : "number"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAssetNode",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Asset" ],
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasBot",
@@ -3187,6 +3248,24 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "FloatProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAssetID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Asset" ],
+    "shortName" : "assetID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAssetType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Asset" ],
+    "shortName" : "assetType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAssetURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AssetMessage" ],
+    "shortName" : "assetURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAuthSessionID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#Session" ],
     "shortName" : "authSessionID",
@@ -3632,6 +3711,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasHumidity",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AssetConditionMessage" ],
+    "shortName" : "humidity",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasId",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogButton", "http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage", "http://vital.ai/ontology/vital-aimp#DialogElement" ],
     "shortName" : "id",
@@ -3752,6 +3837,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "localTime",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLocation",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AssetLocationMessage" ],
+    "shortName" : "location",
+    "multipleValues" : false,
+    "type" : "GeoLocationProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLongDescription",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#Movie", "http://vital.ai/ontology/vital-aimp#SearchResult" ],
@@ -4197,6 +4288,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSubpropertyName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogCondition" ],
+    "shortName" : "subpropertyName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSwLatitude",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#MapObject" ],
     "shortName" : "swLatitude",
@@ -4242,6 +4339,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasTax",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ShoppingCart" ],
     "shortName" : "tax",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasTemperature",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AssetConditionMessage" ],
+    "shortName" : "temperature",
     "multipleValues" : false,
     "type" : "FloatProperty"
   }, {
@@ -4608,6 +4711,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isSkippable",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
     "shortName" : "skippable",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isSubpropertyEnabled",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogCondition" ],
+    "shortName" : "subpropertyEnabled",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
