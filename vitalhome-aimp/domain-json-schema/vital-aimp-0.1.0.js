@@ -457,6 +457,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#ChatRuleSetFile",
     "parent" : "http://vital.ai/ontology/vital#FileNode",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMd5checksum" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CheckItem",
@@ -3891,6 +3894,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "maxTimestamp",
     "multipleValues" : false,
     "type" : "LongProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMd5checksum",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ChatRuleSetFile" ],
+    "shortName" : "md5checksum",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#Sms" ],
