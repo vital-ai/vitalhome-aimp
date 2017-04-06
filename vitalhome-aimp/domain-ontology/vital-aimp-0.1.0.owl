@@ -1270,6 +1270,7 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1286,6 +1287,8 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1726,6 +1729,31 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasPersistFactOperationType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPersistFactOperationType">
+        <rdfs:comment xml:lang="en">one of:
+get_profile , optionally provide profile URI
+store_profile , store user profile referenced in dialog uri fact or current profile, optionally provide profile URI
+
+get_profile_fact , getting an individual fact (or list of facts) associated with a profile (current or URI of profile)
+
+store_profile_fact , storing an individual fact (or list of facts) associated with a profile (current or URI of profile)
+
+delete_profile , remove all profile facts (current or URI of profile) 
+
+delete_profile_fact , remove an individual fact (or list of facts) associated with a profile
+
+
+store_entity_or_relationship , storing an entity (or list of entities), or relationship (or list of relationships)
+
+delete_entity_or_relationship , delete an entity ( or list of entities), or relationships (or list of relationships)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasPg -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPg">
@@ -1767,6 +1795,16 @@ static for all copies</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasProcessorType">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasProfileURI -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasProfileURI">
+        <rdfs:comment xml:lang="en">either a literal or expression</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -2784,6 +2822,23 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isAutoLoadUserProfile -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAutoLoadUserProfile">
+        <rdfs:comment xml:lang="en">whether profiles should be autoloaded or not when it&apos;s a new account</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BuilderDesignerBot"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Dialog"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isBroadcastOnly -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isBroadcastOnly">
@@ -2868,6 +2923,15 @@ receive aimp message, no default timeout</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isCurrentProfile -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isCurrentProfile">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -3026,6 +3090,27 @@ receive aimp message, no default timeout</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGoodbyePage">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isGraphObjectsLinked -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGraphObjectsLinked">
+        <rdfs:comment xml:lang="en">determines if linked graph objects should be deleted/saved along with the fact</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GraphObjectFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ListFact"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3198,6 +3283,15 @@ receive aimp message, no default timeout</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isRemoveWholeProfile -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isRemoveWholeProfile">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
