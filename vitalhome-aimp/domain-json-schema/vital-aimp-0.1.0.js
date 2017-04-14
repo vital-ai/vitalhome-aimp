@@ -307,6 +307,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isAcceptSystemTicks" : {
         "type" : "boolean"
       },
+      "http://vital.ai/ontology/vital-aimp#isAutoLoadUserProfile" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isGlobalBot" : {
         "type" : "boolean"
       },
@@ -326,9 +329,6 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#BuilderDesignerBot",
     "parent" : "http://vital.ai/ontology/vital-aimp#Bot",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isAutoLoadUserProfile" : {
-        "type" : "boolean"
-      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#BuilderStringBot",
@@ -392,6 +392,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Channel",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isDefaultChannel" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions" : {
         "type" : "boolean"
       }
@@ -4595,7 +4598,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isAutoLoadUserProfile",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#BuilderDesignerBot", "http://vital.ai/ontology/vital-aimp#Dialog" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot", "http://vital.ai/ontology/vital-aimp#Dialog" ],
     "shortName" : "autoLoadUserProfile",
     "multipleValues" : false,
     "type" : "BooleanProperty"
@@ -4657,6 +4660,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isDefaultBot",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasChannelBot" ],
     "shortName" : "defaultBot",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isDefaultChannel",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
+    "shortName" : "defaultChannel",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

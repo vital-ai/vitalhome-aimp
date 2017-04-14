@@ -2830,7 +2830,7 @@ receive aimp message, no default timeout</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BuilderDesignerBot"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Bot"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Dialog"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2950,6 +2950,16 @@ receive aimp message, no default timeout</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDefaultBot">
         <rdfs:comment xml:lang="en">this property is set in channel-&gt;bot edges</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasChannelBot"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isDefaultChannel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDefaultChannel">
+        <rdfs:comment xml:lang="en">indicates that this channel is default, there should be at most 1 default channel per account</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
