@@ -7,6 +7,7 @@
     <!ENTITY vital-nlp "http://vital.ai/ontology/vital-nlp#" >
     <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY vital-social "http://vital.ai/ontology/vital-social#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
@@ -18,6 +19,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:vital-social="http://vital.ai/ontology/vital-social#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-aimp">
         <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">vital-aimp</vital-core:hasDefaultArtifactId>
@@ -158,7 +160,7 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCampaignURIs">
         <rdfs:comment xml:lang="en">campaigns this tweet was associated with</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TweetReceived"/>
-        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaCampaign"/>
+        <rdfs:range rdf:resource="&vital-social;SocialMediaCampaign"/>
     </owl:ObjectProperty>
     
 
@@ -418,6 +420,22 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAlexaUserID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAlexaUserID">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AlexaEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AlexaProfile"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -989,6 +1007,15 @@ expression</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEmail">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailProfile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEndDate">
@@ -1131,10 +1158,28 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFirstName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookProfile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasFunctionName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFunctionName">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogDatascript"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGender">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookProfile"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -1395,6 +1440,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLastName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookProfile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasLatitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLatitude">
@@ -1453,6 +1507,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasLocale -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLocale">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookProfile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasLocation -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLocation">
@@ -1495,6 +1558,16 @@ static for all copies</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasMasterUserID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMasterUserID">
+        <rdfs:comment xml:lang="en">tunnelling purposes, if set it is used to verify authenticated userID</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -1766,8 +1839,15 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
     <!-- http://vital.ai/ontology/vital-aimp#hasPhoneNumber -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPhoneNumber">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SmsEndpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1795,6 +1875,15 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasProcessorType">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasProfilePic -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasProfilePic">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookProfile"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -2215,8 +2304,15 @@ callDialog / switchToBot
     <!-- http://vital.ai/ontology/vital-aimp#hasSlackTeamID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackTeamID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2224,8 +2320,15 @@ callDialog / switchToBot
     <!-- http://vital.ai/ontology/vital-aimp#hasSlackUserID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackUserID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2312,6 +2415,7 @@ the map is serialized as json map</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogStatusMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
@@ -2328,8 +2432,15 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasStatusMessage -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasStatusMessage">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3306,6 +3417,27 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isRetired -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isRetired">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AlexaLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnonymousLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FacebookLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterLogin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isSendAsAttachment -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSendAsAttachment">
@@ -3362,6 +3494,30 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasFacebookID -->
+
+    <rdf:Description rdf:about="&vital-social;hasFacebookID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookProfile"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasScreenName -->
+
+    <rdf:Description rdf:about="&vital-social;hasScreenName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TwitterProfile"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasTwitterID -->
+
+    <rdf:Description rdf:about="&vital-social;hasTwitterID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TwitterProfile"/>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3413,6 +3569,14 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#APILogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#APILogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ActivateMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ActivateMessage">
@@ -3445,10 +3609,35 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AlexaLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AlexaLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AlexaProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AlexaProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AmazonEchoAccount -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AmazonEchoAccount">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AnonymousLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnonymousLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+        <rdfs:comment xml:lang="en">a node for anonymous login nodes created for anonymous profiles</rdfs:comment>
     </owl:Class>
     
 
@@ -3775,6 +3964,15 @@ receive aimp message, no default timeout</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ContextChangedMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:comment xml:lang="en">indicates that the enclosing page context has changed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#CreateEndpointProfileMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CreateEndpointProfileMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfileMessage"/>
+        <rdfs:comment xml:lang="en">Creates/Updates given endpoint profiles</rdfs:comment>
     </owl:Class>
     
 
@@ -4386,6 +4584,36 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAPILogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAPILogin">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#APILogin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAlexaLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAlexaLogin">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AlexaLogin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAnonymousLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAnonymousLogin">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AnonymousLogin"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAssetNode -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAssetNode">
@@ -4571,12 +4799,32 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasEmailLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasEmailLogin">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailLogin"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasEndpoint -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasEndpoint">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasEndpointProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasEndpointProfile">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
     </owl:Class>
     
 
@@ -4607,7 +4855,17 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AmazonEchoAccount"/>
-        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="&vital-social;SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasFacebookLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasFacebookLogin">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookLogin"/>
     </owl:Class>
     
 
@@ -4628,8 +4886,8 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasProfile">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
-        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#UserProfile"/>
-        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="&vital-social;SocialMediaAccount"/>
     </owl:Class>
     
 
@@ -4694,6 +4952,36 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasSlackLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasSlackLogin">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackLogin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasSmsLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasSmsLogin">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#SmsLogin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasTwitterLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasTwitterLogin">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#TwitterLogin"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasUserAvatar -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasUserAvatar">
@@ -4720,10 +5008,26 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#EmailLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmailLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#EmailMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#EmailProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EmailProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
     </owl:Class>
     
 
@@ -4773,6 +5077,31 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Endpoint">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
         <rdfs:comment xml:lang="en">base class for all endpoints</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#EndpointProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfile">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#EndpointProfileMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfileMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfileMessage"/>
+        <rdfs:comment xml:lang="en">response to List/Create/Remove endpoint profile message</rdfs:comment>
     </owl:Class>
     
 
@@ -4850,6 +5179,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#FacebookLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FacebookLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#FacebookMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FacebookMessage">
@@ -4870,6 +5207,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FacebookPost">
         <rdfs:subClassOf rdf:resource="&vital-nlp;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#FacebookProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FacebookProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
     </owl:Class>
     
 
@@ -5434,6 +5779,15 @@ filenodeURI length name</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ListEndpointProfilesMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListEndpointProfilesMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfileMessage"/>
+        <rdfs:comment xml:lang="en">requests to list endpoint profiles</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ListFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListFact">
@@ -5764,6 +6118,15 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#RemoveEndpointProfileMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RemoveEndpointProfileMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfileMessage"/>
+        <rdfs:comment xml:lang="en">Removes endpoint profiles specified in payload</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage">
@@ -5912,6 +6275,14 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SlackLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SlackLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#SlackMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage">
@@ -5928,6 +6299,14 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SlackProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Sms -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Sms">
@@ -5940,6 +6319,22 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SmsEndpoint">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SmsLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SmsLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SmsProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SmsProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
     </owl:Class>
     
 
@@ -6124,10 +6519,26 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#TwitterLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TwitterLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#TwitterMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TwitterMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#TwitterProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TwitterProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
     </owl:Class>
     
 

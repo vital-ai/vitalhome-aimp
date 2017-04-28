@@ -58,6 +58,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasLocalTime" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasMasterUserID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasQueueName" : {
         "type" : "string"
       },
@@ -106,6 +109,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#APILogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ActivateMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
     "properties" : {
@@ -124,6 +132,25 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AlexaEndpoint",
     "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAlexaUserID" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AlexaLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AlexaProfile",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAlexaUserID" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AmazonEchoAccount",
@@ -131,6 +158,14 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasEchoUserID" : {
         "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AnonymousLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -536,6 +571,11 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ContextChangedMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CreateEndpointProfileMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfileMessage",
     "properties" : {
     }
   }, {
@@ -1241,6 +1281,27 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAPILogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#APILogin" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAlexaLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AlexaLogin" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAnonymousLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AnonymousLogin" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAssetNode",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
@@ -1379,10 +1440,24 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasEmailLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#EmailLogin" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasEndpoint",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Endpoint" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasEndpointProfile",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Login" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#EndpointProfile" ],
     "properties" : {
     }
   }, {
@@ -1407,6 +1482,13 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasFacebookLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#FacebookLogin" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasIFrameTemplate",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AdUnitEndpoint", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
@@ -1417,7 +1499,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasProfile",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Login", "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#UserProfile" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#BaseProfile" ],
     "properties" : {
     }
   }, {
@@ -1472,6 +1554,27 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasSlackLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#SlackLogin" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasSmsLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#SmsLogin" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasTwitterLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#TwitterLogin" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasUserAvatar",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#BaseProfile" ],
@@ -1487,6 +1590,14 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#EmailEndpoint",
     "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EmailLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+        "type" : "boolean"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#EmailMessage",
@@ -1520,6 +1631,14 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSubject" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EmailProfile",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasEmail" : {
         "type" : "string"
       }
     }
@@ -1578,6 +1697,27 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isDefaultEndpoint" : {
         "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EndpointProfileMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfileMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasStatus" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasStatusMessage" : {
+        "type" : "string"
       }
     }
   }, {
@@ -1665,6 +1805,14 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#FacebookLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#FacebookMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
@@ -1688,6 +1836,29 @@ var vital_aimp_0_1_0_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#hasThumbnailImageURL" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#FacebookProfile",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasFirstName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGender" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLastName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLocale" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasProfilePic" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasFacebookID" : {
         "type" : "string"
       }
     }
@@ -2235,6 +2406,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ListEndpointProfilesMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfileMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ListFact",
     "parent" : "http://vital.ai/ontology/vital#VITAL_Fact",
     "properties" : {
@@ -2654,6 +2830,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#RemoveEndpointProfileMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfileMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
@@ -2801,6 +2982,14 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SlackLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SlackMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
@@ -2821,6 +3010,17 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#SlackOutgoingMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#SlackMessage",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SlackProfile",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackUserID" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Sms",
@@ -2848,6 +3048,22 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SmsEndpoint",
     "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasPhoneNumber" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SmsLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SmsProfile",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasPhoneNumber" : {
         "type" : "string"
@@ -3027,9 +3243,28 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TwitterLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TwitterMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TwitterProfile",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
+    "properties" : {
+      "http://vital.ai/ontology/vital-social#hasScreenName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasTwitterID" : {
+        "type" : "number"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage",
@@ -3314,6 +3549,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAddress",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GeoLocationPropertyFact", "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "address",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAlexaUserID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaEndpoint", "http://vital.ai/ontology/vital-aimp#AlexaProfile" ],
+    "shortName" : "alexaUserID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -3672,6 +3913,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasEmail",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailProfile" ],
+    "shortName" : "email",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasEndDate",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CalendarEntry", "http://vital.ai/ontology/vital-aimp#CalendarObject" ],
     "shortName" : "endDate",
@@ -3762,9 +4009,21 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasFirstName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookProfile" ],
+    "shortName" : "firstName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasFunctionName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogDatascript" ],
     "shortName" : "functionName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGender",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookProfile" ],
+    "shortName" : "gender",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -3888,6 +4147,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "LongProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLastName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookProfile" ],
+    "shortName" : "lastName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLatitude",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "latitude",
@@ -3919,6 +4184,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLocale",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookProfile" ],
+    "shortName" : "locale",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLocation",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AssetLocationMessage" ],
     "shortName" : "location",
@@ -3936,6 +4207,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "longitude",
     "multipleValues" : false,
     "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMasterUserID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "masterUserID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMaxTimestamp",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
@@ -4082,7 +4359,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPhoneNumber",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SmsEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SmsEndpoint", "http://vital.ai/ontology/vital-aimp#SmsProfile" ],
     "shortName" : "phoneNumber",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -4102,6 +4379,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasProcessorType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ProcessorMessage" ],
     "shortName" : "processorType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasProfilePic",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookProfile" ],
+    "shortName" : "profilePic",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -4298,13 +4581,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackTeamID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackProfile" ],
     "shortName" : "slackTeamID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackUserID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackProfile" ],
     "shortName" : "slackUserID",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -4358,13 +4641,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasStatus",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogStatusMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage", "http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage", "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage", "http://vital.ai/ontology/vital-aimp#UserStatusMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogStatusMessage", "http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage", "http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage", "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage", "http://vital.ai/ontology/vital-aimp#UserStatusMessage" ],
     "shortName" : "status",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasStatusMessage",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage", "http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage" ],
     "shortName" : "statusMessage",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -4842,6 +5125,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "replyTo",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isRetired",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaLogin", "http://vital.ai/ontology/vital-aimp#AnonymousLogin", "http://vital.ai/ontology/vital-aimp#EmailLogin", "http://vital.ai/ontology/vital-aimp#FacebookLogin", "http://vital.ai/ontology/vital-aimp#SlackLogin", "http://vital.ai/ontology/vital-aimp#SmsLogin", "http://vital.ai/ontology/vital-aimp#TwitterLogin" ],
+    "shortName" : "retired",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isSendAsAttachment",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Card" ],
