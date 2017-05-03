@@ -1273,6 +1273,17 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DirectTextMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#UserTextMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasSender" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasDirectMessageID" : {
+        "type" : "number"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DoublePropertyFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
     "properties" : {
@@ -1696,6 +1707,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isDefaultEndpoint" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isTunnelingEnabled" : {
         "type" : "boolean"
       }
     }
@@ -2154,6 +2168,21 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasRecipient" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isDirectMessageResponse" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isTweetResponse" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-social#hasInReplyToScreenName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasInReplyToTweetID" : {
+        "type" : "number"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyMovieDetailsMessage",
@@ -2599,6 +2628,14 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasPanelName" : {
         "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#PauseMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasDurationSeconds" : {
+        "type" : "number"
       }
     }
   }, {
@@ -3229,6 +3266,17 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasCampaignURIs" : {
         "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TweetTextMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#UserTextMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasSender" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasTweetID" : {
+        "type" : "number"
       }
     }
   }, {
@@ -3902,7 +3950,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDurationSeconds",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AudioObject", "http://vital.ai/ontology/vital-aimp#Movie", "http://vital.ai/ontology/vital-aimp#VideoObject" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AudioObject", "http://vital.ai/ontology/vital-aimp#Movie", "http://vital.ai/ontology/vital-aimp#PauseMessage", "http://vital.ai/ontology/vital-aimp#VideoObject" ],
     "shortName" : "durationSeconds",
     "multipleValues" : false,
     "type" : "FloatProperty"
@@ -4467,7 +4515,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasRecipient",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#PaymentConfirmation", "http://vital.ai/ontology/vital-aimp#Sms" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage", "http://vital.ai/ontology/vital-aimp#PaymentConfirmation", "http://vital.ai/ontology/vital-aimp#Sms" ],
     "shortName" : "recipient",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -4539,7 +4587,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSender",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#Sms" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DirectTextMessage", "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#Sms", "http://vital.ai/ontology/vital-aimp#TweetTextMessage" ],
     "shortName" : "sender",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -4964,6 +5012,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isDirectMessageResponse",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
+    "shortName" : "directMessageResponse",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
     "shortName" : "dontBroadcastToAllSessions",
@@ -5159,6 +5213,18 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isTimeoutEnabled",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage" ],
     "shortName" : "timeoutEnabled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isTunnelingEnabled",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Endpoint" ],
+    "shortName" : "tunnelingEnabled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isTweetResponse",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
+    "shortName" : "tweetResponse",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

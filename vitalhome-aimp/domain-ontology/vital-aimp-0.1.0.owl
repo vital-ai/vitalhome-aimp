@@ -983,6 +983,7 @@ expression</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Movie"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PauseMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2077,6 +2078,7 @@ geolocation
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PaymentConfirmation"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
                 </owl:unionOf>
@@ -2210,8 +2212,10 @@ callDialog / switchToBot
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DirectTextMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TweetTextMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3096,6 +3100,15 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isDirectMessageResponse -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDirectMessageResponse">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions">
@@ -3485,12 +3498,38 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isTunnelingEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isTunnelingEnabled">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isTweetResponse -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isTweetResponse">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isVitalRulesEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isVitalRulesEnabled">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasDirectMessageID -->
+
+    <rdf:Description rdf:about="&vital-social;hasDirectMessageID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DirectTextMessage"/>
+    </rdf:Description>
     
 
 
@@ -3502,10 +3541,34 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasInReplyToScreenName -->
+
+    <rdf:Description rdf:about="&vital-social;hasInReplyToScreenName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasInReplyToTweetID -->
+
+    <rdf:Description rdf:about="&vital-social;hasInReplyToTweetID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </rdf:Description>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasScreenName -->
 
     <rdf:Description rdf:about="&vital-social;hasScreenName">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TwitterProfile"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasTweetID -->
+
+    <rdf:Description rdf:about="&vital-social;hasTweetID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TweetTextMessage"/>
     </rdf:Description>
     
 
@@ -4572,6 +4635,14 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DirectMessageReceived">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DirectTextMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DirectTextMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserTextMessage"/>
     </owl:Class>
     
 
@@ -5918,6 +5989,14 @@ filenodeURI length name</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#PauseMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PauseMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#PaymentConfirmation -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PaymentConfirmation">
@@ -6507,6 +6586,14 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TweetReceived">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#TwitterMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#TweetTextMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TweetTextMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserTextMessage"/>
     </owl:Class>
     
 
