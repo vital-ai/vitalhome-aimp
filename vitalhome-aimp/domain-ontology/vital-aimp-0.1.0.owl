@@ -419,6 +419,7 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
                 </owl:unionOf>
             </owl:Class>
@@ -484,6 +485,16 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAvatarURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAvatarURL">
+        <rdfs:comment xml:lang="en">optional property to override avatar image</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PaymentConfirmation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -918,6 +929,7 @@ expression</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -935,6 +947,7 @@ expression</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -951,6 +964,7 @@ expression</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1275,6 +1289,7 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Movie"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1460,6 +1475,7 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
@@ -1553,6 +1569,7 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
@@ -1666,6 +1683,7 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1682,6 +1700,7 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1984,6 +2003,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2197,6 +2217,7 @@ callDialog / switchToBot
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResultsList"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2280,6 +2301,7 @@ callDialog / switchToBot
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Movie"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProgressItem"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2508,6 +2530,7 @@ the map is serialized as json map</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2524,6 +2547,7 @@ the map is serialized as json map</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2662,6 +2686,7 @@ the map is serialized as json map</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Movie"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2723,6 +2748,7 @@ receive aimp message, no default timeout</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Movie"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PaymentConfirmation"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2805,8 +2831,10 @@ receive aimp message, no default timeout</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PaymentConfirmation"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SwitchEnclosingPageToURL"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2894,6 +2922,7 @@ receive aimp message, no default timeout</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MapObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3095,6 +3124,16 @@ receive aimp message, no default timeout</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDefaultEndpoint">
         <rdfs:comment xml:lang="en">for randomized channel with multiple endpoints this property should be set in exactly one endpoint so that bot config order is correct (default bot)</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isDetailsEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDetailsEnabled">
+        <rdfs:comment xml:lang="en">determines if thing card details link should be visible or not</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ThingCard"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -3516,6 +3555,16 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isUrlAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isUrlAvailable">
+        <rdfs:comment xml:lang="en">if url (link/button) should be displayed</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PaymentConfirmation"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isVitalRulesEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isVitalRulesEnabled">
@@ -3888,6 +3937,15 @@ receive aimp message, no default timeout</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Channel">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ChannelViewSwitchedMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ChannelViewSwitchedMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">sent when user switches to a new channel view</rdfs:comment>
     </owl:Class>
     
 
@@ -5622,6 +5680,14 @@ filenodeURI length name</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyThingMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyThingMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HaleyTranslationMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyTranslationMessage">
@@ -6164,6 +6230,14 @@ with error message</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#RefreshChannelCommand -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RefreshChannelCommand">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#RelationFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RelationFact">
@@ -6511,6 +6585,15 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Task">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ThingCard -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+        <rdfs:comment xml:lang="en">special object that may have image, map, and arbitrary properties using facts</rdfs:comment>
     </owl:Class>
     
 
