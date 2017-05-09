@@ -427,12 +427,26 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Channel",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasOrderInUI" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasOrientationInUI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#isDefaultChannel" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isDisplayInUI" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions" : {
         "type" : "boolean"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ChannelViewLeftMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ChannelViewSwitchedMessage",
@@ -4438,6 +4452,18 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasOrderInUI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
+    "shortName" : "orderInUI",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasOrientationInUI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
+    "shortName" : "orientationInUI",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasOutputCardsPropertyName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogChatRules" ],
     "shortName" : "outputCardsPropertyName",
@@ -5113,6 +5139,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isDirectMessageResponse",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
     "shortName" : "directMessageResponse",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isDisplayInUI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
+    "shortName" : "displayInUI",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

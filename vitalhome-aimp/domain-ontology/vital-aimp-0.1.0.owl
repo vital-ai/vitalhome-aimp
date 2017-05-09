@@ -1760,6 +1760,26 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasOrderInUI -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOrderInUI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasOrientationInUI -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOrientationInUI">
+        <rdfs:comment xml:lang="en">bottom-up
+top-down</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasOutputCardsPropertyName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOutputCardsPropertyName">
@@ -3148,6 +3168,15 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isDisplayInUI -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDisplayInUI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions">
@@ -3937,6 +3966,14 @@ receive aimp message, no default timeout</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Channel">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ChannelViewLeftMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ChannelViewLeftMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
