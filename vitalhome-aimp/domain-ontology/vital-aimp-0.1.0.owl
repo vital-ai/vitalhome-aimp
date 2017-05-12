@@ -1847,6 +1847,9 @@ top-down</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPersistFactOperationType">
         <rdfs:comment xml:lang="en">one of:
 get_profile , optionally provide profile URI
+
+unload_profile , optionally provide profile URI - unloads profile from the channel on demand, opposite to get_profile / get_profile_fact
+
 store_profile , store user profile referenced in dialog uri fact or current profile, optionally provide profile URI
 
 get_profile_fact , getting an individual fact (or list of facts) associated with a profile (current or URI of profile)
@@ -2121,6 +2124,7 @@ geolocation
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PaymentConfirmation"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsTextMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2256,6 +2260,7 @@ callDialog / switchToBot
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DirectTextMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsTextMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TweetTextMessage"/>
                 </owl:unionOf>
             </owl:Class>
@@ -3373,8 +3378,15 @@ receive aimp message, no default timeout</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#isMms -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isMms">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Sms"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsTextMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3543,6 +3555,15 @@ receive aimp message, no default timeout</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSkippable">
         <rdfs:comment xml:lang="en">the question can be skipped, leaving previous value unchanged</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSmsResponse -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSmsResponse">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -6533,6 +6554,14 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SmsReceived">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SmsTextMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SmsTextMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserTextMessage"/>
     </owl:Class>
     
 
