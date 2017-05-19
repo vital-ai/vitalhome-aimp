@@ -2337,8 +2337,15 @@ callDialog / switchToBot
     <!-- http://vital.ai/ontology/vital-aimp#hasSlackChannelID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackChannelID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2346,7 +2353,41 @@ callDialog / switchToBot
     <!-- http://vital.ai/ontology/vital-aimp#hasSlackEventType -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackEventType">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackRecipientChannelID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackRecipientChannelID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackRecipientTeamID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackRecipientTeamID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -2361,6 +2402,7 @@ callDialog / switchToBot
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2377,6 +2419,7 @@ callDialog / switchToBot
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3577,6 +3620,15 @@ receive aimp message, no default timeout</rdfs:comment>
         <rdfs:comment xml:lang="en">the question can be skipped, leaving previous value unchanged</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSlackResponse -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSlackResponse">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -6535,6 +6587,14 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SlackTextMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserTextMessage"/>
     </owl:Class>
     
 
