@@ -2473,6 +2473,7 @@ the map is serialized as json map</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserStatusMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VirtualLoginResponseMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2489,6 +2490,7 @@ the map is serialized as json map</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VirtualLoginResponseMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2987,6 +2989,25 @@ receive aimp message, no default timeout</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isAuthLoginProfile -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAuthLoginProfile">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isAuthLoginTunnel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAuthLoginTunnel">
+        <rdfs:comment xml:lang="en">used with masterUserID for a non-virtual login case</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -6929,6 +6950,26 @@ with error message</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#VirtualLoginRequestMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#VirtualLoginRequestMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">asks if given VirtualLogin is mapped to some Auth Login
+the body shoud contain an EndpointProfile subclass with proper unique properties</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#VirtualLoginResponseMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#VirtualLoginResponseMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">response to VirtualLoginRequestMessage
+the payload contains Login object if an auth login exists or empty</rdfs:comment>
     </owl:Class>
     
 
