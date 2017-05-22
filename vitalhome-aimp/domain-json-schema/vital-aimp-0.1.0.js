@@ -1698,6 +1698,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasLink" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasMenu" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
       }
@@ -1835,6 +1838,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasGreetingText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasPersistedMenuJSON" : {
         "type" : "string"
       }
     }
@@ -2123,6 +2129,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyImageGalleryMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyImageMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
     "properties" : {
@@ -2392,6 +2403,14 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ImageGallery",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Card",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasShortDescription" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ImageObject",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
@@ -2550,6 +2569,17 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#MemoryFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#StringPropertyFact",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#MenuClickedMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMenu" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasMenuURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#MetaQLMessage",
@@ -4448,6 +4478,19 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMenu",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmbeddedCard", "http://vital.ai/ontology/vital-aimp#MenuClickedMessage" ],
+    "shortName" : "menu",
+    "multipleValues" : false,
+    "type" : "StringProperty",
+    "parent" : "http://vital.ai/ontology/vital-aimp#hasLink"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMenuURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#MenuClickedMessage" ],
+    "shortName" : "menuURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#Sms" ],
     "shortName" : "messageID",
@@ -4583,6 +4626,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPersistFactOperationType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogPersistFact" ],
     "shortName" : "persistFactOperationType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasPersistedMenuJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint" ],
+    "shortName" : "persistedMenuJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -4797,7 +4846,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "FloatProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasShortDescription",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ArticleObject", "http://vital.ai/ontology/vital-aimp#CalendarEntry", "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#Movie", "http://vital.ai/ontology/vital-aimp#ProgressItem", "http://vital.ai/ontology/vital-aimp#SearchResult", "http://vital.ai/ontology/vital-aimp#ThingCard" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ArticleObject", "http://vital.ai/ontology/vital-aimp#CalendarEntry", "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#ImageGallery", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#Movie", "http://vital.ai/ontology/vital-aimp#ProgressItem", "http://vital.ai/ontology/vital-aimp#SearchResult", "http://vital.ai/ontology/vital-aimp#ThingCard" ],
     "shortName" : "shortDescription",
     "multipleValues" : false,
     "type" : "StringProperty"
