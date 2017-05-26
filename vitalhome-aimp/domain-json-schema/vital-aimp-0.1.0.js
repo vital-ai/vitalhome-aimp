@@ -642,6 +642,14 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#DateTimePropertyFact",
+    "parent" : "http://vital.ai/ontology/vital-aimp#PropertyFact",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasDateValue" : {
+        "type" : "number"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DeactiveMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
     "properties" : {
@@ -1834,6 +1842,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#FacebookEndpoint",
     "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasEntryText" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasGettingStartedText" : {
         "type" : "string"
       },
@@ -4075,6 +4086,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "DateProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasDateValue",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DateTimePropertyFact" ],
+    "shortName" : "dateValue",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDebugMessageAfter",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogAction" ],
     "shortName" : "debugMessageAfter",
@@ -4200,6 +4217,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "entitySetURI",
     "multipleValues" : true,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasEntryText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint" ],
+    "shortName" : "entryText",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasErrorMessagePropertyName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogDatascriptAction" ],

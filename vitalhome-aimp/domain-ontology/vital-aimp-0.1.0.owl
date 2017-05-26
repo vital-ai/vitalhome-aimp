@@ -855,6 +855,15 @@ expression</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasDateValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDateValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DateTimePropertyFact"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasDebugMessageAfter -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDebugMessageAfter">
@@ -1064,6 +1073,16 @@ expression</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEntityPropertyType">
         <rdfs:comment xml:lang="en">boolean, date, integer, long, float, double, string, geolocation, truth, uri</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EntityProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasEntryText -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEntryText">
+        <rdfs:comment xml:lang="en">if set, sets the entryText channel fact when get started button is clicked</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -4297,6 +4316,14 @@ receive aimp message, no default timeout</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DataScriptInput">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#DialogPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DateTimePropertyFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DateTimePropertyFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
     </owl:Class>
     
 
