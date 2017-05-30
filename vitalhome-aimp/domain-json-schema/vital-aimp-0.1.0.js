@@ -199,6 +199,18 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSlackChannelID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackEventType" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackUserID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#isAnswerSkipped" : {
         "type" : "boolean"
       },
@@ -210,6 +222,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isQuestionClosed" : {
         "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isSlackResponse" : {
+        "type" : "string"
       }
     }
   }, {
@@ -443,6 +458,12 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isHaleyMessageTextHidden" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isTextEntryHidden" : {
         "type" : "boolean"
       }
     }
@@ -2472,6 +2493,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#IntentMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#InteractionModeMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
@@ -2734,6 +2760,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasAvatarURL" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasCurrencySymbol" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRecipient" : {
         "type" : "string"
       },
@@ -2742,6 +2771,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isCurrencyISymbolnFrontOf" : {
+        "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isUrlAvailable" : {
         "type" : "boolean"
@@ -2893,6 +2925,18 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPreviousAnswer" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackRecipientChannelID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackRecipientTeamID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isSlackResponse" : {
         "type" : "string"
       }
     }
@@ -4080,6 +4124,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasCurrencySymbol",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#PaymentConfirmation" ],
+    "shortName" : "currencySymbol",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDateSent",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Sms" ],
     "shortName" : "dateSent",
@@ -4875,43 +4925,43 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackChannelID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
     "shortName" : "slackChannelID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackEventType",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
     "shortName" : "slackEventType",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackRecipientChannelID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "slackRecipientChannelID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackRecipientTeamID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "slackRecipientTeamID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "slackRecipientUserID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackTeamID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackProfile", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackProfile", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
     "shortName" : "slackTeamID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackUserID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackProfile", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackProfile", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
     "shortName" : "slackUserID",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -5258,6 +5308,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isCurrencyISymbolnFrontOf",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#PaymentConfirmation" ],
+    "shortName" : "currencyISymbolnFrontOf",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isCurrentChannelTarget",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage", "http://vital.ai/ontology/vital-aimp#DialogTextMessage" ],
     "shortName" : "currentChannelTarget",
@@ -5390,6 +5446,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isHaleyMessageTextHidden",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
+    "shortName" : "haleyMessageTextHidden",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isHelpRequested",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage", "http://vital.ai/ontology/vital-aimp#UserDialogAppMessage" ],
     "shortName" : "helpRequested",
@@ -5505,7 +5567,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isSlackResponse",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#HaleyMessage", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "slackResponse",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -5519,6 +5581,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isSubpropertyEnabled",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogCondition" ],
     "shortName" : "subpropertyEnabled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isTextEntryHidden",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
+    "shortName" : "textEntryHidden",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
