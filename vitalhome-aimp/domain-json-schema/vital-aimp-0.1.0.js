@@ -2496,6 +2496,12 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#IntentMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#CommandMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasIntent" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#InteractionModeMessage",
@@ -4425,7 +4431,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasIntent",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Intent" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Intent", "http://vital.ai/ontology/vital-aimp#IntentMessage" ],
     "shortName" : "intent",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -4769,7 +4775,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPropertyValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogAssignFact", "http://vital.ai/ontology/vital-aimp#DialogCondition", "http://vital.ai/ontology/vital-aimp#PropertyFact" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogAssignFact", "http://vital.ai/ontology/vital-aimp#DialogCondition", "http://vital.ai/ontology/vital-aimp#IntentMessage", "http://vital.ai/ontology/vital-aimp#PropertyFact" ],
     "shortName" : "propertyValue",
     "multipleValues" : false,
     "type" : "StringProperty"
