@@ -3356,6 +3356,16 @@ receive aimp message, no default timeout</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isDistribute -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDistribute">
+        <rdfs:comment xml:lang="en">ditribute=true means user is online</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HeartbeatMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions">
@@ -3747,7 +3757,7 @@ receive aimp message, no default timeout</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#isSlackResponse -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSlackResponse">
-        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6009,6 +6019,14 @@ filenodeURI length name</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HeartbeatMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HeartbeatMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 

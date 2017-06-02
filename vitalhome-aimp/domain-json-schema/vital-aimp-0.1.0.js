@@ -224,7 +224,7 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isSlackResponse" : {
-        "type" : "string"
+        "type" : "boolean"
       }
     }
   }, {
@@ -2252,7 +2252,7 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isSlackResponse" : {
-        "type" : "string"
+        "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isSmsResponse" : {
         "type" : "boolean"
@@ -2366,6 +2366,14 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasWeatherJSONResponse" : {
         "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HeartbeatMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isDistribute" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -2943,7 +2951,7 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isSlackResponse" : {
-        "type" : "string"
+        "type" : "boolean"
       }
     }
   }, {
@@ -5380,6 +5388,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isDistribute",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HeartbeatMessage" ],
+    "shortName" : "distribute",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
     "shortName" : "dontBroadcastToAllSessions",
@@ -5576,7 +5590,7 @@ var vital_aimp_0_1_0_schema = {
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#HaleyMessage", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "slackResponse",
     "multipleValues" : false,
-    "type" : "StringProperty"
+    "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isSmsResponse",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
