@@ -5297,6 +5297,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasLoginChannelBot -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasLoginChannelBot">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasProfile -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasProfile">
