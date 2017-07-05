@@ -1173,6 +1173,15 @@ eval</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasEventType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEventType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#IFrameEventMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasExpression -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasExpression">
@@ -2152,6 +2161,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEventMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IntentMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QueryCriterion"/>
@@ -6339,6 +6349,15 @@ filenodeURI length name</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEndpoint">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#IFrameEventMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEventMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">sent by the iframe to notify agent of some iframe event like url changed, i iframe opened / closed</rdfs:comment>
     </owl:Class>
     
 
