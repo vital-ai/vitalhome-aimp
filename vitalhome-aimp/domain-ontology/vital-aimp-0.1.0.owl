@@ -776,6 +776,24 @@ process_input_fact_text_with_a_single_selected_ruleset</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasChoiceListSource -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChoiceListSource">
+        <rdfs:comment xml:lang="en">&apos;list&apos; (default)
+&apos;fact&apos;</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasChoiceValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChoiceValue">
@@ -799,8 +817,15 @@ history (default)</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasColor -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasColor">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Device"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Device"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1344,8 +1369,15 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGreetingText">
         <rdfs:comment xml:lang="en">set via curl, appears in the getting started page</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1369,6 +1401,7 @@ static for all copies</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Button"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButton"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogElement"/>
@@ -1435,6 +1468,8 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1453,6 +1488,8 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3165,6 +3202,7 @@ query timeout in seconds, default 10</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Button"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmbeddedCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EnclosingPageURLButtonClickedMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
@@ -3572,6 +3610,15 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isGetStartedButtonEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGetStartedButtonEnabled">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isGlobalBot -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isGlobalBot">
@@ -3878,6 +3925,22 @@ query timeout in seconds, default 10</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isRemoveWholeProfile">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isRenderQuickReplies -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isRenderQuickReplies">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -4346,6 +4409,14 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BuilderStringBot">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Button -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Button">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     
 
