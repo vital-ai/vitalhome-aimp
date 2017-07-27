@@ -2432,6 +2432,8 @@ geolocation
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PaymentConfirmation"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
@@ -2594,11 +2596,29 @@ question:
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DirectTextMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Sms"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsTextMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TweetTextMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSenderOrRecipient -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSenderOrRecipient">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
