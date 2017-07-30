@@ -5,6 +5,8 @@ if(typeof(VITAL_JSON_SCHEMAS) == 'undefined') {
 var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
+  "version" : "0.1.0",
+  "domainOWLHash" : "888fd10f6b8a148dd7193aa1505fd00d",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
