@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "888fd10f6b8a148dd7193aa1505fd00d",
+  "domainOWLHash" : "af6dfbe2f89f52b42551c13036f0e932",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -1299,6 +1299,12 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogRow",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogPart",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasComments" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isCommentedOut" : {
+        "type" : "boolean"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage",
@@ -1351,6 +1357,12 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogStep",
     "parent" : "http://vital.ai/ontology/vital-aimp#DialogAction",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasComments" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isCommentedOut" : {
+        "type" : "boolean"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogSubroutine",
@@ -4473,6 +4485,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasComments",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogRow", "http://vital.ai/ontology/vital-aimp#DialogStep" ],
+    "shortName" : "comments",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasCommentsCount",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookPost" ],
     "shortName" : "commentsCount",
@@ -5762,6 +5780,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isChildChannel",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
     "shortName" : "childChannel",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isCommentedOut",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogRow", "http://vital.ai/ontology/vital-aimp#DialogStep" ],
+    "shortName" : "commentedOut",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

@@ -881,6 +881,22 @@ history (default)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasComments -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasComments">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRow"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogStep"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasCommentsCount -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCommentsCount">
@@ -3557,6 +3573,23 @@ query timeout in seconds, default 10</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isChildChannel">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isCommentedOut -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isCommentedOut">
+        <rdfs:comment xml:lang="en">when commented out the entire row is skipped when running a dialog</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRow"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogStep"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
