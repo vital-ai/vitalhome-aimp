@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "af6dfbe2f89f52b42551c13036f0e932",
+  "domainOWLHash" : "de56125f4a5eb63d8b2eea7ff45b14a7",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -458,6 +458,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Channel",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasBotURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasOrderInUI" : {
         "type" : "number"
       },
@@ -2627,6 +2630,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasGreetingText" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isOpenInitially" : {
         "type" : "boolean"
       }
@@ -4287,7 +4293,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasBotURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#Channel" ],
     "shortName" : "botURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -5828,6 +5834,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isCurrentProfile",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogPersistFact" ],
     "shortName" : "currentProfile",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "shortName" : "customerServiceEnabled",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

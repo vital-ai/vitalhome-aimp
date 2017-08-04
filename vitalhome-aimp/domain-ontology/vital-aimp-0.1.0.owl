@@ -140,8 +140,15 @@
     <!-- http://vital.ai/ontology/vital-aimp#hasBotURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBotURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Channel"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -3669,6 +3676,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isCurrentProfile">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
