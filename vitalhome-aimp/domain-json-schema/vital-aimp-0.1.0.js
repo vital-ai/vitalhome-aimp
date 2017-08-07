@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "de56125f4a5eb63d8b2eea7ff45b14a7",
+  "domainOWLHash" : "9b80ac7f176a33dede8a823d416fdf89",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -322,7 +322,19 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#isAutoPlay" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isDownloadEnabled" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isPlaying" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isProgressBarEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isSynchronize" : {
         "type" : "boolean"
       }
     }
@@ -4155,7 +4167,19 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasUrl" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#isAutoPlay" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isDownloadEnabled" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isPlaying" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isProgressBarEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isSynchronize" : {
         "type" : "boolean"
       }
     }
@@ -5771,6 +5795,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isAutoPlay",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AudioObject", "http://vital.ai/ontology/vital-aimp#VideoObject" ],
+    "shortName" : "autoPlay",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isBroadcastOnly",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage", "http://vital.ai/ontology/vital-aimp#DialogTextMessage" ],
     "shortName" : "broadcastOnly",
@@ -5900,6 +5930,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
     "shortName" : "dontBroadcastToAllSessions",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isDownloadEnabled",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AudioObject", "http://vital.ai/ontology/vital-aimp#VideoObject" ],
+    "shortName" : "downloadEnabled",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
@@ -6065,6 +6101,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isProgressBarEnabled",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AudioObject", "http://vital.ai/ontology/vital-aimp#VideoObject" ],
+    "shortName" : "progressBarEnabled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isPurgeSession",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CloseIFrame", "http://vital.ai/ontology/vital-aimp#OpenIFrame" ],
     "shortName" : "purgeSession",
@@ -6134,6 +6176,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isSubpropertyEnabled",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogCondition" ],
     "shortName" : "subpropertyEnabled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isSynchronize",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AudioObject", "http://vital.ai/ontology/vital-aimp#VideoObject" ],
+    "shortName" : "synchronize",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

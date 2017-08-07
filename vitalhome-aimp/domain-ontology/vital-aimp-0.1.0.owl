@@ -3548,6 +3548,22 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isAutoPlay -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAutoPlay">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isBroadcastOnly -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isBroadcastOnly">
@@ -3783,6 +3799,22 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:comment xml:lang="en">when true, the message will only be sent to channel bot and session the message was created in</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isDownloadEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDownloadEnabled">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -4109,6 +4141,22 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isProgressBarEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isProgressBarEnabled">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isPurgeSession -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isPurgeSession">
@@ -4249,6 +4297,22 @@ query timeout in seconds, default 10</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSubpropertyEnabled">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSynchronize -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSynchronize">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
