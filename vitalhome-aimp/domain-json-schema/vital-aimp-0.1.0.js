@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "9b80ac7f176a33dede8a823d416fdf89",
+  "domainOWLHash" : "cda4086b9b1eaae0d4c547ef4bcc7ade",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2578,6 +2578,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#HeartbeatMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLastActivityTime" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-aimp#isDistribute" : {
         "type" : "boolean"
       }
@@ -2742,6 +2745,14 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasInteractionMode" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#InvalidateMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMessageURI" : {
         "type" : "string"
       }
     }
@@ -4918,7 +4929,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLastActivityTime",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasSessionChannel" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasSessionChannel", "http://vital.ai/ontology/vital-aimp#HeartbeatMessage" ],
     "shortName" : "lastActivityTime",
     "multipleValues" : false,
     "type" : "LongProperty"
@@ -5038,6 +5049,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "messageSerialized",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#InvalidateMessage" ],
+    "shortName" : "messageURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMinTimestamp",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage", "http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
