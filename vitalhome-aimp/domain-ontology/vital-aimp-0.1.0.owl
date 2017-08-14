@@ -1264,6 +1264,7 @@ eval</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1505,6 +1506,8 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButton"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogElement"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebviewCard"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2284,6 +2287,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
@@ -2995,6 +2999,7 @@ the map is serialized as json map</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
                 </owl:unionOf>
             </owl:Class>
@@ -3262,6 +3267,7 @@ query timeout in seconds, default 10</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
                 </owl:unionOf>
@@ -3463,6 +3469,16 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasWebviewHeightRatio -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasWebviewHeightRatio">
+        <rdfs:comment xml:lang="en">compact, tall, full</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#WebviewCard"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -4016,6 +4032,15 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isHideShareButton -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isHideShareButton">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#WebviewCard"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -6665,6 +6690,14 @@ filenodeURI length name</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyWebviewMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyWebviewMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HeartbeatMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HeartbeatMessage">
@@ -7944,6 +7977,14 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     <!-- http://vital.ai/ontology/vital-aimp#WeatherForecast -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#WebviewCard -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WebviewCard">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
     </owl:Class>
     
