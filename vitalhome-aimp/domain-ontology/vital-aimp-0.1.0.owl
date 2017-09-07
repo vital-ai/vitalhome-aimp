@@ -1685,6 +1685,7 @@ static for all copies</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Intent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IntentMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#OpenIFrame"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2404,6 +2405,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEventMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IntentMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#OpenIFrame"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QueryCriterion"/>
                 </owl:unionOf>
