@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "0b7dac8802e7f8c2812dfa62775ff4f1",
+  "domainOWLHash" : "7aeb66cd0e6fc724df61f78deb546474",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -57,6 +57,11 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPEmailMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#ProcessorMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPEvent",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
     }
   }, {
@@ -350,7 +355,7 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AssetMessage",
-    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPEvent",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasAssetURI" : {
         "type" : "string"
