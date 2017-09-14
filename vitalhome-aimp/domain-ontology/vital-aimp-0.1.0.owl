@@ -3021,14 +3021,14 @@ the map is serialized as json map</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasStatus -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasStatus">
-        <rdfs:comment xml:lang="en">AIMPTask: 
-created, in-progress, completed, canceled, pending, halted</rdfs:comment>
+        <rdfs:comment xml:lang="en">DialogExitDialog values:
+failed, incomplete, human-intervention, completed</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusMessage"/>
@@ -3053,6 +3053,7 @@ created, in-progress, completed, canceled, pending, halted</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
@@ -4602,14 +4603,6 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageFact">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ListFact"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#AIMPTask -->
-
-    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTask">
-        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     
 
