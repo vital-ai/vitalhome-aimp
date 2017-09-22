@@ -306,6 +306,7 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFileNodeURI">
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital#FileNode"/>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage"/>
     </owl:ObjectProperty>
     
 
@@ -469,6 +470,52 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://vital.ai/ontology/vital#hasFileLength -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasFileLength">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital#hasFileName -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasFileName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital#hasFileScope -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasFileScope">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileQuestion"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital#hasFileType -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasFileType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital#hasFileURL -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasFileURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage"/>
+    </rdf:Description>
     
 
 
@@ -1415,6 +1462,7 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCallDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascript"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
@@ -2356,6 +2404,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
@@ -2363,6 +2412,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSwitchToBot"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GraphObjectFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ListFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
@@ -3159,8 +3209,11 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3253,8 +3306,10 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Answer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
@@ -3690,8 +3745,11 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3797,8 +3855,11 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -4224,8 +4285,11 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -4387,8 +4451,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSkippable">
         <rdfs:comment xml:lang="en">the question can be skipped, leaving previous value unchanged</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -4765,6 +4836,14 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AssetMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Audio -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Audio">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Media"/>
     </owl:Class>
     
 
@@ -6047,7 +6126,9 @@ text(AgentContext context -&gt; String)</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasFileNode">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital#FileNode"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Folder"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="&vital-nlp;Document"/>
     </owl:Class>
     
@@ -6533,7 +6614,8 @@ create/update/remove/get/query</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FileQuestion">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
         <rdfs:comment xml:lang="en">file question, stringpropertyfact contains space separated 
-filenodeURI length name</rdfs:comment>
+filenodeURI length name
+new implementation stores just the fileNodeURI</rdfs:comment>
     </owl:Class>
     
 
@@ -6721,6 +6803,16 @@ filenodeURI length name</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyFacebookStatusPanelMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:comment>a message containing file download link
+depending on file scope it may either have publicURL or fileNodeURI</rdfs:comment>
     </owl:Class>
     
 
@@ -7022,6 +7114,14 @@ filenodeURI length name</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Image -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Image">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Media"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ImageGallery -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ImageGallery">
@@ -7191,6 +7291,14 @@ filenodeURI length name</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MapObject">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Media -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Media">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#FileNode"/>
     </owl:Class>
     
 
@@ -8175,6 +8283,14 @@ create/update/remove/get/query</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserTextMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Video -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Video">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Media"/>
     </owl:Class>
     
 
