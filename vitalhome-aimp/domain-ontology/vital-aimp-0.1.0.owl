@@ -428,6 +428,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasRoleURIs -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRoleURIs">
+        <vital-core:hasMultipleValues rdf:datatype="&xsd;boolean">true</vital-core:hasMultipleValues>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSolutionFactURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSolutionFactURI">
@@ -1320,6 +1329,16 @@ for payments USD</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasEncryptedPayload -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEncryptedPayload">
+        <rdfs:comment xml:lang="en">base64 encoded</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEndDate">
@@ -1813,6 +1832,16 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasKeyHash -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasKeyHash">
+        <rdfs:comment xml:lang="en">identifies the key</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasLastActiveDate -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLastActiveDate">
@@ -2301,6 +2330,16 @@ top-down</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasPayload -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPayload">
+        <rdfs:comment xml:lang="en">locally decrypted payload</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasPersistFactOperationType -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPersistFactOperationType">
@@ -2641,6 +2680,16 @@ payment [stripe|braintree|...] [publishableKey]
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasRecipientIdentify -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRecipientIdentify">
+        <rdfs:comment xml:lang="en">true external recipient of the message</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasRecipients -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRecipients">
@@ -2785,6 +2834,25 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSecurityProfile -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSecurityProfile">
+        <rdfs:comment xml:lang="en">use to remember if something was encrypted before, and if so any details that should be remembered</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&vital-core;VITAL_Edge"/>
+                    <rdf:Description rdf:about="&vital-core;VITAL_HyperEdge"/>
+                    <rdf:Description rdf:about="&vital-core;VITAL_HyperNode"/>
+                    <rdf:Description rdf:about="&vital-core;VITAL_Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSender -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSender">
@@ -2803,6 +2871,16 @@ question:
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSenderIdentify -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSenderIdentify">
+        <rdfs:comment xml:lang="en">true external sender of the message</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -2885,6 +2963,16 @@ question:
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSignature -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSignature">
+        <rdfs:comment xml:lang="en">confirms identify of sender</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -6326,6 +6414,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Session"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasSignedDocument -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasSignedDocument">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="&vital-nlp;Document"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="&vital-nlp;Document"/>
     </owl:Class>
     
 
