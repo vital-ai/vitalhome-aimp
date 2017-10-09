@@ -2680,9 +2680,9 @@ payment [stripe|braintree|...] [publishableKey]
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasRecipientIdentify -->
+    <!-- http://vital.ai/ontology/vital-aimp#hasRecipientIdentity -->
 
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRecipientIdentify">
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRecipientIdentity">
         <rdfs:comment xml:lang="en">true external recipient of the message</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
@@ -2875,9 +2875,9 @@ question:
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasSenderIdentify -->
+    <!-- http://vital.ai/ontology/vital-aimp#hasSenderIdentity -->
 
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSenderIdentify">
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSenderIdentity">
         <rdfs:comment xml:lang="en">true external sender of the message</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
