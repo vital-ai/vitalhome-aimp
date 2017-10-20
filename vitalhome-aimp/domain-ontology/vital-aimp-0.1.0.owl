@@ -301,6 +301,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasFileNodeClassURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFileNodeClassURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasFileNodeURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFileNodeURI">
@@ -361,6 +369,24 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSession"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasParentObjectURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasParentObjectURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital#Account"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Contract"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Folder"/>
+                    <rdf:Description rdf:about="&vital-nlp;Document"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1270,6 +1296,24 @@ for payments USD</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasDocuSignEnvelopeID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDocuSignEnvelopeID">
+        <rdfs:domain rdf:resource="&vital-nlp;Document"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasDocuSignStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDocuSignStatus">
+        <rdfs:domain rdf:resource="&vital-nlp;Document"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasDoubleValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDoubleValue">
@@ -1524,6 +1568,17 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasFileUploadProcessingType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFileUploadProcessingType">
+        <rdfs:comment xml:lang="en">upload_new_file (default)
+create_file_from_fact</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasFirstName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFirstName">
@@ -1720,6 +1775,24 @@ static for all copies</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasInputFileFactName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasInputFileFactName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasInputFileFactScope -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasInputFileFactScope">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -3656,6 +3729,7 @@ query timeout in seconds, default 10</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Button"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmbeddedCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EnclosingPageURLButtonClickedMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
@@ -4048,6 +4122,15 @@ query timeout in seconds, default 10</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDefaultEndpoint">
         <rdfs:comment xml:lang="en">for randomized channel with multiple endpoints this property should be set in exactly one endpoint so that bot config order is correct (default bot)</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isDeleteOnSuccess -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDeleteOnSuccess">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -4561,6 +4644,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSent">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogQuestion"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSignedVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSignedVersion">
+        <rdfs:domain rdf:resource="&vital-nlp;Document"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
