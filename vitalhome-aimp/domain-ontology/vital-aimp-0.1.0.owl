@@ -629,6 +629,22 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasAttachmentsCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAttachmentsCount">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailSummary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasAuthSessionID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAuthSessionID">
@@ -800,6 +816,22 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCardType">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmbeddedCard"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasCategory -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCategory">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailSummary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -4707,6 +4739,22 @@ query timeout in seconds, default 10</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserDialogAppMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isRead -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isRead">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailSummary"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
