@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "0111c5def2e063e53b5882e0dfd5588e",
+  "domainOWLHash" : "1b315184b2467475a1920771fcbadd10",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -189,6 +189,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isAuthLoginTunnel" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isContainsPII" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isFinalResponse" : {
@@ -1745,6 +1748,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#EMailTag",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAPILogin",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
@@ -2206,6 +2214,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#EmailAttachment",
     "parent" : "http://vital.ai/ontology/vital#FileNode",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasInternalID" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#EmailEndpoint",
@@ -2245,10 +2256,22 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasCcRecipients" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasDeliveryDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasEMailTagURI" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
       "http://vital.ai/ontology/vital-aimp#hasEventTimestamp" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#hasMessageID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasOpionalData" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRecipients" : {
@@ -2261,6 +2284,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isRead" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isTrackingOpens" : {
         "type" : "boolean"
       }
     }
@@ -2302,6 +2328,12 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasCcRecipients" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasEMailTagURI" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
       "http://vital.ai/ontology/vital-aimp#hasEventTimestamp" : {
         "type" : "number"
       },
@@ -2318,6 +2350,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isRead" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isTrackingOpens" : {
         "type" : "boolean"
       }
     }
@@ -5291,6 +5326,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasDeliveryDate",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage" ],
+    "shortName" : "deliveryDate",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDestinationFactName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogQueryAction" ],
     "shortName" : "destinationFactName",
@@ -5404,6 +5445,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "durationSeconds",
     "multipleValues" : false,
     "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasEMailTagURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary" ],
+    "shortName" : "eMailTagURI",
+    "multipleValues" : true,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasEchoUserID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AmazonEchoAccount", "http://vital.ai/ontology/vital-aimp#UserProfile" ],
@@ -5669,6 +5716,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasInternalID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailAttachment" ],
+    "shortName" : "internalID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasIpAddress",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
     "shortName" : "ipAddress",
@@ -5904,6 +5957,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "offset",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasOpionalData",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage" ],
+    "shortName" : "opionalData",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasOrderInUI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
@@ -6709,6 +6768,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isContainsPII",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "containsPII",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isCountOnly",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage", "http://vital.ai/ontology/vital-aimp#TwitterQueryResultsMessage" ],
     "shortName" : "countOnly",
@@ -7102,6 +7167,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isTimeoutEnabled",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage" ],
     "shortName" : "timeoutEnabled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isTrackingOpens",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary" ],
+    "shortName" : "trackingOpens",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
