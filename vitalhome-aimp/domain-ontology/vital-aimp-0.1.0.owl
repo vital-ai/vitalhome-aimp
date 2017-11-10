@@ -1170,6 +1170,18 @@ eval</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasCriterionType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCriterionType">
+        <rdfs:comment xml:lang="en">values:
+AND  (default)
+OR</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QueryCriterion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasCurrencySymbol -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCurrencySymbol">
@@ -2455,9 +2467,9 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasOpionalData -->
+    <!-- http://vital.ai/ontology/vital-aimp#hasOptionalData -->
 
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOpionalData">
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOptionalData">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>

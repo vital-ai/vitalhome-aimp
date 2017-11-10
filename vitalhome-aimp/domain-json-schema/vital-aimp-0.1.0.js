@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "1b315184b2467475a1920771fcbadd10",
+  "domainOWLHash" : "6538df348479ae0b71b95bc98ef4e5a0",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2271,7 +2271,7 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasMessageID" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasOpionalData" : {
+      "http://vital.ai/ontology/vital-aimp#hasOptionalData" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRecipients" : {
@@ -3820,6 +3820,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasComparator" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasCriterionType" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
         "type" : "string"
       },
@@ -5296,6 +5299,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasCriterionType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QueryCriterion" ],
+    "shortName" : "criterionType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasCurrencySymbol",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Contract", "http://vital.ai/ontology/vital-aimp#Invoice", "http://vital.ai/ontology/vital-aimp#Payment", "http://vital.ai/ontology/vital-aimp#PaymentConfirmation" ],
     "shortName" : "currencySymbol",
@@ -5958,9 +5967,9 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#hasOpionalData",
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasOptionalData",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage" ],
-    "shortName" : "opionalData",
+    "shortName" : "optionalData",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
