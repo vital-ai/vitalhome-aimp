@@ -690,6 +690,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasBadge -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBadge">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PushNotification"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasBccRecipients -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBccRecipients">
@@ -1585,6 +1594,15 @@ for payments USD</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasExpirationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasExpirationDate">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PushNotification"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasExpression -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasExpression">
@@ -2470,8 +2488,15 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     <!-- http://vital.ai/ontology/vital-aimp#hasOptionalData -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasOptionalData">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PushNotification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3370,6 +3395,15 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSound -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSound">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PushNotification"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSource -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSource">
@@ -3713,6 +3747,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PushNotification"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
             </owl:Class>
@@ -3847,7 +3882,18 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasToken -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasToken">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#IosDeviceProfile"/>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#StripePayment"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasTokens -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTokens">
+        <vital-core:hasMultipleValues rdf:datatype="&xsd;boolean">true</vital-core:hasMultipleValues>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PushNotification"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -3987,6 +4033,15 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasUuid -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasUuid">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#IosDeviceProfile"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -5268,6 +5323,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ApnsEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ApnsEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+        <rdfs:comment xml:lang="en">Apple Push Notification Service</rdfs:comment>
     </owl:Class>
     
 
@@ -7828,6 +7892,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#IosDeviceProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#IosDeviceProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#JiboDevice -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#JiboDevice">
@@ -8222,6 +8294,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#PushNotification -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PushNotification">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Query -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Query">
@@ -8401,6 +8481,15 @@ create/update/remove/get/query</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SendEmail">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPEmailMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SendPushNotificationMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SendPushNotificationMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">IosDeviceProfile in payload</rdfs:comment>
     </owl:Class>
     
 
