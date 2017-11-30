@@ -3603,6 +3603,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#CreateVirtualLoginResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
@@ -3628,6 +3629,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#CreateVirtualLoginResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
@@ -5842,6 +5844,22 @@ query timeout in seconds, default 10</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CreateEndpointProfileMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfileMessage"/>
         <rdfs:comment xml:lang="en">Creates/Updates given endpoint profiles</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#CreateVirtualLoginRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CreateVirtualLoginRequest">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#CreateVirtualLoginResponse -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CreateVirtualLoginResponse">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
