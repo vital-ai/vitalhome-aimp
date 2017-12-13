@@ -547,6 +547,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1960,6 +1961,8 @@ static for all copies</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Button"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButton"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage"/>
@@ -2183,8 +2186,16 @@ numerical</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasJson -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJson">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#StripePayment"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#StripePayment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3665,6 +3676,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogStatusMessage"/>
@@ -3691,6 +3703,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
@@ -5447,6 +5460,23 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentError">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentStatusRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusRequest">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+        <rdfs:comment xml:lang="en">a request sent over data modification queue to get current agent state</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentStatusResponse -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     
 
