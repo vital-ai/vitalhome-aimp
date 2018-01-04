@@ -2228,6 +2228,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Channel"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasSessionChannel"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HeartbeatMessage"/>
                 </owl:unionOf>
@@ -4307,6 +4308,15 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isAnonymousChannel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAnonymousChannel">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isAnswerSkipped -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAnswerSkipped">
@@ -5147,6 +5157,26 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:comment xml:lang="en">a setting respected by some of the endpoints to send responses as attachments rather than inline elements</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSendAsUser -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSendAsUser">
+        <rdfs:comment xml:lang="en">use current userid to send out messages, default &apos;haley&apos;</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
