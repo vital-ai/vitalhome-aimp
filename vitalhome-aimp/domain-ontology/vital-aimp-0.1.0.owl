@@ -444,6 +444,7 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EntityMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Opportunity"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#RelationshipCommandMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#RelationshipMessage"/>
                 </owl:unionOf>

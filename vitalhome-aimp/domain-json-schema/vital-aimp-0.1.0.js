@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "1be5d6f5b7c94482b7333e0e8801b4f4",
+  "domainOWLHash" : "8186ecf7e307018016033a71c87a15c4",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -3757,6 +3757,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasEntityURI" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasObjectURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasOpportunityStatus" : {
         "type" : "string"
       },
@@ -6252,7 +6255,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasObjectURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#EntityCommandMessage", "http://vital.ai/ontology/vital-aimp#EntityMessage", "http://vital.ai/ontology/vital-aimp#GetObjectMessage", "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage", "http://vital.ai/ontology/vital-aimp#RelationshipCommandMessage", "http://vital.ai/ontology/vital-aimp#RelationshipMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#EntityCommandMessage", "http://vital.ai/ontology/vital-aimp#EntityMessage", "http://vital.ai/ontology/vital-aimp#GetObjectMessage", "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage", "http://vital.ai/ontology/vital-aimp#Opportunity", "http://vital.ai/ontology/vital-aimp#RelationshipCommandMessage", "http://vital.ai/ontology/vital-aimp#RelationshipMessage" ],
     "shortName" : "objectURI",
     "multipleValues" : false,
     "type" : "URIProperty"
