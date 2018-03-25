@@ -814,6 +814,15 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasBackgroundColor -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBackgroundColor">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Choice"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasBadge -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBadge">
@@ -1217,6 +1226,7 @@ history (default)</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Choice"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Device"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
                 </owl:unionOf>
@@ -4424,6 +4434,7 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
