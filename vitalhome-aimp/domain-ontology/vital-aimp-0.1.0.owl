@@ -2681,7 +2681,8 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
         <rdfs:comment xml:lang="en">Open
 Closed
 Converted
-Spam</rdfs:comment>
+Spam
+QuoteRequested</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Opportunity"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -2881,6 +2882,15 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasPrefilledAnswer -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPrefilledAnswer">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -4799,6 +4809,16 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isExclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isExclusive">
+        <rdfs:comment xml:lang="en">Applied only in multiselect questions. There may be at most 1 exclusive choice within choices set. This option will clear other selections. Non-exclusive option selection clears exclusive one.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Choice"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -6974,8 +6994,9 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasCustomer -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasCustomer">
-        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasBusinessRelationshipWith"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Customer"/>
     </owl:Class>
     
