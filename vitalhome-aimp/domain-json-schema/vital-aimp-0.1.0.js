@@ -6,12 +6,18 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "0b2f2de670aaee64f65ab5669d4eadf1",
+  "domainOWLHash" : "2267a52951564b5a9555ff3bed43cf4f",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
     "extends" : "http://vital.ai/ontology/vital#Account",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasViewURIs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
       "http://vital.ai/ontology/vital-aimp#isInterAccountSearchableRecipient" : {
         "type" : "boolean"
       }
@@ -20,6 +26,12 @@ var vital_aimp_0_1_0_schema = {
     "extends" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasRoleURIs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
+      "http://vital.ai/ontology/vital-aimp#hasViewURIs" : {
         "type" : "array",
         "items" : {
           "type" : "string"
@@ -3799,6 +3811,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasInputPropertyName" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#isMultivalue" : {
         "type" : "boolean"
       },
@@ -6960,6 +6975,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion" ],
+    "shortName" : "submitButtonLabel",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSubpropertyName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogCondition" ],
     "shortName" : "subpropertyName",
@@ -7181,6 +7202,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "validationType",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasViewURIs",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Account", "http://vital.ai/ontology/vital#Login" ],
+    "shortName" : "viewURIs",
+    "multipleValues" : true,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasWeatherJSONResponse",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],

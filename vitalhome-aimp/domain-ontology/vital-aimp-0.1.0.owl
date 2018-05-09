@@ -630,6 +630,16 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasViewURIs -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasViewURIs">
+        <vital-core:hasMultipleValues rdf:datatype="&xsd;boolean">true</vital-core:hasMultipleValues>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isReplyTo -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#isReplyTo">
@@ -3873,6 +3883,16 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel">
+        <rdfs:comment xml:lang="en">&quot;Submit&quot; is default</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
