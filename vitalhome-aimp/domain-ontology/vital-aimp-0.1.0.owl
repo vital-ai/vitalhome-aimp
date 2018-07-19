@@ -1257,6 +1257,17 @@ history (default)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasColumnsDefinition -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasColumnsDefinition">
+        <rdfs:comment xml:lang="en">columns definition for tabular questions, JSON like:
+[ {name: &quot;address1&quot;, label: &quot;Address&quot;, type: text}, {name: &quot;count&quot;, label: &quot;Count&quot;, type: integer}, ....]</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasCommand -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCommand">
@@ -3149,7 +3160,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
 textarea
 geolocation
 payment [stripe|braintree|...] [publishableKey]
-...</rdfs:comment>
+tabular</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -5477,6 +5488,16 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isTrueAnswerOnly -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isTrueAnswerOnly">
+        <rdfs:comment xml:lang="en">if set, the question should only render true answer, it does not affect skip which is optional</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 

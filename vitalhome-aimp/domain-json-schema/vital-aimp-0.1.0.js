@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "2267a52951564b5a9555ff3bed43cf4f",
+  "domainOWLHash" : "64fedd5d770d411610578c7b7c55e1a9",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -4149,6 +4149,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasChatRulesOutputFactName" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasColumnsDefinition" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasDialogToCallName" : {
         "type" : "string"
       },
@@ -4905,6 +4908,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isRenderQuickReplies" : {
         "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isTrueAnswerOnly" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -5656,6 +5662,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasColor",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Choice", "http://vital.ai/ontology/vital-aimp#Device", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
     "shortName" : "color",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasColumnsDefinition",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "columnsDefinition",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -7770,6 +7782,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isTrackingOpens",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary" ],
     "shortName" : "trackingOpens",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isTrueAnswerOnly",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TrueFalseQuestion" ],
+    "shortName" : "trueAnswerOnly",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
