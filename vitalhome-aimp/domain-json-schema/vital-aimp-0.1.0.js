@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "64fedd5d770d411610578c7b7c55e1a9",
+  "domainOWLHash" : "c591fbb109f9bae28cf8c478b5c532fb",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2856,6 +2856,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasFileScope" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasFileTypeConstraint" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasMaxFileLength" : {
         "type" : "number"
       }
@@ -4152,6 +4155,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasColumnsDefinition" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasConditionalLogic" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasDialogToCallName" : {
         "type" : "string"
       },
@@ -4166,6 +4172,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasMaxRetriesCount" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasPlaceholder" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPrefilledAnswer" : {
         "type" : "string"
@@ -5701,6 +5710,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasConditionalLogic",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "conditionalLogic",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasCriteriaType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogQueryAction" ],
     "shortName" : "criteriaType",
@@ -6006,6 +6021,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "fileNodeURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasFileTypeConstraint",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FileQuestion" ],
+    "shortName" : "fileTypeConstraint",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasFileUploadProcessingType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogUploadFile" ],
@@ -6528,6 +6549,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPhoneNumber",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Contact", "http://vital.ai/ontology/vital-aimp#SmsEndpoint", "http://vital.ai/ontology/vital-aimp#SmsProfile" ],
     "shortName" : "phoneNumber",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasPlaceholder",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "placeholder",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {

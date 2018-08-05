@@ -1344,6 +1344,15 @@ expression</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasConditionalLogic -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasConditionalLogic">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasCriteriaType -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCriteriaType">
@@ -1883,6 +1892,16 @@ when unsetting facts or getfactsmessage a wildcard may be given: *</rdfs:comment
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFalseLabel">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TrueFalseQuestion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasFileTypeConstraint -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFileTypeConstraint">
+        <rdfs:comment xml:lang="en">regex for input file element validation</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FileQuestion"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -2903,6 +2922,15 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasPlaceholder -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPlaceholder">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
