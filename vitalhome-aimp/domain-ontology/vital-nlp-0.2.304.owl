@@ -125,6 +125,16 @@ it should point to class URI, not a particular instance</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-nlp#hasAnalyzedBody -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasAnalyzedBody">
+        <vital-core:isAnalyzedNoEquals rdf:datatype="&xsd;boolean">true</vital-core:isAnalyzedNoEquals>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-nlp#hasAnnotationName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasAnnotationName">

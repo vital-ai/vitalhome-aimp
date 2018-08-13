@@ -4568,7 +4568,7 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#isBroadcastOnly -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isBroadcastOnly">
-        <rdfs:comment xml:lang="en">determines if message should be sent to both bot and channel recipients or be broadcasted to channel recipients only (output)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Mutually exclusive with isInternalOnly. Determines if message should be sent to both bot and channel recipients or be broadcasted to channel recipients only (output)</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;boolean"/>
         <rdfs:domain>
             <owl:Class>
@@ -5119,6 +5119,27 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:comment xml:lang="en">when enabled (default) boolean and multichoice question may be answered with text</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isInternalOnly -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isInternalOnly">
+        <rdfs:comment xml:lang="en">Mutually exclusive with isBroadcastOnly. If enabled it will only send the message to input queue, provided the channel is different than origin.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDownloadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogUploadFile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
