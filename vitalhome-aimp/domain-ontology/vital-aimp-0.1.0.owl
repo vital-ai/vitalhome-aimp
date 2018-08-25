@@ -9115,6 +9115,14 @@ create/update/remove/get/query</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SessionClosedMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SessionClosedMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#SessionEndpoint -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SessionEndpoint">
@@ -9701,19 +9709,6 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WebviewCard">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
     </owl:Class>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-core#VITAL_Edge -->
-
-    <rdf:Description rdf:about="&vital-core;VITAL_Edge">
-        <rdfs:comment xml:lang="en">connects an aimp message to all its payload objects</rdfs:comment>
-        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Edge"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperEdge"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_HyperNode"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
-    </rdf:Description>
 </rdf:RDF>
 
 
