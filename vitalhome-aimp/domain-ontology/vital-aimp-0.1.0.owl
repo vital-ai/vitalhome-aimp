@@ -1449,6 +1449,15 @@ for payments USD</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDescription">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasDestinationFactName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDestinationFactName">
@@ -3548,6 +3557,7 @@ question:
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Opportunity"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProgressItem"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProjectTask"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard"/>
                 </owl:unionOf>
@@ -7867,6 +7877,15 @@ new implementation stores just the fileNodeURI</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FormDialog">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Dialog"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#FormPageAnswersMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FormPageAnswersMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+        <rdfs:comment xml:lang="en">a message that contains answers to all questions in a form page</rdfs:comment>
     </owl:Class>
     
 
