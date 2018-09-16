@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "5ecee79973d50d7e51e515d0518d83b9",
+  "domainOWLHash" : "7967cecb6fc597c51b648c1a8032252d",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -692,6 +692,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Card",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasIndex" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-aimp#isSendAsAttachment" : {
         "type" : "boolean"
       }
@@ -4190,6 +4193,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasHandlerResultFactName" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasIndex" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-aimp#hasInternalProcessingChoice" : {
         "type" : "string"
       },
@@ -4200,6 +4206,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPrefilledAnswer" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasPreviousAnswer" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPropertyName" : {
@@ -4309,6 +4318,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#isGoodbyePage" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isStaticQuestionsList" : {
         "type" : "boolean"
       }
     }
@@ -6159,7 +6171,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "FloatProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasIndex",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Choice", "http://vital.ai/ontology/vital-aimp#DialogPageElementMessage", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Card", "http://vital.ai/ontology/vital-aimp#Choice", "http://vital.ai/ontology/vital-aimp#DialogPageElementMessage", "http://vital.ai/ontology/vital-aimp#Question", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "index",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -6605,7 +6617,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPreviousAnswer",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "previousAnswer",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -7825,6 +7837,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isSmsResponse",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage" ],
     "shortName" : "smsResponse",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isStaticQuestionsList",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
+    "shortName" : "staticQuestionsList",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

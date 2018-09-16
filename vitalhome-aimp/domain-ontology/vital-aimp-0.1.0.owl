@@ -2099,8 +2099,10 @@ static for all copies</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Card"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Choice"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPageElementMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2957,8 +2959,15 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPreviousAnswer">
         <rdfs:comment xml:lang="en">string-serialized previous answer</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -5486,6 +5495,16 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSmsResponse">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isStaticQuestionsList -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isStaticQuestionsList">
+        <rdfs:comment xml:lang="en">if set, all questions are embedded into single message</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
