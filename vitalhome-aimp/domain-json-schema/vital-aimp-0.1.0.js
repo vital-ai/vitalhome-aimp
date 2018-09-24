@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "7967cecb6fc597c51b648c1a8032252d",
+  "domainOWLHash" : "f9bff8a4535ff94493cbd703a5034ccb",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -356,6 +356,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Answer",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAnswerURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
         "type" : "string"
       }
@@ -5406,6 +5409,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "amount",
     "multipleValues" : false,
     "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAnswerURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Answer" ],
+    "shortName" : "answerURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAssetID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Asset" ],
