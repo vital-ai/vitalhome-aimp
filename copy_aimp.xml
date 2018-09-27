@@ -13,7 +13,7 @@
 	<property name="src.js" value="${VITAL_HOME}/domain-json-schema/vital-aimp-0.1.0.js" />
 	<property name="src.owl" value="${VITAL_HOME}/domain-ontology/vital-aimp-0.1.0.owl" />
 	
-	<property name="aimp.project" value="D:/workspace_vital.ai_git/workspace_haley.ai/aimp//vitalhome-aimp" />
+	<property name="aimp.project" value="D:/workspace_vital.ai_git/workspace_haley.ai/vitalhome-aimp" />
 	
 	<property name="haley.vitalhome" value="D:/workspace_vital.ai_git/workspace_haley.ai/vitalhome-haley" />
 	
