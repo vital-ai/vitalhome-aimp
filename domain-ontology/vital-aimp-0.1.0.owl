@@ -1355,8 +1355,16 @@ expression</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasConditionalLogic -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasConditionalLogic">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButton"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextCard"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3123,6 +3131,24 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasProvider -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasProvider">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PaymentQuestion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasPublicKey -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPublicKey">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PaymentQuestion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -5404,6 +5430,16 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSaveAnswersOnGoingBack -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSaveAnswersOnGoingBack">
+        <rdfs:comment xml:lang="en">when enabled the form should submit current page anyway when going back in the form, ignoring potential errors - opportunity to save answers</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -8751,6 +8787,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PaymentConfirmation">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PaymentQuestion -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PaymentQuestion">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
     </owl:Class>
     
 

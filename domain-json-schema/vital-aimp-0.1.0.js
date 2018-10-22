@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "f9bff8a4535ff94493cbd703a5034ccb",
+  "domainOWLHash" : "4a09bcce9214b5a2478fd7772e5183e7",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -1208,6 +1208,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogButton",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasConditionalLogic" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasId" : {
         "type" : "string"
       }
@@ -1821,6 +1824,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#DialogTextCard",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasConditionalLogic" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
         "type" : "string"
       }
@@ -3963,6 +3969,17 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#PaymentQuestion",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Question",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasProvider" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasPublicKey" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#PlayAudioCommand",
     "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
     "properties" : {
@@ -4321,6 +4338,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#isGoodbyePage" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isSaveAnswersOnGoingBack" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isStaticQuestionsList" : {
@@ -5766,7 +5786,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasConditionalLogic",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogButton", "http://vital.ai/ontology/vital-aimp#DialogTextCard", "http://vital.ai/ontology/vital-aimp#Question" ],
     "shortName" : "conditionalLogic",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -6688,6 +6708,18 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPropertyValue",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogAssignFact", "http://vital.ai/ontology/vital-aimp#DialogCondition", "http://vital.ai/ontology/vital-aimp#IFrameEventMessage", "http://vital.ai/ontology/vital-aimp#IntentMessage", "http://vital.ai/ontology/vital-aimp#OpenIFrame", "http://vital.ai/ontology/vital-aimp#PropertyFact", "http://vital.ai/ontology/vital-aimp#QueryCriterion" ],
     "shortName" : "propertyValue",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasProvider",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#PaymentQuestion" ],
+    "shortName" : "provider",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasPublicKey",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#PaymentQuestion" ],
+    "shortName" : "publicKey",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -7798,6 +7830,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isRetired",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaLogin", "http://vital.ai/ontology/vital-aimp#AnonymousLogin", "http://vital.ai/ontology/vital-aimp#EmailLogin", "http://vital.ai/ontology/vital-aimp#FacebookLogin", "http://vital.ai/ontology/vital-aimp#SlackLogin", "http://vital.ai/ontology/vital-aimp#SmsLogin", "http://vital.ai/ontology/vital-aimp#TwitterLogin" ],
     "shortName" : "retired",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isSaveAnswersOnGoingBack",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
+    "shortName" : "saveAnswersOnGoingBack",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
