@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "34f9d60460daecf63338701afdbd7437",
+  "domainOWLHash" : "eb27538b0a91b34fac1826e92dc28cab",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -3452,6 +3452,13 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionPart",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionPartChain",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart" ],
     "properties" : {
     }

@@ -8439,6 +8439,16 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionPartChain -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionPartChain">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionTransaction -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionTransaction">
