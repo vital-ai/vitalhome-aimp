@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "2c742006e6ecf22ac6325dad79a9107a",
+  "domainOWLHash" : "34f9d60460daecf63338701afdbd7437",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -259,6 +259,11 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#APILogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountAction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
   }, {
@@ -3399,6 +3404,13 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HueLightDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#LightDevice",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasAccountAction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountAction" ],
     "properties" : {
     }
   }, {

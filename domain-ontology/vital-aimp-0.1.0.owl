@@ -5798,6 +5798,14 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AccountAction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountAction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AccountInteraction -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountInteraction">
@@ -8350,6 +8358,16 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HueLightDevice">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#LightDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasAccountAction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasAccountAction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountAction"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
     </owl:Class>
     
 
