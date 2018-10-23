@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "4a09bcce9214b5a2478fd7772e5183e7",
+  "domainOWLHash" : "2c742006e6ecf22ac6325dad79a9107a",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -260,6 +260,27 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#APILogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountInteraction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountInteractionPart",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAccountInteractionFee" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountInteractionTotalFee" : {
+        "type" : "number"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ActivateMessage",
@@ -3409,6 +3430,27 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionChain",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionPart",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasInteractionTransaction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction", "http://vital.ai/ontology/vital-aimp#AccountInteractionPart" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasListFactElement",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#ListFact" ],
@@ -5400,6 +5442,18 @@ var vital_aimp_0_1_0_schema = {
     }
   } ],
   "properties" : [ {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountInteractionFee",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction" ],
+    "shortName" : "accountInteractionFee",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountInteractionTotalFee",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction" ],
+    "shortName" : "accountInteractionTotalFee",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary", "http://vital.ai/ontology/vital-aimp#ErrorNode", "http://vital.ai/ontology/vital-aimp#Task" ],
     "shortName" : "accountURI",
