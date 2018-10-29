@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vital.ai/ontology/vital-aimp#"
      xml:base="http://vital.ai/ontology/vital-aimp"
-     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:vital-social="http://vital.ai/ontology/vital-social#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:vital-social="http://vital.ai/ontology/vital-social#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-aimp">
         <owl:imports rdf:resource="http://vital.ai/ontology/vital-social"/>
         <vital-core:hasDefaultArtifactId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vital-aimp</vital-core:hasDefaultArtifactId>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
-        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
         <vital-core:hasDefaultGroupId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitalai-com</vital-core:hasDefaultGroupId>
+        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -526,6 +526,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasRecipientAccountURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRecipientAccountURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasRelationshipSetURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRelationshipSetURI">
@@ -567,6 +576,15 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRoleURIs">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#Login"/>
         <vital-core:hasMultipleValues rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vital-core:hasMultipleValues>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSenderAccountURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSenderAccountURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Account"/>
     </owl:ObjectProperty>
     
 
@@ -6971,6 +6989,30 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#DocumentSignatureEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DocumentSignatureEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DocumentSignatureLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DocumentSignatureLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#DocumentSignatureProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DocumentSignatureProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#DoublePropertyFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#DoublePropertyFact">
@@ -7299,6 +7341,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasDocumentSignatureLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasDocumentSignatureLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DocumentSignatureLogin"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasEmailAttachment -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasEmailAttachment">
@@ -7460,6 +7512,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Payment"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Invoice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasPaymentLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasPaymentLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#PaymentLogin"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
     </owl:Class>
     
 
@@ -8880,6 +8942,30 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#PaymentEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PaymentEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PaymentLogin -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PaymentLogin">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PaymentProfile -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PaymentProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#PaymentQuestion -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PaymentQuestion">
@@ -9892,5 +9978,5 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
 
