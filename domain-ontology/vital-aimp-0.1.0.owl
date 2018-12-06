@@ -2160,6 +2160,7 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Card"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Choice"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPageElementMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GroupStringPropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
                 </owl:unionOf>
@@ -3995,6 +3996,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GroupStringPropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#StringPropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
                 </owl:unionOf>
@@ -8137,6 +8139,15 @@ new implementation stores just the fileNodeURI</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#GroupStringPropertyFact -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GroupStringPropertyFact">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
+        <rdfs:comment>Used for a list of string properties grouped together and sorted by optional index value (low to high) when displayed.  All should have the same name to define the grouping.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HaleyArticleMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage">
@@ -8374,6 +8385,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#HaleyThingMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyThingMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyThingWideMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyThingWideMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
     </owl:Class>
     
@@ -9663,6 +9682,14 @@ create/update/remove/get/query</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ThingCard">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
         <rdfs:comment xml:lang="en">special object that may have image, map, and arbitrary properties using facts</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ThingWideCard -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ThingWideCard">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ThingCard"/>
     </owl:Class>
     
 
