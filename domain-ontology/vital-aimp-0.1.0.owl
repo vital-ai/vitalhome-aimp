@@ -599,6 +599,24 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSearchCategoryURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSearchCategoryURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
+        <vital-core:hasMultipleValues rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vital-core:hasMultipleValues>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSearchGeoURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSearchGeoURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
+        <vital-core:hasMultipleValues rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vital-core:hasMultipleValues>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSenderAccountURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSenderAccountURI">
@@ -659,6 +677,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasUriValue">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#URIPropertyFact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasUserCategoryURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasUserCategoryURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
+        <vital-core:hasMultipleValues rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vital-core:hasMultipleValues>
     </owl:ObjectProperty>
     
 
@@ -2445,6 +2472,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ResultListFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -2778,6 +2806,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ResultListFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3245,6 +3274,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Query"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage"/>
                 </owl:unionOf>
             </owl:Class>
@@ -9340,6 +9370,14 @@ create/update/remove/get/query</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RobotDevice">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SearchRequestMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SearchRequestMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#CommandMessage"/>
     </owl:Class>
     
 
