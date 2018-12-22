@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "65282d1a8f84e980b53a72b7433b9fa1",
+  "domainOWLHash" : "57c4dd362a374ec081260b111d28a2ed",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -4628,6 +4628,9 @@ var vital_aimp_0_1_0_schema = {
           "type" : "string"
         }
       },
+      "http://vital.ai/ontology/vital-aimp#hasSearchExcludedCategoryURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSearchGeoURI" : {
         "type" : "array",
         "items" : {
@@ -7065,6 +7068,12 @@ var vital_aimp_0_1_0_schema = {
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SearchRequestMessage" ],
     "shortName" : "searchCategoryURI",
     "multipleValues" : true,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSearchExcludedCategoryURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SearchRequestMessage" ],
+    "shortName" : "searchExcludedCategoryURI",
+    "multipleValues" : false,
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSearchGeoURI",
