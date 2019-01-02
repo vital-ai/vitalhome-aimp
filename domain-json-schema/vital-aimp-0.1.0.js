@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "57c4dd362a374ec081260b111d28a2ed",
+  "domainOWLHash" : "3e880cb2b224b6e6a8d957edf69a8ff6",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -670,6 +670,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CalendarEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CalendarEntry",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -707,6 +712,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CalendarLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CalendarObject",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
@@ -722,6 +732,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasStartDate" : {
         "type" : "number"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CalendarProfile",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Card",
@@ -2085,6 +2100,13 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasCalendarLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#CalendarLogin" ],
     "properties" : {
     }
   }, {
