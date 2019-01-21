@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vital.ai/ontology/vital-aimp#"
      xml:base="http://vital.ai/ontology/vital-aimp"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
      xmlns:vital-core="http://vital.ai/ontology/vital-core#"
-     xmlns:vital-social="http://vital.ai/ontology/vital-social#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:vital-social="http://vital.ai/ontology/vital-social#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-aimp">
         <owl:imports rdf:resource="http://vital.ai/ontology/vital-social"/>
         <vital-core:hasDefaultArtifactId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vital-aimp</vital-core:hasDefaultArtifactId>
-        <vital-core:hasDefaultGroupId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitalai-com</vital-core:hasDefaultGroupId>
-        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
         <owl:versionInfo>0.1.0</owl:versionInfo>
+        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultGroupId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitalai-com</vital-core:hasDefaultGroupId>
     </owl:Ontology>
     
 
@@ -1565,6 +1565,15 @@ for payments USD</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDestinationFactScope">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasDeviceID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDeviceID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -4639,6 +4648,15 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isAudioDevice -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAudioDevice">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isAuthLoginProfile -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isAuthLoginProfile">
@@ -5735,6 +5753,15 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isVisualDevice -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isVisualDevice">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isVitalRulesEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isVitalRulesEnabled">
@@ -5944,6 +5971,14 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AlexaDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AlexaDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SmartDevice"/>
     </owl:Class>
     
 
@@ -8203,6 +8238,14 @@ new implementation stores just the fileNodeURI</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#GoogleHomeDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GoogleHomeDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SmartDevice"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#GraphObjectFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GraphObjectFact">
@@ -8273,6 +8316,14 @@ new implementation stores just the fileNodeURI</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyCommandMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SmartDevice"/>
     </owl:Class>
     
 
@@ -9612,6 +9663,14 @@ create/update/remove/get/query</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#SmartDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SmartDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Sms -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Sms">
@@ -10104,5 +10163,5 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
 
 
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 

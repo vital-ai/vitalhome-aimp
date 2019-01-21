@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "3e880cb2b224b6e6a8d957edf69a8ff6",
+  "domainOWLHash" : "3fc362f08a85249461bc65f07939634e",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -107,6 +107,15 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasDeviceID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isAudioDevice" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isVisualDevice" : {
+        "type" : "boolean"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPEmailMessage",
@@ -338,6 +347,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasStatusMessage" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AlexaDevice",
+    "parent" : "http://vital.ai/ontology/vital-aimp#SmartDevice",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AlexaEndpoint",
@@ -3106,6 +3120,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#GoogleHomeDevice",
+    "parent" : "http://vital.ai/ontology/vital-aimp#SmartDevice",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#GraphObjectFact",
     "parent" : "http://vital.ai/ontology/vital#VITAL_Fact",
     "properties" : {
@@ -3188,6 +3207,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasCommand" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyDevice",
+    "parent" : "http://vital.ai/ontology/vital-aimp#SmartDevice",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyDeviceDetailsMessage",
@@ -4866,6 +4890,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SmartDevice",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Sms",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -6055,6 +6084,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDestinationFactScope",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogQueryAction" ],
     "shortName" : "destinationFactScope",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasDeviceID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPDevice" ],
+    "shortName" : "deviceID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -7626,6 +7661,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isAudioDevice",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPDevice" ],
+    "shortName" : "audioDevice",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isAuthLoginProfile",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EndpointProfile" ],
     "shortName" : "authLoginProfile",
@@ -8181,6 +8222,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isUrlAvailable",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#PaymentConfirmation" ],
     "shortName" : "urlAvailable",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isVisualDevice",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPDevice" ],
+    "shortName" : "visualDevice",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
