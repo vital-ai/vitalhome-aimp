@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "43a17155f0693822584beda1b7ea4ee0",
+  "domainOWLHash" : "7f6d4e64a1730a609eacb5d96a9b16a9",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2214,6 +2214,13 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#ProjectTask" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#ProjectTask" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasDevice",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Login" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AIMPDevice" ],
     "properties" : {
     }
   }, {

@@ -7412,6 +7412,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasDevice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasDevice">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasDialog -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasDialog">
