@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "3fc362f08a85249461bc65f07939634e",
+  "domainOWLHash" : "43a17155f0693822584beda1b7ea4ee0",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -144,6 +144,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasChannelsHistory" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasDeviceInfo" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasEncryptedPayload" : {
@@ -6090,6 +6093,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDeviceID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPDevice" ],
     "shortName" : "deviceID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasDeviceInfo",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "deviceInfo",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
