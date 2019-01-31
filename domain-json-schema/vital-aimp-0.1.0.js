@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "7f6d4e64a1730a609eacb5d96a9b16a9",
+  "domainOWLHash" : "e96dbe0ed6f1327d64b36f8771bbd6ad",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -352,9 +352,23 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AlexaAccount",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAlexaSkillName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAlexaUserID" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AlexaDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#SmartDevice",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAlexaUserID" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AlexaEndpoint",
@@ -2219,7 +2233,7 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasDevice",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital#Login" ],
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Login", "http://vital.ai/ontology/vital-aimp#AlexaAccount" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AIMPDevice" ],
     "properties" : {
     }
@@ -2325,7 +2339,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasExternalAccount",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Login" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AmazonEchoAccount", "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AlexaAccount", "http://vital.ai/ontology/vital-aimp#AmazonEchoAccount", "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
     "properties" : {
     }
   }, {
@@ -5658,8 +5672,14 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAlexaSkillName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaAccount" ],
+    "shortName" : "alexaSkillName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAlexaUserID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaEndpoint", "http://vital.ai/ontology/vital-aimp#AlexaProfile" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaAccount", "http://vital.ai/ontology/vital-aimp#AlexaDevice", "http://vital.ai/ontology/vital-aimp#AlexaEndpoint", "http://vital.ai/ontology/vital-aimp#AlexaProfile" ],
     "shortName" : "alexaUserID",
     "multipleValues" : false,
     "type" : "StringProperty"
