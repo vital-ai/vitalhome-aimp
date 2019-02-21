@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "e96dbe0ed6f1327d64b36f8771bbd6ad",
+  "domainOWLHash" : "0d739ad9a9601659f030b0d4b744153e",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2765,7 +2765,13 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLocale" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#isAuthLoginProfile" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isPremium" : {
         "type" : "boolean"
       }
     }
@@ -2938,9 +2944,6 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasLastName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasLocale" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasProfilePic" : {
@@ -6617,7 +6620,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLocale",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookProfile" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EndpointProfile" ],
     "shortName" : "locale",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -8084,6 +8087,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isPlaying",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AudioObject", "http://vital.ai/ontology/vital-aimp#VideoObject" ],
     "shortName" : "playing",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isPremium",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EndpointProfile" ],
+    "shortName" : "premium",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

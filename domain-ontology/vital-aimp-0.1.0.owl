@@ -2541,7 +2541,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     <!-- http://vital.ai/ontology/vital-aimp#hasLocale -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLocale">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookProfile"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -5419,6 +5419,15 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isPremium -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isPremium">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
