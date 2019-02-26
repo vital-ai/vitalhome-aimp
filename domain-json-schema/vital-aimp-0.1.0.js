@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "0d739ad9a9601659f030b0d4b744153e",
+  "domainOWLHash" : "b55c898082ee22d0ea80e805056cab1c",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -637,6 +637,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isGlobalBot" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isKeepLoaded" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isVitalRulesEnabled" : {
@@ -5198,6 +5201,14 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#TreeQuestion",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Question",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasTreeJson" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#TrendResult",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -7586,6 +7597,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasTreeJson",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TreeQuestion" ],
+    "shortName" : "treeJson",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasTrueLabel",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TrueFalseQuestion" ],
     "shortName" : "trueLabel",
@@ -8045,6 +8062,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isKeepChannelEntryText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogExitBot", "http://vital.ai/ontology/vital-aimp#DialogExitDialog" ],
     "shortName" : "keepChannelEntryText",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isKeepLoaded",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
+    "shortName" : "keepLoaded",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

@@ -4447,6 +4447,15 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasTreeJson -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTreeJson">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#TreeQuestion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasTrueLabel -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTrueLabel">
@@ -5325,6 +5334,15 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">when set the channel.entryText fact is not cleared when dialog exits</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isKeepLoaded -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isKeepLoaded">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -9914,6 +9932,14 @@ create/update/remove/get/query</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Translation">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#TreeQuestion -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#TreeQuestion">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
     </owl:Class>
     
 
