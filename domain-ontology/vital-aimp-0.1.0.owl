@@ -18,6 +18,7 @@
     </owl:Ontology>
     
 
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -26,7 +27,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://vital.ai/ontology/vital-aimp#hasCommonName -->
@@ -36,7 +37,7 @@
 as example, a node class such as &quot;AIMP_Person&quot; may have a common name of &quot;person&quot;.</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://vital.ai/ontology/vital-aimp#hasVariationName -->
@@ -45,6 +46,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
         <rdfs:comment>value is for a name that may be used to refer to the annotated object, but is not the most &quot;common&quot; one. so a node like AIMP_Person might have a variation name of &quot;human&quot;.</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:AnnotationProperty>
+    
 
 
     <!-- 
@@ -477,6 +479,8 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Answer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#InvalidateQuestionMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage"/>
                 </owl:unionOf>
@@ -1396,6 +1400,16 @@ expression</rdfs:comment>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasConstraints -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasConstraints">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">constraints definition as JSON array</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -3137,6 +3151,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCallDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
@@ -3190,6 +3205,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEventMessage"/>
@@ -3956,6 +3972,7 @@ the map is serialized as json map</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogStatusMessage"/>
@@ -3985,6 +4002,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EndpointProfilesMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
@@ -5770,6 +5788,15 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isUpdateAnswer -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isUpdateAnswer">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isUrlAvailable -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isUrlAvailable">
@@ -6089,6 +6116,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AnswerStatusMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment xml:lang="en">optional message sent by agent that adds feedback on</rdfs:comment>
     </owl:Class>
     
 
