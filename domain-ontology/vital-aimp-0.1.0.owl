@@ -481,6 +481,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Answer"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#InvalidateQuestionMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage"/>
                 </owl:unionOf>
@@ -3152,6 +3153,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCallDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
@@ -3206,6 +3208,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogCondition"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEventMessage"/>
@@ -3330,7 +3333,18 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
 textarea
 geolocation
 payment [stripe|braintree|...] [publishableKey]
-tabular</rdfs:comment>
+tabular
+dropdown
+datepicker
+dateentry
+timepicker
+number
+currency
+email
+captcha
+download
+html
+read-only</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -6125,6 +6139,14 @@ query timeout in seconds, default 10</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:comment xml:lang="en">optional message sent by agent that adds feedback on</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
