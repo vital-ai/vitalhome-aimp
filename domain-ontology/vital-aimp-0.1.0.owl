@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vital.ai/ontology/vital-aimp#"
      xml:base="http://vital.ai/ontology/vital-aimp"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
      xmlns:vital-core="http://vital.ai/ontology/vital-core#"
-     xmlns:vital-social="http://vital.ai/ontology/vital-social#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:vital-social="http://vital.ai/ontology/vital-social#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-aimp">
         <owl:imports rdf:resource="http://vital.ai/ontology/vital-social"/>
         <vital-core:hasDefaultArtifactId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vital-aimp</vital-core:hasDefaultArtifactId>
-        <vital-core:hasDefaultGroupId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitalai-com</vital-core:hasDefaultGroupId>
-        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
         <owl:versionInfo>0.1.0</owl:versionInfo>
+        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultGroupId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitalai-com</vital-core:hasDefaultGroupId>
     </owl:Ontology>
     
 
@@ -1896,6 +1896,24 @@ for payments USD</rdfs:comment>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasExternalInteractionFee -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasExternalInteractionFee">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasExternalInteractionTotalFee -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasExternalInteractionTotalFee">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -8164,6 +8182,30 @@ create/update/remove/get/query</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ExternalInteraction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ExternalInteraction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ExternalInteractionPart -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#FacebookEndpoint -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#FacebookEndpoint">
@@ -8741,6 +8783,47 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
         <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogPart"/>
         <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Edge"/>
         <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Dialog"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionChain -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionChain">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteraction"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionPart -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionPart">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionPartChain -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionPartChain">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionTransaction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionTransaction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteraction"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
     </owl:Class>
     
 
@@ -10287,5 +10370,5 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
 
 
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 

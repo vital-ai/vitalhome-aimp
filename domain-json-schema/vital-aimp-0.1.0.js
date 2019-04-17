@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "fa98916b10dda8dae5e3fe99265179da",
+  "domainOWLHash" : "c7c14bc23f4acf13bc46a5062142b301",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2962,6 +2962,27 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ExternalInteraction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasExternalInteractionFee" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasExternalInteractionTotalFee" : {
+        "type" : "number"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#FacebookEndpoint",
     "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
     "properties" : {
@@ -3647,6 +3668,34 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#Dialog" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#DialogPart", "http://vital.ai/ontology/vital-core#VITAL_Edge" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionChain",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteraction" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteraction" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionPart",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteraction" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionPartChain",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasExternalInteractionTransaction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteraction", "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction" ],
     "properties" : {
     }
   }, {
@@ -6443,6 +6492,18 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "expression",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasExternalInteractionFee",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction" ],
+    "shortName" : "externalInteractionFee",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasExternalInteractionTotalFee",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction" ],
+    "shortName" : "externalInteractionTotalFee",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasFacebookUserID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookMessage" ],
