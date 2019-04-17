@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "c7c14bc23f4acf13bc46a5062142b301",
+  "domainOWLHash" : "3fac990047fb0372098d83f488ccea05",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2970,6 +2970,12 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasRecipientReferenceURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSenderReferenceURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction",
@@ -7263,6 +7269,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasRecipientReferenceURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
+    "shortName" : "recipientReferenceURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasRecipients",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary" ],
     "shortName" : "recipients",
@@ -7394,6 +7406,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "senderOrRecipient",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSenderReferenceURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
+    "shortName" : "senderReferenceURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasServiceName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogDatascript", "http://vital.ai/ontology/vital-aimp#DialogQuery" ],
