@@ -1827,8 +1827,10 @@ for payments USD</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPredictAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogProcess"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRecommend"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3163,9 +3165,11 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPersistFact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPredictAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogProcess"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRecommend"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRemoveFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSendAIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogSwitchToBot"/>
@@ -4040,8 +4044,10 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogChatRules"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPredictAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogProcess"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRecommend"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -4331,9 +4337,11 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPayment"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPredictAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogProcess"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRecommend"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -5185,9 +5193,11 @@ query timeout in seconds, default 10</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogAssignFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogDatascriptAction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPredictAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogProcess"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQueryAction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogRecommend"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GraphObjectFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ListFact"/>
                 </owl:unionOf>
