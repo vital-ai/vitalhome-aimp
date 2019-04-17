@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "3fac990047fb0372098d83f488ccea05",
+  "domainOWLHash" : "2984562e6dd4444aa98615acffa467bb",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -3651,8 +3651,22 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasAccountAction",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart" ],
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart", "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountAction" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionChain",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction", "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction", "http://vital.ai/ontology/vital-aimp#ExternalInteraction" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionPartChain",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart", "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart", "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
     "properties" : {
     }
   }, {

@@ -8765,6 +8765,31 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
         <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountAction"/>
         <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionChain -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionChain">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteraction"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteraction"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteraction"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionPartChain -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionPartChain">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
     </owl:Class>
     
 
