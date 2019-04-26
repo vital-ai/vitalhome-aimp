@@ -6025,7 +6025,7 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#AccountInteraction -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountInteraction">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseInteraction"/>
     </owl:Class>
     
 
@@ -6033,7 +6033,7 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#AccountInteractionPart -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountInteractionPart">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseInteractionPart"/>
     </owl:Class>
     
 
@@ -6041,7 +6041,7 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseInteractionTransaction"/>
     </owl:Class>
     
 
@@ -6264,6 +6264,30 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BB8Device">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#SpheroDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#BaseInteraction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BaseInteraction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#BaseInteractionPart -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BaseInteractionPart">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#BaseInteractionTransaction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#BaseInteractionTransaction">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
     </owl:Class>
     
 
@@ -8201,7 +8225,7 @@ create/update/remove/get/query</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#ExternalInteraction -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ExternalInteraction">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseInteraction"/>
     </owl:Class>
     
 
@@ -8209,7 +8233,7 @@ create/update/remove/get/query</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#ExternalInteractionPart -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseInteractionPart"/>
     </owl:Class>
     
 
@@ -8217,7 +8241,7 @@ create/update/remove/get/query</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseInteractionTransaction"/>
     </owl:Class>
     
 
@@ -8766,18 +8790,6 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
         <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountAction"/>
         <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionPart"/>
         <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteractionPart"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionChain -->
-
-    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionChain">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteraction"/>
-        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteraction"/>
-        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteraction"/>
-        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#ExternalInteraction"/>
     </owl:Class>
     
 

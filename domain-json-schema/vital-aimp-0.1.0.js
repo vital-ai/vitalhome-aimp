@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "1241d63ea4165df6d0599f44df8304b3",
+  "domainOWLHash" : "98bd921cc316976a764e948fe0ceb7e5",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -280,12 +280,12 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AccountInteraction",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "parent" : "http://vital.ai/ontology/vital-aimp#BaseInteraction",
     "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AccountInteractionPart",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "parent" : "http://vital.ai/ontology/vital-aimp#BaseInteractionPart",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasRecipientAccountURI" : {
         "type" : "string"
@@ -296,7 +296,7 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "parent" : "http://vital.ai/ontology/vital-aimp#BaseInteractionTransaction",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasAccountInteractionFee" : {
         "type" : "number"
@@ -640,6 +640,21 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#BB8Device",
     "parent" : "http://vital.ai/ontology/vital-aimp#SpheroDevice",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#BaseInteraction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#BaseInteractionPart",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#BaseInteractionTransaction",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
     "properties" : {
     }
   }, {
@@ -2963,12 +2978,12 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ExternalInteraction",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "parent" : "http://vital.ai/ontology/vital-aimp#BaseInteraction",
     "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "parent" : "http://vital.ai/ontology/vital-aimp#BaseInteractionPart",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasRecipientReferenceURI" : {
         "type" : "string"
@@ -2979,7 +2994,7 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ExternalInteractionTransaction",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
+    "parent" : "http://vital.ai/ontology/vital-aimp#BaseInteractionTransaction",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasExternalInteractionFee" : {
         "type" : "number"
@@ -3653,13 +3668,6 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionPart", "http://vital.ai/ontology/vital-aimp#ExternalInteractionPart" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountAction" ],
-    "properties" : {
-    }
-  }, {
-    "id" : "http://vital.ai/ontology/vital-aimp#HyperEdge_hasBridgeInteractionChain",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction", "http://vital.ai/ontology/vital-aimp#ExternalInteraction" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountInteraction", "http://vital.ai/ontology/vital-aimp#ExternalInteraction" ],
     "properties" : {
     }
   }, {
