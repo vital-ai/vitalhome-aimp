@@ -525,6 +525,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
                 </owl:unionOf>
@@ -618,7 +619,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <!-- http://vital.ai/ontology/vital-aimp#hasThreadURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasThreadURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -935,6 +944,7 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ResultListFact"/>
                 </owl:unionOf>
@@ -2158,6 +2168,8 @@ create_file_from_fact</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusRequest"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Button"/>
@@ -2413,6 +2425,7 @@ numerical</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusRequest"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#StripePayment"/>
@@ -2517,6 +2530,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
@@ -2853,6 +2867,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ResultListFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
@@ -3587,6 +3602,15 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasScriptName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScriptName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSearchString -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSearchString">
@@ -4023,6 +4047,7 @@ the map is serialized as json map</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
@@ -4053,6 +4078,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogExitDialog"/>
@@ -4463,6 +4489,7 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ResultListFact"/>
                 </owl:unionOf>
@@ -6058,6 +6085,22 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AdUnitEndpoint">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
 
