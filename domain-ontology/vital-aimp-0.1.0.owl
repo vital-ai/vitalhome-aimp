@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://vital.ai/ontology/vital-aimp#"
      xml:base="http://vital.ai/ontology/vital-aimp"
-     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:vital-social="http://vital.ai/ontology/vital-social#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:vital-social="http://vital.ai/ontology/vital-social#">
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-aimp">
         <owl:imports rdf:resource="http://vital.ai/ontology/vital-social"/>
         <vital-core:hasDefaultArtifactId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vital-aimp</vital-core:hasDefaultArtifactId>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
-        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
         <vital-core:hasDefaultGroupId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitalai-com</vital-core:hasDefaultGroupId>
+        <vital-core:hasDefaultPackage>com.vitalai.aimp.domain</vital-core:hasDefaultPackage>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -67,6 +67,8 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailSummary"/>
@@ -1490,6 +1492,25 @@ OR</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">default $
 for payments USD</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasDatascriptScope -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDatascriptScope">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">&apos;global&apos;
+&apos;account&apos;
+&apos;service&apos;</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -3614,7 +3635,14 @@ question:
     <!-- http://vital.ai/ontology/vital-aimp#hasScriptName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScriptName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -5074,16 +5102,6 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDontBroadcastToAllSessions">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="en">when true, the message will only be sent to channel bot and session the message was created in</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-aimp#isDownloadEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDownloadEnabled">
@@ -5383,6 +5401,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isInterAccountSearchableRecipient">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isInteractMode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isInteractMode">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -5814,6 +5841,15 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSystemChannel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSystemChannel">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -10512,5 +10548,5 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
 
