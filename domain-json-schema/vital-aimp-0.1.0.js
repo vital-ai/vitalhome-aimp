@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "64ec8c7bfa2587e8d4b26f7571621bf3",
+  "domainOWLHash" : "60ff031d9d11e2b935bdaf7eac4f5a84",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5380,6 +5380,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasFormattedContent" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasImageCaption" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasImageFileNodeURI" : {
         "type" : "string"
       },
@@ -6790,6 +6793,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasId",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest", "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse", "http://vital.ai/ontology/vital-aimp#AgentStatusRequest", "http://vital.ai/ontology/vital-aimp#AgentStatusResponse", "http://vital.ai/ontology/vital-aimp#Button", "http://vital.ai/ontology/vital-aimp#DialogButton", "http://vital.ai/ontology/vital-aimp#DialogButtonClickedMessage", "http://vital.ai/ontology/vital-aimp#DialogElement", "http://vital.ai/ontology/vital-aimp#DialogPayment", "http://vital.ai/ontology/vital-aimp#Payment", "http://vital.ai/ontology/vital-aimp#WebviewCard" ],
     "shortName" : "id",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasImageCaption",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ThingCard" ],
+    "shortName" : "imageCaption",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {

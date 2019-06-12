@@ -2255,6 +2255,15 @@ static for all copies</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasImageCaption -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasImageCaption">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ThingCard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasImageURL -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasImageURL">
