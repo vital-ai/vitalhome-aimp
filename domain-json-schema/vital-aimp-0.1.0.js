@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "df89a8fc2729efc642c423e566074948",
+  "domainOWLHash" : "0eb6796e8ca00c3496a0f4c99d4fb125",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -582,6 +582,12 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasStatusMessage" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasUpdateContent" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasUpdateType" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#isUpdateAnswer" : {
         "type" : "boolean"
       }
@@ -597,6 +603,12 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasQuestionURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasUpdateContent" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasUpdateType" : {
         "type" : "string"
       }
     }
@@ -8039,6 +8051,18 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "tweetIDs",
     "multipleValues" : true,
     "type" : "LongProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasUpdateContent",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerStatusMessage", "http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage" ],
+    "shortName" : "updateContent",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasUpdateType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerStatusMessage", "http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage" ],
+    "shortName" : "updateType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasUriValue",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#URIPropertyFact" ],
