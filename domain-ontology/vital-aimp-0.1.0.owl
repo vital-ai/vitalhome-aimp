@@ -5658,6 +5658,23 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isNextButtonEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isNextButtonEnabled">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ButtonStateMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>By default considered true, and is set to false when the Next button on a form should be disabled when the form loads or dynamically.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isNotificationsEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isNotificationsEnabled">
@@ -5727,6 +5744,23 @@ query timeout in seconds, default 10</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isPremium">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isPreviousButtonEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isPreviousButtonEnabled">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ButtonStateMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>By default this is considered true, and is set to false when the a form should have it&apos;s &quot;Previous&quot; button disabled upon form loads or dynamically.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -5978,6 +6012,23 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">if set, all questions are embedded into single message</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSubmitButtonEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSubmitButtonEnabled">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ButtonStateMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>By default considered true, and is set to false when the Submit button should be disabled when a form loads or dynamically.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -6611,6 +6662,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ButtonClickedMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ButtonStateMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ButtonStateMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment>Used to set the state of buttons in a form that are used to navigate across pages.</rdfs:comment>
     </owl:Class>
     
 
