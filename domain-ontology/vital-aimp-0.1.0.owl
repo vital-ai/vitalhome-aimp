@@ -9015,7 +9015,7 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
-        <vital-core:hasEdgeSrcDomain xml:lang="en">a message sent by the server after a certain task was completed and client side needs to know the status of it</vital-core:hasEdgeSrcDomain>
+        <rdfs:comment xml:lang="en">a message sent by the server after a certain task was completed and client side needs to know the status of it</rdfs:comment>
     </owl:Class>
     
 
