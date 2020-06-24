@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "c17d76055f39eaa3a47652fdf609ea95",
+  "domainOWLHash" : "3ad40fce2b4aee6a8409a9c46ed0daa1",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -4792,6 +4792,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isHandlerEnabled" : {
         "type" : "boolean"
       },
+      "http://vital.ai/ontology/vital-aimp#isHidden" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isIgnoreStandardIntents" : {
         "type" : "boolean"
       },
@@ -8477,6 +8480,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isHelpRequested",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage", "http://vital.ai/ontology/vital-aimp#UserDialogAppMessage" ],
     "shortName" : "helpRequested",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isHidden",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "hidden",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
