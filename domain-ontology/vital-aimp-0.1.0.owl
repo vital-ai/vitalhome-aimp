@@ -2906,6 +2906,22 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasNextButtonLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasNextButtonLabel">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ButtonStateMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasNextExecutionDateMinutesSource -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasNextExecutionDateMinutesSource">
@@ -3244,6 +3260,22 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">string-serialized previous answer</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasPreviousButtonLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPreviousButtonLabel">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ButtonStateMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -4301,7 +4333,15 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ButtonStateMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">&quot;Submit&quot; is default</rdfs:comment>
     </owl:DatatypeProperty>

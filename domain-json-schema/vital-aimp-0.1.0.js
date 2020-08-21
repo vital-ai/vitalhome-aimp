@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "3ad40fce2b4aee6a8409a9c46ed0daa1",
+  "domainOWLHash" : "c1b6c75b488c2cd91b6ef7360c9fe259",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -863,6 +863,15 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#ButtonStateMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasNextButtonLabel" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasPreviousButtonLabel" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#isNextButtonEnabled" : {
         "type" : "boolean"
       },
@@ -4853,10 +4862,19 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasNextButtonLabel" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasPage" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasPreviousButtonLabel" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasTotalPages" : {
@@ -7157,6 +7175,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasNextButtonLabel",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ButtonStateMessage", "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
+    "shortName" : "nextButtonLabel",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasNextExecutionDateMinutesSource",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogExitDialog" ],
     "shortName" : "nextExecutionDateMinutesSource",
@@ -7358,6 +7382,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPreviousAnswer",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "previousAnswer",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasPreviousButtonLabel",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ButtonStateMessage", "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
+    "shortName" : "previousButtonLabel",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -7884,7 +7914,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSubmitButtonLabel",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ButtonStateMessage", "http://vital.ai/ontology/vital-aimp#MultiChoiceQuestion", "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
     "shortName" : "submitButtonLabel",
     "multipleValues" : false,
     "type" : "StringProperty"
