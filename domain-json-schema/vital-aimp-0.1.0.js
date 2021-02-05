@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "c1b6c75b488c2cd91b6ef7360c9fe259",
+  "domainOWLHash" : "2d5b80ff7e87f4d5a01fdf81b830af62",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2628,6 +2628,13 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInLogin",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInEndpoint" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLoginChannelBot",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
@@ -3610,6 +3617,34 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInInviteMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInPostMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInSearchMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInTextMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyMapMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
     "properties" : {
@@ -4129,6 +4164,59 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#LightDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LinkedInEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LinkedInInvitation",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LinkedInLogin",
+    "parent" : "http://vital.ai/ontology/vital#Login",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LinkedInMessage",
+    "parent" : "http://vital.ai/ontology/vital-nlp#Document",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LinkedInProfile",
+    "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInProfileId" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ListChannelsRequestMessage",
@@ -7036,6 +7124,18 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty",
     "parent" : "http://vital.ai/ontology/vital-aimp#hasUrl"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage", "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile", "http://vital.ai/ontology/vital-aimp#LinkedInInvitation", "http://vital.ai/ontology/vital-aimp#LinkedInMessage", "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedInJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInProfileId",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInProfile" ],
+    "shortName" : "linkedInProfileId",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLocalTime",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
     "shortName" : "localTime",
@@ -8706,7 +8806,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isRetired",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaLogin", "http://vital.ai/ontology/vital-aimp#AnonymousLogin", "http://vital.ai/ontology/vital-aimp#EmailLogin", "http://vital.ai/ontology/vital-aimp#FacebookLogin", "http://vital.ai/ontology/vital-aimp#SlackLogin", "http://vital.ai/ontology/vital-aimp#SmsLogin", "http://vital.ai/ontology/vital-aimp#TwitterLogin" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaLogin", "http://vital.ai/ontology/vital-aimp#AnonymousLogin", "http://vital.ai/ontology/vital-aimp#EmailLogin", "http://vital.ai/ontology/vital-aimp#FacebookLogin", "http://vital.ai/ontology/vital-aimp#LinkedInLogin", "http://vital.ai/ontology/vital-aimp#SlackLogin", "http://vital.ai/ontology/vital-aimp#SmsLogin", "http://vital.ai/ontology/vital-aimp#TwitterLogin" ],
     "shortName" : "retired",
     "multipleValues" : false,
     "type" : "BooleanProperty"
