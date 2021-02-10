@@ -4026,6 +4026,33 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackFileShareName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackFileShareName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackFileShareURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackFileShareURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackMessageJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackMessageJSON">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSlackRecipientChannelID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackRecipientChannelID">

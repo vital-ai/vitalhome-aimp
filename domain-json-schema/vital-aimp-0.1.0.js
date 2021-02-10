@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "2d5b80ff7e87f4d5a01fdf81b830af62",
+  "domainOWLHash" : "d62b762b1f6d7859656f80bc3cfccf2f",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5349,6 +5349,15 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasSlackEventType" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSlackFileShareName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackFileShareURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackMessageJSON" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
         "type" : "string"
       },
@@ -7854,6 +7863,24 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackEventType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
     "shortName" : "slackEventType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackFileShareName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
+    "shortName" : "slackFileShareName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackFileShareURL",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
+    "shortName" : "slackFileShareURL",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackMessageJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
+    "shortName" : "slackMessageJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
