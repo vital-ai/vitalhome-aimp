@@ -4085,6 +4085,22 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackRecipientThreadID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackRecipientThreadID">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID">
@@ -4104,6 +4120,24 @@ question:
     <!-- http://vital.ai/ontology/vital-aimp#hasSlackTeamID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackTeamID">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSlackThreadID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSlackThreadID">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">

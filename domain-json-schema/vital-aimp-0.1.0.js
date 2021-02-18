@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "d62b762b1f6d7859656f80bc3cfccf2f",
+  "domainOWLHash" : "8006131c47657d6ddcb1e6852011db5f",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -545,6 +545,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackThreadID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSlackUserID" : {
@@ -3698,6 +3701,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasSlackRecipientTeamID" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSlackRecipientThreadID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID" : {
         "type" : "string"
       },
@@ -4936,6 +4942,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasSlackRecipientTeamID" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSlackRecipientThreadID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID" : {
         "type" : "string"
       },
@@ -5319,6 +5328,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSlackThreadID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSlackUserID" : {
         "type" : "string"
       }
@@ -5333,6 +5345,9 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackThreadID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSlackUserID" : {
@@ -5359,6 +5374,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSlackTeamID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSlackThreadID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSlackUserID" : {
@@ -7896,6 +7914,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackRecipientThreadID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
+    "shortName" : "slackRecipientThreadID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackRecipientUserID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyMessage", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "slackRecipientUserID",
@@ -7905,6 +7929,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackTeamID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackProfile", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
     "shortName" : "slackTeamID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackThreadID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackProfile", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
+    "shortName" : "slackThreadID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
