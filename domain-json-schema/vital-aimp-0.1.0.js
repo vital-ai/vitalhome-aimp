@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "8006131c47657d6ddcb1e6852011db5f",
+  "domainOWLHash" : "c2137a0c26ce50be5ecd8900cd285c5c",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2631,10 +2631,45 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInCompanyAffiliation",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInLogin",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInEndpoint" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInRecipientInvite",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInInvitation" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInRecipientMessage",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInMessage" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInSenderInvite",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInInvitation" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInSenderMessage",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#LinkedInMessage" ],
     "properties" : {
     }
   }, {
@@ -4210,6 +4245,14 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LinkedInPost",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
@@ -7152,7 +7195,7 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-aimp#hasUrl"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage", "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile", "http://vital.ai/ontology/vital-aimp#LinkedInInvitation", "http://vital.ai/ontology/vital-aimp#LinkedInMessage", "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage", "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile", "http://vital.ai/ontology/vital-aimp#LinkedInInvitation", "http://vital.ai/ontology/vital-aimp#LinkedInMessage", "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile", "http://vital.ai/ontology/vital-aimp#LinkedInPost" ],
     "shortName" : "linkedInJSON",
     "multipleValues" : false,
     "type" : "StringProperty"

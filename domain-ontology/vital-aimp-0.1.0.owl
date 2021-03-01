@@ -2648,6 +2648,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInInvitation"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInPost"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -8262,12 +8263,62 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInCompanyAffiliation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInCompanyAffiliation">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInLogin -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInLogin">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInEndpoint"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInRecipientInvite -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInRecipientInvite">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInInvitation"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInRecipientMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInRecipientMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInMessage"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInSenderInvite -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInSenderInvite">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInInvitation"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInSenderMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasLinkedInSenderMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInMessage"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
     </owl:Class>
     
 
@@ -9699,6 +9750,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#LinkedInPost -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInPost">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
