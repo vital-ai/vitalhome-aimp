@@ -2637,6 +2637,74 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyLogoImageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyLogoImageURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyURL">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInEmailAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInEmailAddress">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInFirstName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInIndustry -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInIndustry">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInJSON -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInJSON">
@@ -2657,10 +2725,64 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInLastName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInNumberOfEmployees -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInNumberOfEmployees">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInOccupation -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInOccupation">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInProfileId -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInProfileId">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInProfilePageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInProfilePageURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedInUniversalName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedInUniversalName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLinkedinProfileImageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLinkedinProfileImageURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     

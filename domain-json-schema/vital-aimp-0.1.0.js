@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "c2137a0c26ce50be5ecd8900cd285c5c",
+  "domainOWLHash" : "ddce78142fac27a40102132b5a901e52",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -4210,7 +4210,25 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyLogoImageURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInIndustry" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInNumberOfEmployees" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInUniversalName" : {
         "type" : "string"
       }
     }
@@ -4247,7 +4265,31 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInEmailAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInFirstName" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInLastName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInOccupation" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedInProfilePageURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLinkedinProfileImageURL" : {
         "type" : "string"
       }
     }
@@ -7194,15 +7236,87 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty",
     "parent" : "http://vital.ai/ontology/vital-aimp#hasUrl"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyLogoImageURL",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile" ],
+    "shortName" : "linkedInCompanyLogoImageURL",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile", "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedInCompanyName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInCompanyURL",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile", "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedInCompanyURL",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInEmailAddress",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedInEmailAddress",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInFirstName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedInFirstName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInIndustry",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile" ],
+    "shortName" : "linkedInIndustry",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInJSON",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage", "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile", "http://vital.ai/ontology/vital-aimp#LinkedInInvitation", "http://vital.ai/ontology/vital-aimp#LinkedInMessage", "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile", "http://vital.ai/ontology/vital-aimp#LinkedInPost" ],
     "shortName" : "linkedInJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInLastName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedInLastName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInNumberOfEmployees",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile" ],
+    "shortName" : "linkedInNumberOfEmployees",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInOccupation",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedInOccupation",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInProfileId",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInProfile" ],
     "shortName" : "linkedInProfileId",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInProfilePageURL",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedInProfilePageURL",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedInUniversalName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInCompanyProfile" ],
+    "shortName" : "linkedInUniversalName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLinkedinProfileImageURL",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LinkedInPersonProfile" ],
+    "shortName" : "linkedinProfileImageURL",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
