@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "aa9b88944b6a2bb04b28b02acb7909d1",
+  "domainOWLHash" : "4f4a86c73c854775cd26dab2f0851b4a",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -25,6 +25,9 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "extends" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLoginStatusURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRoleURIs" : {
         "type" : "array",
         "items" : {
@@ -4425,6 +4428,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#LoginStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ManagedChatRuleSet",
     "parent" : "http://vital.ai/ontology/vital-aimp#ChatRuleSet",
     "properties" : {
@@ -7431,6 +7439,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "locationString",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLoginStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Login" ],
+    "shortName" : "loginStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLoginURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LoginDataEvent" ],
