@@ -68,6 +68,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountStatusURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountStatusURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AccountStatus"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasAccountURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountURI">
@@ -6705,6 +6714,14 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AccountStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ActivateMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ActivateMessage">
@@ -11302,6 +11319,22 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountStatus_DISABLED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountStatus_DISABLED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountStatus_ENABLED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountStatus_ENABLED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountStatus"/>
+    </owl:NamedIndividual>
     
 
 

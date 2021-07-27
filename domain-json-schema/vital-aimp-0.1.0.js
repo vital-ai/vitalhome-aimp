@@ -6,12 +6,15 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "4f4a86c73c854775cd26dab2f0851b4a",
+  "domainOWLHash" : "190b319291a8447c61acbb2573a5f578",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
     "extends" : "http://vital.ai/ontology/vital#Account",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAccountStatusURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasViewURIs" : {
         "type" : "array",
         "items" : {
@@ -404,6 +407,11 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasAccountInteractionTotalFee" : {
         "type" : "number"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ActivateMessage",
@@ -6303,6 +6311,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "accountInteractionTotalFee",
     "multipleValues" : false,
     "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Account" ],
+    "shortName" : "accountStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest", "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse", "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary", "http://vital.ai/ontology/vital-aimp#ErrorNode", "http://vital.ai/ontology/vital-aimp#Task" ],
