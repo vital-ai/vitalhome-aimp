@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "190b319291a8447c61acbb2573a5f578",
+  "domainOWLHash" : "21e893b9ea398b32e9970fcdcffce6af",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -1039,6 +1039,14 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#CalendarProfile",
     "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CancelCommandMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasCancelCommandMessageURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Card",
@@ -6514,6 +6522,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasCampaignURIs",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#TweetReceived" ],
     "shortName" : "campaignURIs",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasCancelCommandMessageURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CancelCommandMessage" ],
+    "shortName" : "cancelCommandMessageURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
