@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "21e893b9ea398b32e9970fcdcffce6af",
+  "domainOWLHash" : "d8db005fedeb44f5706d27ae68ccbf6c",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -3894,9 +3894,20 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasHaleyStatusMessage" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasHaleyStatusTypeURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyStatusType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyTextMessage",
@@ -7172,6 +7183,18 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "greetingText",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasHaleyStatusMessage",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage" ],
+    "shortName" : "haleyStatusMessage",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasHaleyStatusTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage" ],
+    "shortName" : "haleyStatusTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasHandlerResultFactName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
