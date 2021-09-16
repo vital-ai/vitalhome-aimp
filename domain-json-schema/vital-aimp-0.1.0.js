@@ -6,13 +6,16 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "d8db005fedeb44f5706d27ae68ccbf6c",
+  "domainOWLHash" : "5fdf132378e00fa3c676fde50ab385b0",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
     "extends" : "http://vital.ai/ontology/vital#Account",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasAccountStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSingleSignOnProviderURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasViewURIs" : {
@@ -36,6 +39,9 @@ var vital_aimp_0_1_0_schema = {
         "items" : {
           "type" : "string"
         }
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSingleSignOnIdentifier" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasViewURIs" : {
         "type" : "array",
@@ -5488,6 +5494,14 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#SingleSignOnProvider",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasSingleSignOnProviderIdentifier" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SlackEndpoint",
     "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
     "properties" : {
@@ -8193,6 +8207,24 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "signature",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSingleSignOnIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Login" ],
+    "shortName" : "singleSignOnIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSingleSignOnProviderIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SingleSignOnProvider" ],
+    "shortName" : "singleSignOnProviderIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSingleSignOnProviderURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Account" ],
+    "shortName" : "singleSignOnProviderURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSlackChannelID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#SlackMessage", "http://vital.ai/ontology/vital-aimp#SlackTextMessage" ],
