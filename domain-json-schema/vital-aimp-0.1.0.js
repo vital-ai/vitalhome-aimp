@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "5fdf132378e00fa3c676fde50ab385b0",
+  "domainOWLHash" : "c15ab54bb505a52bf83c54983462c262",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5109,6 +5109,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isProcessWithChatRules" : {
         "type" : "boolean"
       },
+      "http://vital.ai/ontology/vital-aimp#isReadOnlyQuestion" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isSendAsUser" : {
         "type" : "boolean"
       },
@@ -9201,6 +9204,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isRead",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary" ],
     "shortName" : "read",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isReadOnlyQuestion",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "readOnlyQuestion",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
