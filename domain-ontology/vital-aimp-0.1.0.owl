@@ -4054,6 +4054,23 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasScrollToQuestionIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScrollToQuestionIndex">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ScrollToQuestionMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment>Used to specify the index of the question to scroll to.  Can be used when the page initially loads to jump to a particular starting point (which could skip content, menus, currently answered questions, etc.) or can be used dynamically to jump to a particular question, such as after receiving an event like an answer message.  The index value matches the hasIndex value of a question.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSearchString -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSearchString">
@@ -10684,6 +10701,14 @@ create/update/remove/get/query</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RobotDevice">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ScrollToQuestionMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ScrollToQuestionMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 

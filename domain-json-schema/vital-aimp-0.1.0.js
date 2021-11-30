@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "c15ab54bb505a52bf83c54983462c262",
+  "domainOWLHash" : "5d1f39225f234513ab1821deab7be2f8",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5167,6 +5167,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasPreviousButtonLabel" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasScrollToQuestionIndex" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
         "type" : "string"
       },
@@ -5329,6 +5332,14 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#RobotDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ScrollToQuestionMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasScrollToQuestionIndex" : {
+        "type" : "number"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#SearchRequestMessage",
@@ -8108,6 +8119,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "scriptName",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasScrollToQuestionIndex",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage", "http://vital.ai/ontology/vital-aimp#ScrollToQuestionMessage" ],
+    "shortName" : "scrollToQuestionIndex",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSearchCategoryURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#SearchRequestMessage" ],
