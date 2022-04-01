@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "4341f17d4d6e1bacf3aff2b9686066e1",
+  "domainOWLHash" : "47ee617b03d592b6cfa7e7e23176100c",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5187,6 +5187,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isGoodbyePage" : {
         "type" : "boolean"
       },
+      "http://vital.ai/ontology/vital-aimp#isHidePageCount" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isNextButtonEnabled" : {
         "type" : "boolean"
       },
@@ -9058,6 +9061,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isHidden",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
     "shortName" : "hidden",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isHidePageCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
+    "shortName" : "hidePageCount",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
