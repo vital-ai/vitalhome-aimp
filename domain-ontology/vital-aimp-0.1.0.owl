@@ -4096,6 +4096,23 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSectionHeaderHTML -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSectionHeaderHTML">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButton"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextCard"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasSecurityProfile -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSecurityProfile">

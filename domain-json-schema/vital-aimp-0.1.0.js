@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "47ee617b03d592b6cfa7e7e23176100c",
+  "domainOWLHash" : "793a91551b4faa34e18e7775bb078d83",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -1584,6 +1584,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasId" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSectionHeaderHTML" : {
+        "type" : "string"
       }
     }
   }, {
@@ -2238,6 +2241,9 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasConditionalLogic" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSectionHeaderHTML" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
@@ -5067,6 +5073,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasScriptBody" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSectionHeaderHTML" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasShortDescription" : {
@@ -8155,6 +8164,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSearchString",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ArticleObject", "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#HaleyImageMessage", "http://vital.ai/ontology/vital-aimp#HaleyMapMessage", "http://vital.ai/ontology/vital-aimp#HaleyWeatherMessage", "http://vital.ai/ontology/vital-aimp#ImageObject", "http://vital.ai/ontology/vital-aimp#MapObject", "http://vital.ai/ontology/vital-aimp#SearchResultsList", "http://vital.ai/ontology/vital-aimp#ThingCard", "http://vital.ai/ontology/vital-aimp#WeatherForecast" ],
     "shortName" : "searchString",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSectionHeaderHTML",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogButton", "http://vital.ai/ontology/vital-aimp#DialogTextCard", "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "sectionHeaderHTML",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
