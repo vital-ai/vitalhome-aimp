@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "793a91551b4faa34e18e7775bb078d83",
+  "domainOWLHash" : "6e89346b2974d58431341871712644ec",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -340,6 +340,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isBroadcastOnly" : {
         "type" : "boolean"
       },
+      "http://vital.ai/ontology/vital-aimp#isCompressed" : {
+        "type" : "boolean"
+      },
       "http://vital.ai/ontology/vital-aimp#isContainsPII" : {
         "type" : "boolean"
       },
@@ -360,6 +363,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isRequestCompression" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -8839,6 +8845,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isCompressed",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "compressed",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isConsumeImmediately",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogReceiveAIMPMessage" ],
     "shortName" : "consumeImmediately",
@@ -9276,6 +9288,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "replyTo",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isRequestCompression",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "requestCompression",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isRetired",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaLogin", "http://vital.ai/ontology/vital-aimp#AnonymousLogin", "http://vital.ai/ontology/vital-aimp#EmailLogin", "http://vital.ai/ontology/vital-aimp#FacebookLogin", "http://vital.ai/ontology/vital-aimp#LinkedInLogin", "http://vital.ai/ontology/vital-aimp#SlackLogin", "http://vital.ai/ontology/vital-aimp#SmsLogin", "http://vital.ai/ontology/vital-aimp#TwitterLogin" ],
