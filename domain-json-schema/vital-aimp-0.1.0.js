@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "6e89346b2974d58431341871712644ec",
+  "domainOWLHash" : "60c1303961f174d3e0ff20efa18351de",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5072,6 +5072,15 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasPropertyType" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionContent" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionOption" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionPreviousContent" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasQuestionType" : {
         "type" : "string"
       },
@@ -5153,6 +5162,15 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPreviousAnswer" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionContent" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionOption" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionPreviousContent" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSlackRecipientChannelID" : {
@@ -7993,9 +8011,27 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasQuestionContent",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
+    "shortName" : "questionContent",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasQuestionID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogRestartQuestion" ],
     "shortName" : "questionID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasQuestionOption",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
+    "shortName" : "questionOption",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasQuestionPreviousContent",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
+    "shortName" : "questionPreviousContent",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
