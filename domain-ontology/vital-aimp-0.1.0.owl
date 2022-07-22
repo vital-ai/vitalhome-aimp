@@ -477,6 +477,14 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasPageTypeIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPageTypeIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasParentFactURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasParentFactURI">

@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "60c1303961f174d3e0ff20efa18351de",
+  "domainOWLHash" : "5187846fc0c04546da6b7c6c48e7940b",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5202,6 +5202,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasPage" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasPageTypeIdentifier" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasPreviousButtonLabel" : {
         "type" : "string"
       },
@@ -7776,6 +7779,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "page",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasPageTypeIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
+    "shortName" : "pageTypeIdentifier",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPanelName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ClosePanelCommand", "http://vital.ai/ontology/vital-aimp#OpenPanelCommand" ],
