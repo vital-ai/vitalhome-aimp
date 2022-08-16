@@ -277,6 +277,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPageElementMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
@@ -4360,6 +4361,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
                 </owl:unionOf>
@@ -4377,6 +4379,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
                 </owl:unionOf>
@@ -4485,6 +4488,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
@@ -4503,6 +4507,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
@@ -4521,6 +4526,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackProfile"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackTextMessage"/>
@@ -5422,6 +5428,7 @@ query timeout in seconds, default 10</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerChoice"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserDialogAppMessage"/>
                 </owl:unionOf>
             </owl:Class>
@@ -5932,6 +5939,7 @@ query timeout in seconds, default 10</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserDialogAppMessage"/>
                 </owl:unionOf>
@@ -6001,6 +6009,7 @@ query timeout in seconds, default 10</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserDialogAppMessage"/>
                 </owl:unionOf>
@@ -6368,6 +6377,7 @@ query timeout in seconds, default 10</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserDialogAppMessage"/>
                 </owl:unionOf>
@@ -6551,6 +6561,7 @@ query timeout in seconds, default 10</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
                 </owl:unionOf>
@@ -7055,6 +7066,14 @@ query timeout in seconds, default 10</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:comment xml:lang="en">optional message sent by agent that adds feedback on</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
 
