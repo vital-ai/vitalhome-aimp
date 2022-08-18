@@ -280,6 +280,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogPageElementMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionUpdateMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UserTextMessage"/>
@@ -565,6 +566,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#InvalidateQuestionMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionUpdateMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#RemoveQuestionMessage"/>
                 </owl:unionOf>
             </owl:Class>
@@ -2416,6 +2418,7 @@ static for all copies</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GroupStringPropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionUpdateMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3673,6 +3676,7 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PropertyFact"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QueryCriterion"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionUpdateMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
                 </owl:unionOf>
             </owl:Class>
@@ -5229,6 +5233,7 @@ query timeout in seconds, default 10</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerStatusMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionUpdateMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -10692,6 +10697,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#QuestionMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#QuestionUpdateMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#QuestionUpdateMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
     </owl:Class>
     
