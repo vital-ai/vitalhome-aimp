@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "8ce0127e9a02f8ba60728df82b1f9fd0",
+  "domainOWLHash" : "d40828af9ff94fe096456256097a7940",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5125,6 +5125,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasRequestType" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSameAsCheckBoxLabel" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasScriptBody" : {
         "type" : "string"
       },
@@ -5177,6 +5180,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isReadOnlyQuestion" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isSameAsCheckboxEnabled" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isSendAsUser" : {
@@ -8228,6 +8234,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "FloatProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSameAsCheckBoxLabel",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "sameAsCheckBoxLabel",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasScore",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HyperEdge_hasListFactElement" ],
     "shortName" : "score",
@@ -9401,6 +9413,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isRetired",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaLogin", "http://vital.ai/ontology/vital-aimp#AnonymousLogin", "http://vital.ai/ontology/vital-aimp#EmailLogin", "http://vital.ai/ontology/vital-aimp#FacebookLogin", "http://vital.ai/ontology/vital-aimp#LinkedInLogin", "http://vital.ai/ontology/vital-aimp#SlackLogin", "http://vital.ai/ontology/vital-aimp#SmsLogin", "http://vital.ai/ontology/vital-aimp#TwitterLogin" ],
     "shortName" : "retired",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isSameAsCheckboxEnabled",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "sameAsCheckboxEnabled",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

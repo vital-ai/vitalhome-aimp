@@ -4073,6 +4073,15 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSameAsCheckBoxLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSameAsCheckBoxLabel">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasScore -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasScore">
@@ -6470,6 +6479,15 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isSameAsCheckboxEnabled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isSameAsCheckboxEnabled">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
