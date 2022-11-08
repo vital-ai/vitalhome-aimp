@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "1474bfaa104089596816dcc26470f779",
+  "domainOWLHash" : "8ba9d80a1d26485343d1914edbdcba71",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5260,6 +5260,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasDialogPageURI" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasMultiChoiceQuestionInstruction" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasNextButtonLabel" : {
         "type" : "string"
       },
@@ -5297,6 +5300,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isPreviousButtonEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isQuestionCountPanelDisabled" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isSaveAnswersOnGoingBack" : {
@@ -7732,6 +7738,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "LongProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMultiChoiceQuestionInstruction",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
+    "shortName" : "multiChoiceQuestionInstruction",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasRelationship" ],
     "shortName" : "name",
@@ -9385,6 +9397,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isQuestionClosed",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage", "http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage", "http://vital.ai/ontology/vital-aimp#UserDialogAppMessage" ],
     "shortName" : "questionClosed",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isQuestionCountPanelDisabled",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
+    "shortName" : "questionCountPanelDisabled",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
