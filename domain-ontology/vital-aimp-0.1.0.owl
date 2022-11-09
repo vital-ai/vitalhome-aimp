@@ -6421,6 +6421,23 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isQuestionCountExcluded -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isQuestionCountExcluded">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogButton"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextCard"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isQuestionCountPanelDisabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isQuestionCountPanelDisabled">

@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "8ba9d80a1d26485343d1914edbdcba71",
+  "domainOWLHash" : "d4a4c6d9e8e3ad3b4ea1da20327f3abf",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -1631,6 +1631,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasSectionHeaderHTML" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isQuestionCountExcluded" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -2292,6 +2295,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isQuestionCountExcluded" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -5177,6 +5183,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isProcessWithChatRules" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isQuestionCountExcluded" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isReadOnlyQuestion" : {
@@ -9397,6 +9406,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isQuestionClosed",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerMessage", "http://vital.ai/ontology/vital-aimp#AnswerUnsetMessage", "http://vital.ai/ontology/vital-aimp#UserAnswerDialogAppMessage", "http://vital.ai/ontology/vital-aimp#UserDialogAppMessage" ],
     "shortName" : "questionClosed",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isQuestionCountExcluded",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogButton", "http://vital.ai/ontology/vital-aimp#DialogTextCard", "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "questionCountExcluded",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
