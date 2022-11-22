@@ -3892,6 +3892,15 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasQuestionSubType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQuestionSubType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasQuestionType -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQuestionType">
