@@ -9735,6 +9735,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyNotificationMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyNotificationMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HaleyPaymentConfirmationMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyPaymentConfirmationMessage">
