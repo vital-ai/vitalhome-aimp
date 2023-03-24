@@ -630,11 +630,17 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasReplyBridgeMessageURI -->
+    <!-- http://vital.ai/ontology/vital-aimp#hasReplyBridgeReferenceObjectURI -->
 
-    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasReplyBridgeMessageURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#InterruptProcessorMessage"/>
-        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#BridgeSessionMessage"/>
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasReplyBridgeReferenceObjectURI">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BridgeSessionMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#InterruptProcessorMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
