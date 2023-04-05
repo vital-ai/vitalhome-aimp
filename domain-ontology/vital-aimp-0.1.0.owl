@@ -968,6 +968,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasAnswerDataJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAnswerDataJSON">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasAssetID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAssetID">
@@ -3888,6 +3897,22 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#QuestionMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasQuestionDataJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQuestionDataJSON">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>

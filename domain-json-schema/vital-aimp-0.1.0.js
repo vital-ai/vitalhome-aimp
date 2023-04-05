@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "55d0132ab1070eb4936bc86142e699a4",
+  "domainOWLHash" : "a36b9ce47ed3830c37d159e1f544ef65",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -606,6 +606,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Answer",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAnswerDataJSON" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasAnswerURI" : {
         "type" : "string"
       },
@@ -757,6 +760,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionDataJSON" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasQuestionURI" : {
@@ -5177,6 +5183,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasQuestionContent" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasQuestionDataJSON" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasQuestionOption" : {
         "type" : "string"
       },
@@ -6592,6 +6601,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "amount",
     "multipleValues" : false,
     "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAnswerDataJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Answer" ],
+    "shortName" : "answerDataJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAnswerURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Answer" ],
@@ -8195,6 +8210,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasQuestionContent",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question", "http://vital.ai/ontology/vital-aimp#QuestionMessage" ],
     "shortName" : "questionContent",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasQuestionDataJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AnswerUpdateMessage", "http://vital.ai/ontology/vital-aimp#Question" ],
+    "shortName" : "questionDataJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
