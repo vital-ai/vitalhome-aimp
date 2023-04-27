@@ -8567,6 +8567,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityMemberInvitation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityMemberInvitation">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityMember"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAlexaLogin -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAlexaLogin">
@@ -11958,9 +11968,25 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_EXPIRED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_EXPIRED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_INVALID -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_INVALID">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_NEW -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_NEW">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
     </owl:NamedIndividual>
     
