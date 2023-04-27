@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "d1afa061b63c951757a8a9273882472e",
+  "domainOWLHash" : "fd75c39963755b77201dc63eded7e3b0",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -422,6 +422,61 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasAccountInteractionTotalFee" : {
         "type" : "number"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunity",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPThing",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAccountInstantiationClassURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityConvertDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityStatusURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationCode" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationEmail" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationStatusURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunityMember",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPThing",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMemberEmailAddress" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isMemberEmailAddressValidated" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AccountStatus",
@@ -2494,6 +2549,20 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#APILogin" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityInvitation",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityMember",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityMember" ],
     "properties" : {
     }
   }, {
@@ -6551,6 +6620,12 @@ var vital_aimp_0_1_0_schema = {
     }
   } ],
   "properties" : [ {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountInstantiationClassURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
+    "shortName" : "accountInstantiationClassURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountInteractionFee",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction" ],
     "shortName" : "accountInteractionFee",
@@ -6562,6 +6637,48 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "accountInteractionTotalFee",
     "multipleValues" : false,
     "type" : "FloatProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityConvertDate",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
+    "shortName" : "accountOpportunityConvertDate",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
+    "shortName" : "accountOpportunityIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationCode",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation" ],
+    "shortName" : "accountOpportunityInvitationCode",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationDate",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation" ],
+    "shortName" : "accountOpportunityInvitationDate",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationEmail",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation" ],
+    "shortName" : "accountOpportunityInvitationEmail",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation" ],
+    "shortName" : "accountOpportunityInvitationStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
+    "shortName" : "accountOpportunityStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountStatusURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Account" ],
@@ -7798,6 +7915,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMd5checksum",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ChatRuleSetFile" ],
     "shortName" : "md5checksum",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMemberEmailAddress",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityMember" ],
+    "shortName" : "memberEmailAddress",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -9437,6 +9560,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isKeepLoaded",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
     "shortName" : "keepLoaded",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isMemberEmailAddressValidated",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityMember" ],
+    "shortName" : "memberEmailAddressValidated",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

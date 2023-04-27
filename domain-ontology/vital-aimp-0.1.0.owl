@@ -68,6 +68,32 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountInstantiationClassURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountInstantiationClassURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationStatusURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationStatusURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountOpportunityStatusURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountOpportunityStatusURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunity"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasAccountStatusURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountStatusURI">
@@ -907,6 +933,51 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountInteractionTotalFee">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountOpportunityConvertDate -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountOpportunityConvertDate">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountOpportunityIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountOpportunityIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationCode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationCode">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationDate">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountOpportunityInvitationEmail">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -3086,6 +3157,15 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMd5checksum">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ChatRuleSetFile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasMemberEmailAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMemberEmailAddress">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityMember"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -6302,6 +6382,15 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isMemberEmailAddressValidated -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isMemberEmailAddressValidated">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityMember"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isMms -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isMms">
@@ -7067,6 +7156,46 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountInteractionTransaction">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#BaseInteractionTransaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunity -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunity">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityMember -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityMember">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
 
@@ -8414,6 +8543,26 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#APILogin"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityInvitation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityInvitation">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityMember -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityMember">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityMember"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunity"/>
     </owl:Class>
     
 
@@ -11782,6 +11931,102 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_ACCEPTED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_ACCEPTED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_CANCELED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_CANCELED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_ERROR -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_ERROR">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_INVALID -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_INVALID">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_OPENED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_OPENED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_SENT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus_SENT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitationStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_CONVERTED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_CONVERTED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_ERROR -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_ERROR">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_INVALID -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_INVALID">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_INVITED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_INVITED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_NEW -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_NEW">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_RETIRED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus_RETIRED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus"/>
+    </owl:NamedIndividual>
     
 
 
