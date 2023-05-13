@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "c524db565223674dc5c4fed64e7054ac",
+  "domainOWLHash" : "012ea7e029cd0e7e3f15a6776cedfa69",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -1034,6 +1034,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasBridgeChannelURI" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasBridgeSequenceNumber" : {
+        "type" : "number"
       },
       "http://vital.ai/ontology/vital-aimp#hasBridgeSessionID" : {
         "type" : "string"
@@ -6860,6 +6863,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "bridgeChannelURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasBridgeSequenceNumber",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#BridgeSessionMessage" ],
+    "shortName" : "bridgeSequenceNumber",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasBridgeSessionID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#BridgeSessionMessage" ],
