@@ -1147,6 +1147,17 @@ it is necessary for expired sessions cleanup job</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasBase64BinaryData -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBase64BinaryData">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#FileNode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <vital-core:hasDontIndexFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vital-core:hasDontIndexFlag>
+        <rdfs:comment>Base 64 encoded binary data of a file such as a PDF.  This is meant to be ephemeral and not stored, and is intended to allow service to send a user interface binary data, such as a pdf, to enable displaying it in the UI conveniently.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasBccRecipients -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasBccRecipients">

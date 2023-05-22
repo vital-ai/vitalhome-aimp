@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "012ea7e029cd0e7e3f15a6776cedfa69",
+  "domainOWLHash" : "9852a16c6cafd72cd34a9a20884336c4",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -26,6 +26,13 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isInterAccountSearchableRecipient" : {
         "type" : "boolean"
+      }
+    }
+  }, {
+    "extends" : "http://vital.ai/ontology/vital#FileNode",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasBase64BinaryData" : {
+        "type" : "string"
       }
     }
   }, {
@@ -6803,6 +6810,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "badge",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasBase64BinaryData",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#FileNode" ],
+    "shortName" : "base64BinaryData",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasBccRecipients",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary" ],
