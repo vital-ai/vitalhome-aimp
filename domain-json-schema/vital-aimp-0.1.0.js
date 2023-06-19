@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "cce53fc13610ee23e9fb7f2ccfa92f15",
+  "domainOWLHash" : "1871e544602a32824282a3d8431f19df",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -247,7 +247,7 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasEndpointURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasGeoJSON" : {
+      "http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasGeolocation" : {
@@ -7571,9 +7571,9 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#hasGeoJSON",
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
-    "shortName" : "geoJSON",
+    "shortName" : "geoAPIJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
