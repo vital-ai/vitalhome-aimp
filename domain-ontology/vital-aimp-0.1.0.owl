@@ -2418,9 +2418,9 @@ create_file_from_fact</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasGeoJSON -->
+    <!-- http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON -->
 
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGeoJSON">
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
