@@ -4204,6 +4204,25 @@ read-only</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasReferenceIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasReferenceIdentifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_Edge"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Used for a reference identifier, in UUID format, used with storing the object in an external database.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasRelationshipFactName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRelationshipFactName">

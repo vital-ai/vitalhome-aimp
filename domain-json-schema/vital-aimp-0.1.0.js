@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "1871e544602a32824282a3d8431f19df",
+  "domainOWLHash" : "288d9fde20b1e95e6601dd5719becc51",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -75,6 +75,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasReferenceIdentifier" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSecurityProfile" : {
         "type" : "string"
       },
@@ -116,6 +119,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasReferenceIdentifier" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSecurityProfile" : {
         "type" : "string"
       },
@@ -141,6 +147,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasReferenceIdentifier" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSecurityProfile" : {
         "type" : "string"
       },
@@ -165,6 +174,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasReferenceIdentifier" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSecurityProfile" : {
         "type" : "string"
@@ -8476,6 +8488,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasRecipients",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary" ],
     "shortName" : "recipients",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasReferenceIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "referenceIdentifier",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
