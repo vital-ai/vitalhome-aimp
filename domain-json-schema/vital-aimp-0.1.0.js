@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "65fabf4c7a1a2d9340b2e23e7344fb03",
+  "domainOWLHash" : "7ce0ea0189a2cc8b68f663edfcf7d0ef",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -55,6 +55,9 @@ var vital_aimp_0_1_0_schema = {
         "items" : {
           "type" : "string"
         }
+      },
+      "http://vital.ai/ontology/vital-aimp#isAccountInternalAdmin" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -9274,6 +9277,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isAcceptSystemTicks",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
     "shortName" : "acceptSystemTicks",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isAccountInternalAdmin",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Login" ],
+    "shortName" : "accountInternalAdmin",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
