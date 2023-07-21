@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "739928d33c77c2f9b99f6bfd00745156",
+  "domainOWLHash" : "65fabf4c7a1a2d9340b2e23e7344fb03",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2610,7 +2610,7 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityMember",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account", "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityMember" ],
     "properties" : {
     }

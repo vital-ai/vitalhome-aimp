@@ -8678,6 +8678,7 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAccountOpportunityMember">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunityMember"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AccountOpportunity"/>
     </owl:Class>
     
