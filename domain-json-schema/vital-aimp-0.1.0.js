@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "ac7c2507132a434179f154540432cdbe",
+  "domainOWLHash" : "288a8679153949f825b53d2458d218cb",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -60,6 +60,22 @@ var vital_aimp_0_1_0_schema = {
         }
       },
       "http://vital.ai/ontology/vital-aimp#isAccountInternalAdmin" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "extends" : "http://vital.ai/ontology/vital#LoginAuth",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasLastLoginAttemptDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLoginAttemptCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasLoginAuthLockedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#isLoginAuthLocked" : {
         "type" : "boolean"
       }
     }
@@ -7862,6 +7878,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "LongProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLastLoginAttemptDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#LoginAuth" ],
+    "shortName" : "lastLoginAttemptDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLastName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookProfile" ],
     "shortName" : "lastName",
@@ -8000,6 +8022,18 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "locationString",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLoginAttemptCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#LoginAuth" ],
+    "shortName" : "loginAttemptCount",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasLoginAuthLockedDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#LoginAuth" ],
+    "shortName" : "loginAuthLockedDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLoginOnboardingStatusURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Login" ],
@@ -9727,6 +9761,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isKeepLoaded",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
     "shortName" : "keepLoaded",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isLoginAuthLocked",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#LoginAuth" ],
+    "shortName" : "loginAuthLocked",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

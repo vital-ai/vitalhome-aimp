@@ -2904,6 +2904,15 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasLastLoginAttemptDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLastLoginAttemptDateTime">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#LoginAuth"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasLastName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLastName">
@@ -3157,6 +3166,24 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLocationString">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#CalendarEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLoginAttemptCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLoginAttemptCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#LoginAuth"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasLoginAuthLockedDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLoginAuthLockedDateTime">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#LoginAuth"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -6539,6 +6566,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isKeepLoaded">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isLoginAuthLocked -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isLoginAuthLocked">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#LoginAuth"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
