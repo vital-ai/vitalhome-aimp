@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "288a8679153949f825b53d2458d218cb",
+  "domainOWLHash" : "8532ec312cffff69f745ea47ebdee75d",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -471,6 +471,12 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasAccountEventAccountURI" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasAccountEventDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountEventIdentifier" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasAccountEventLoginURI" : {
         "type" : "string"
       },
@@ -529,6 +535,28 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityStatusURI" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunityEvent",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityEventDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityEventIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityEventTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunityEventType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunityInvitation",
@@ -6731,6 +6759,18 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountEventDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountEvent" ],
+    "shortName" : "accountEventDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountEventIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountEvent" ],
+    "shortName" : "accountEventIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountEventLoginURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountEvent" ],
     "shortName" : "accountEventLoginURI",
@@ -6767,6 +6807,24 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "DateProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityEventDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityEvent" ],
+    "shortName" : "accountOpportunityEventDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityEventIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityEvent" ],
+    "shortName" : "accountOpportunityEventIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityEventTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityEvent" ],
+    "shortName" : "accountOpportunityEventTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityIdentifier",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
     "shortName" : "accountOpportunityIdentifier",
@@ -6800,6 +6858,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityStatusURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunity" ],
     "shortName" : "accountOpportunityStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityEvent" ],
+    "shortName" : "accountOpportunityURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
