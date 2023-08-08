@@ -2224,8 +2224,15 @@ for payments USD</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasEmail -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEmail">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Contact"/>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailProfile"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Contact"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailProfile"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -9431,6 +9438,17 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasPermittedSender -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasPermittedSender">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSender"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasProfile -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasProfile">
@@ -11155,6 +11173,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PaymentQuestion">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PermittedSender -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSender">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
 
