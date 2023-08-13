@@ -523,6 +523,24 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasMessageServiceURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMessageServiceURI">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailReceived"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SendEmail"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SendSms"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsReceived"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#MessageService"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasMessageURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMessageURI">
@@ -660,6 +678,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPermittedSenderStatusURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSender"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSenderStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasPermittedSenderTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasPermittedSenderTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSender"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSenderType"/>
     </owl:ObjectProperty>
     
 
@@ -9221,6 +9248,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasEmailForward -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasEmailForward">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasEmailLogin -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasEmailLogin">
@@ -11024,6 +11061,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#MessageService -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MessageService">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#MetaQLMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLMessage">
@@ -11197,6 +11242,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#PermittedSenderStatus -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSenderStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PermittedSenderType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSenderType">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
@@ -12570,6 +12623,30 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#MessageService_LOOPMESSAGE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#MessageService_LOOPMESSAGE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#MessageService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#MessageService_MAILGUN -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#MessageService_MAILGUN">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#MessageService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#MessageService_TWILIO -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#MessageService_TWILIO">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#MessageService"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#PayloadStyle_JSON_STRING -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#PayloadStyle_JSON_STRING">
@@ -12622,6 +12699,30 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSenderStatus_RETIRED">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSenderStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PermittedSenderType_EMAIL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSenderType_EMAIL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSenderType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PermittedSenderType_SMS -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSenderType_SMS">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSenderType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PermittedSenderType_SMS_IMESSAGE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSenderType_SMS_IMESSAGE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSenderType"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
