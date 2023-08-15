@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "0aa9037e3cb0d74db59cc16de5681c27",
+  "domainOWLHash" : "d62e823ca23516e0ca600162db692af4",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -74,6 +74,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasLoginAuthLockedDateTime" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#isLoginAuthForcePasswordReset" : {
+        "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isLoginAuthLocked" : {
         "type" : "boolean"
@@ -9898,6 +9901,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isKeepLoaded",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
     "shortName" : "keepLoaded",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isLoginAuthForcePasswordReset",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#LoginAuth" ],
+    "shortName" : "loginAuthForcePasswordReset",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
