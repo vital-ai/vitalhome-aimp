@@ -12568,9 +12568,73 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ECHO -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ECHO">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_AccessViolation -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_AccessViolation">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_AmbiguousParameters -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_AmbiguousParameters">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_InternalServiceFailure -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_InternalServiceFailure">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_MissingParameter -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_MissingParameter">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_NotFound -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_NotFound">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_NotImplemented -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_NotImplemented">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_Validation -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_ERROR_Validation">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
     </owl:NamedIndividual>
     
@@ -12587,6 +12651,30 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_Deferred -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_Deferred">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_EmptyResponse -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_EmptyResponse">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_NoResponse -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_NoResponse">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
     </owl:NamedIndividual>
     
