@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "a5ea7f702f93aa3ad47aab5c7dcd4b33",
+  "domainOWLHash" : "e7293023f19e026f81370a696ea261b4",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -596,6 +596,44 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AccountOpportunityStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountResourceLock",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockOwnerIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockUserLoginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAccountResourceTypeURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountResourceLockStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountResourceLockType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AccountResourceType",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
@@ -6922,6 +6960,42 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountOpportunityURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountOpportunityEvent" ],
     "shortName" : "accountOpportunityURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockAccountURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountResourceLock" ],
+    "shortName" : "accountResourceLockAccountURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockOwnerIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountResourceLock" ],
+    "shortName" : "accountResourceLockOwnerIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountResourceLock" ],
+    "shortName" : "accountResourceLockStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountResourceLock" ],
+    "shortName" : "accountResourceLockTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountResourceLockUserLoginURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountResourceLock" ],
+    "shortName" : "accountResourceLockUserLoginURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountResourceTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountResourceLock" ],
+    "shortName" : "accountResourceTypeURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
