@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "cb9f76103d4bbabd9df5f0bf12f9c6f1",
+  "domainOWLHash" : "6f313803cd16de1b0fffc9bdfd3212ee",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5174,6 +5174,17 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#PaymentProcessorEvent",
+    "parent" : "http://vital.ai/ontology/vital-aimp#ProcessorEvent",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasPaymentProcessorEventId" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasPaymentProviderEventType" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#PaymentProfile",
     "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
     "properties" : {
@@ -5242,6 +5253,22 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ProcessorError",
     "parent" : "http://vital.ai/ontology/vital-aimp#ErrorNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ProcessorEvent",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasProcessorEventJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasProcessorEventTypeURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ProcessorEventType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
   }, {
@@ -8561,6 +8588,18 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasPaymentProcessorEventId",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#PaymentProcessorEvent" ],
+    "shortName" : "paymentProcessorEventId",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasPaymentProviderEventType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#PaymentProcessorEvent" ],
+    "shortName" : "paymentProviderEventType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasPecrentComplete",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ProjectTask" ],
     "shortName" : "pecrentComplete",
@@ -8632,6 +8671,18 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "priority",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasProcessorEventJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ProcessorEvent" ],
+    "shortName" : "processorEventJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasProcessorEventTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ProcessorEvent" ],
+    "shortName" : "processorEventTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasProcessorID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ProcessorMessage" ],
