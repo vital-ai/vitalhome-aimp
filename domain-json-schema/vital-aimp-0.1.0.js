@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "e0fc3ccbc67dca6e4f703272250dcbd3",
+  "domainOWLHash" : "0e1ed07b7280c4a152102d75bb76419b",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -778,6 +778,9 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasAgentMessagePayloadTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasObjectClassURI" : {
         "type" : "string"
       }
     }
@@ -8667,7 +8670,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasObjectClassURI",
-    "domainClassesURIs" : [ ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstancePayloadDeployment" ],
     "shortName" : "objectClassURI",
     "multipleValues" : false,
     "type" : "URIProperty"
