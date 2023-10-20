@@ -63,7 +63,14 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <!-- http://vital.ai/ontology/vital#hasLoginURI -->
 
     <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasLoginURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </rdf:Description>
     
 

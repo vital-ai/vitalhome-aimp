@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "92f01a7444d149e334a9cb36619ff1cd",
+  "domainOWLHash" : "252a78211528aeb6e14ae695a5c117a1",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -815,6 +815,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentObject",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
         "type" : "string"
       },
