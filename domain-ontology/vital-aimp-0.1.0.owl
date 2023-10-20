@@ -203,6 +203,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AccountEvent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailSummary"/>
@@ -388,6 +389,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Task"/>
                 </owl:unionOf>
             </owl:Class>
@@ -868,6 +870,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
                 </owl:unionOf>
@@ -4875,6 +4878,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
                 </owl:unionOf>
             </owl:Class>
