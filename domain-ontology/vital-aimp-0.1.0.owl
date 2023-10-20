@@ -547,6 +547,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentImage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Movie"/>
@@ -997,6 +998,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentImage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FacebookPost"/>
@@ -2825,6 +2827,7 @@ static for all copies</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentImage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Choice"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Device"/>
@@ -5617,6 +5620,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentText"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogTextMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Question"/>
                 </owl:unionOf>
@@ -5633,6 +5637,7 @@ failed, incomplete, human-intervention, completed</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentImage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FacebookPost"/>
