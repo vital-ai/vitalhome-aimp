@@ -13240,6 +13240,14 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_Accept -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_Accept">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_Deferred -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_Deferred">
@@ -13259,6 +13267,14 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_NoResponse -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_NoResponse">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_Relay -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#HaleyStatusType_OK_Relay">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyStatusType"/>
     </owl:NamedIndividual>
     
