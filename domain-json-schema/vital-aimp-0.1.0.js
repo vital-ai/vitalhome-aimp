@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "d7ad0e82aedcba493106cb97f4eb361f",
+  "domainOWLHash" : "146cd4688cec4d0f04d535cc6de3bc1b",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -503,9 +503,25 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessageDef",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMessageClassURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessageFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#ListFact",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessagePayloadDef",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasObjectClassURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPThing",
@@ -2897,6 +2913,13 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#EMailTag",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAIMPMessagePayloadDef",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageDef" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessagePayloadDef" ],
     "properties" : {
     }
   }, {
@@ -8682,7 +8705,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageClassURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceMessageDeployment" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageDef", "http://vital.ai/ontology/vital-aimp#AgentInstanceMessageDeployment" ],
     "shortName" : "messageClassURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -8784,7 +8807,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasObjectClassURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstancePayloadDeployment" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessagePayloadDef", "http://vital.ai/ontology/vital-aimp#AgentInstancePayloadDeployment" ],
     "shortName" : "objectClassURI",
     "multipleValues" : false,
     "type" : "URIProperty"
