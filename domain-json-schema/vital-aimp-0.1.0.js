@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "e523d64e8e69e9a9494ad56f55058a43",
+  "domainOWLHash" : "d7ad0e82aedcba493106cb97f4eb361f",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -91,6 +91,18 @@ var vital_aimp_0_1_0_schema = {
           "type" : "string"
         }
       },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGenerationDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGeneratorURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasBotCreatorIdentifier" : {
         "type" : "string"
       },
@@ -125,6 +137,18 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "extends" : "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGenerationDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGeneratorURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasBotCreatorIdentifier" : {
         "type" : "string"
       },
@@ -146,6 +170,18 @@ var vital_aimp_0_1_0_schema = {
         "items" : {
           "type" : "string"
         }
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGenerationDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGeneratorURI" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasBotCreatorIdentifier" : {
         "type" : "string"
@@ -187,6 +223,18 @@ var vital_aimp_0_1_0_schema = {
           "type" : "string"
         }
       },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGenerationDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGeneratorURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasBotCreatorIdentifier" : {
         "type" : "string"
       },
@@ -214,6 +262,18 @@ var vital_aimp_0_1_0_schema = {
         "items" : {
           "type" : "string"
         }
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentAccessURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGenerationDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentGeneratorURI" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasBotCreatorIdentifier" : {
         "type" : "string"
@@ -7285,6 +7345,30 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "address",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentAccessAccountURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "agentAccessAccountURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentAccessURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "agentAccessURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentGenerationDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "agentGenerationDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentGeneratorURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "agentGeneratorURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentMessagePayloadTypeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstancePayloadDeployment" ],
