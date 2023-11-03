@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "146cd4688cec4d0f04d535cc6de3bc1b",
+  "domainOWLHash" : "6caf8149a54f3aaa5a4ce4271fa740fb",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -112,6 +112,12 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasDestinationReferenceIdentifier" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasGraphLabelURIs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
       },
@@ -192,6 +198,12 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasDestinationReferenceIdentifier" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasGraphLabelURIs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
       },
@@ -238,6 +250,12 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasBotCreatorIdentifier" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasGraphLabelURIs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
       },
@@ -277,6 +295,12 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasBotCreatorIdentifier" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGraphLabelURIs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
@@ -4210,6 +4234,11 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#GoogleHomeDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#SmartDevice",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#GraphLabel",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
   }, {
@@ -8293,6 +8322,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "gettingStartedText",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGraphLabelURIs",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "graphLabelURIs",
+    "multipleValues" : true,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGreetingText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
