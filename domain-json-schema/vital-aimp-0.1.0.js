@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "6caf8149a54f3aaa5a4ce4271fa740fb",
+  "domainOWLHash" : "310a3d6ce12912502a1ac70b138c413b",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -5733,6 +5733,11 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Proposal",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPThing",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#PurgeSessionMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
     }
   }, {

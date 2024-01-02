@@ -12068,6 +12068,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#PurgeSessionMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PurgeSessionMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#PushNotification -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PushNotification">
