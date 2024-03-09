@@ -6,7 +6,7 @@ var vital_nlp_0_2_304_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-nlp",
   "name" : "vital-nlp-0.2.304",
   "version" : "0.2.304",
-  "domainOWLHash" : "4264d711ee7bb710f22429a6d9ed62ba",
+  "domainOWLHash" : "35f19ee74c243d8476200e592c4681ae",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital" ],
   "schemas" : [ {
@@ -90,6 +90,21 @@ var vital_nlp_0_2_304_schema = {
       "http://vital.ai/ontology/vital-nlp#hasDmozPath" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentPublicationDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentSourceName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentTitle" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentUrl" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentUrlRoot" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-nlp#hasExtractedText" : {
         "type" : "string"
       },
@@ -99,9 +114,6 @@ var vital_nlp_0_2_304_schema = {
       "http://vital.ai/ontology/vital-nlp#hasLang" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-nlp#hasPublicationDate" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-nlp#hasSentimentScore" : {
         "type" : "number"
       },
@@ -109,18 +121,6 @@ var vital_nlp_0_2_304_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-nlp#hasSourceDomain" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasSourceName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasTitle" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasUrl" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasUrlRoot" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-nlp#isSentimentMixed" : {
@@ -166,21 +166,21 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasEntity",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#Entity" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntity" ],
     "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasEntityInstance",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#Entity" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#NlpEntity" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasEquivalenceElement",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#EquivalenceRelationInstance" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "properties" : {
     }
   }, {
@@ -194,7 +194,7 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasEventElement",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#EventInstance" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "properties" : {
       "http://vital.ai/ontology/vital-nlp#hasEventRole" : {
         "type" : "string"
@@ -204,14 +204,14 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasEventInstance",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasEventTrigger",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#EventInstance" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "properties" : {
     }
   }, {
@@ -224,8 +224,8 @@ var vital_nlp_0_2_304_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasNormalizedEntity",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Entity" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntity" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
     "properties" : {
       "http://vital.ai/ontology/vital-nlp#hasNormConfidence" : {
         "type" : "number"
@@ -235,7 +235,7 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasNormalizedTopic",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Topic" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NormalizedTopic" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedTopic" ],
     "properties" : {
       "http://vital.ai/ontology/vital-nlp#hasNormConfidence" : {
         "type" : "number"
@@ -252,7 +252,7 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasPhraseNormalizedEntity",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Phrase" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
     "properties" : {
     }
   }, {
@@ -265,8 +265,8 @@ var vital_nlp_0_2_304_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasRelationElement",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#RelationInstance" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpRelationInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "properties" : {
       "http://vital.ai/ontology/vital-nlp#hasRelationRole" : {
         "type" : "string"
@@ -276,7 +276,7 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasRelationInstance",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#RelationInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpRelationInstance" ],
     "properties" : {
     }
   }, {
@@ -297,7 +297,7 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasSentenceEntityInstance",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Sentence" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "properties" : {
     }
   }, {
@@ -350,62 +350,10 @@ var vital_nlp_0_2_304_schema = {
     "properties" : {
     }
   }, {
-    "id" : "http://vital.ai/ontology/vital-nlp#Entity",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "properties" : {
-      "http://vital.ai/ontology/vital-nlp#hasCategory" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasExtractSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasOpenCalaisURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasRelevance" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasWikipediaURL" : {
-        "type" : "string"
-      }
-    }
-  }, {
-    "id" : "http://vital.ai/ontology/vital-nlp#EntityInstance",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "properties" : {
-      "http://vital.ai/ontology/vital-nlp#hasAuthor" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasExactString" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasLength" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasLengthInSentence" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasOffset" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasOffsetInSentence" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasSentimentScore" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasSpanType" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#isSentimentMixed" : {
-        "type" : "boolean"
-      }
-    }
-  }, {
     "id" : "http://vital.ai/ontology/vital-nlp#EquivalenceRelationInstance",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-nlp#hasAuthor" : {
+      "http://vital.ai/ontology/vital-nlp#hasEntityAuthor" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-nlp#hasEquivalenceType" : {
@@ -416,10 +364,10 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#EventInstance",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-nlp#hasAuthor" : {
+      "http://vital.ai/ontology/vital-nlp#hasEntityAuthor" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-nlp#hasEventType" : {
+      "http://vital.ai/ontology/vital-nlp#hasEventInstanceType" : {
         "type" : "string"
       }
     }
@@ -441,16 +389,16 @@ var vital_nlp_0_2_304_schema = {
       "http://vital.ai/ontology/vital-nlp#hasContentType" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentPublicationDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentTitle" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-nlp#hasHeightPx" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-nlp#hasImageData" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasPublicationDate" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasTitle" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-nlp#hasWidthPx" : {
@@ -464,16 +412,16 @@ var vital_nlp_0_2_304_schema = {
       "http://vital.ai/ontology/vital-nlp#hasContentType" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentPublicationDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasDocumentTitle" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-nlp#hasHeightPx" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-nlp#hasImageURL" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasPublicationDate" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasTitle" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-nlp#hasWidthPx" : {
@@ -481,12 +429,58 @@ var vital_nlp_0_2_304_schema = {
       }
     }
   }, {
-    "id" : "http://vital.ai/ontology/vital-nlp#NormalizedEntity",
+    "id" : "http://vital.ai/ontology/vital-nlp#NlpEntity",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-nlp#hasCategory" : {
+      "http://vital.ai/ontology/vital-nlp#hasExtractSource" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-nlp#hasNlpEntityCategory" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasRelevance" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasWikipediaURL" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-nlp#NlpEntityInstance",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-nlp#hasEntityAuthor" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasEntityOffset" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasEntityOffsetInSentence" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasExactString" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasLength" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasLengthInSentence" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasSentimentScore" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasSpanType" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#isSentimentMixed" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
       "http://vital.ai/ontology/vital-nlp#hasContext" : {
         "type" : "string"
       },
@@ -505,7 +499,7 @@ var vital_nlp_0_2_304_schema = {
       "http://vital.ai/ontology/vital-nlp#hasNameVariants" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-nlp#hasOpenCalaisURI" : {
+      "http://vital.ai/ontology/vital-nlp#hasNlpEntityCategory" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-nlp#hasShortname" : {
@@ -528,7 +522,7 @@ var vital_nlp_0_2_304_schema = {
       }
     }
   }, {
-    "id" : "http://vital.ai/ontology/vital-nlp#NormalizedTopic",
+    "id" : "http://vital.ai/ontology/vital-nlp#NlpNormalizedTopic",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
       "http://vital.ai/ontology/vital-nlp#hasHeightPx" : {
@@ -543,14 +537,22 @@ var vital_nlp_0_2_304_schema = {
       "http://vital.ai/ontology/vital-nlp#hasNameVariants" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-nlp#hasOpenCalaisURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-nlp#hasShortname" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-nlp#hasWidthPx" : {
         "type" : "number"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-nlp#NlpRelationInstance",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-nlp#hasEntityAuthor" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasRelationType" : {
+        "type" : "string"
       }
     }
   }, {
@@ -577,17 +579,6 @@ var vital_nlp_0_2_304_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-nlp#hasTagValue" : {
-        "type" : "string"
-      }
-    }
-  }, {
-    "id" : "http://vital.ai/ontology/vital-nlp#RelationInstance",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "properties" : {
-      "http://vital.ai/ontology/vital-nlp#hasAuthor" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasRelationType" : {
         "type" : "string"
       }
     }
@@ -661,14 +652,14 @@ var vital_nlp_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-nlp#TextBlock",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-nlp#hasText" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-nlp#hasTextBlockLength" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-nlp#hasTextBlockOffset" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasTextBlockText" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-nlp#hasTransformationVector" : {
         "type" : "string"
@@ -695,10 +686,7 @@ var vital_nlp_0_2_304_schema = {
       "http://vital.ai/ontology/vital-nlp#hasClassifierName" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-nlp#hasOpenCalaisURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-nlp#hasScore" : {
+      "http://vital.ai/ontology/vital-nlp#hasTopicScore" : {
         "type" : "number"
       }
     }
@@ -739,21 +727,9 @@ var vital_nlp_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasAuthor",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance", "http://vital.ai/ontology/vital-nlp#EquivalenceRelationInstance", "http://vital.ai/ontology/vital-nlp#EventInstance", "http://vital.ai/ontology/vital-nlp#RelationInstance" ],
-    "shortName" : "author",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasBody",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Content", "http://vital.ai/ontology/vital-nlp#Document" ],
     "shortName" : "body",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasCategory",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Entity", "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
-    "shortName" : "category",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -788,7 +764,7 @@ var vital_nlp_0_2_304_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasContext",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
     "shortName" : "context",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -796,6 +772,36 @@ var vital_nlp_0_2_304_schema = {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasDmozPath",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
     "shortName" : "dmozPath",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasDocumentPublicationDate",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#Image", "http://vital.ai/ontology/vital-nlp#ImageReference" ],
+    "shortName" : "documentPublicationDate",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasDocumentSourceName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
+    "shortName" : "documentSourceName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasDocumentTitle",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#Image", "http://vital.ai/ontology/vital-nlp#ImageReference" ],
+    "shortName" : "documentTitle",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasDocumentUrl",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
+    "shortName" : "documentUrl",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasDocumentUrlRoot",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
+    "shortName" : "documentUrlRoot",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -811,8 +817,26 @@ var vital_nlp_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasEntityAuthor",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EquivalenceRelationInstance", "http://vital.ai/ontology/vital-nlp#EventInstance", "http://vital.ai/ontology/vital-nlp#NlpEntityInstance", "http://vital.ai/ontology/vital-nlp#NlpRelationInstance" ],
+    "shortName" : "entityAuthor",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasEntityOffset",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
+    "shortName" : "entityOffset",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasEntityOffsetInSentence",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
+    "shortName" : "entityOffsetInSentence",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasEntityType",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
     "shortName" : "entityType",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -823,26 +847,26 @@ var vital_nlp_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasEventInstanceType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EventInstance" ],
+    "shortName" : "eventInstanceType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasEventRole",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Edge_hasEventElement" ],
     "shortName" : "eventRole",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasEventType",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EventInstance" ],
-    "shortName" : "eventType",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasExactString",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "shortName" : "exactString",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasExtractSource",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Entity" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntity" ],
     "shortName" : "extractSource",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -860,7 +884,7 @@ var vital_nlp_0_2_304_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasHeightPx",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Image", "http://vital.ai/ontology/vital-nlp#ImageReference", "http://vital.ai/ontology/vital-nlp#NormalizedEntity", "http://vital.ai/ontology/vital-nlp#NormalizedTopic" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Image", "http://vital.ai/ontology/vital-nlp#ImageReference", "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity", "http://vital.ai/ontology/vital-nlp#NlpNormalizedTopic" ],
     "shortName" : "heightPx",
     "multipleValues" : false,
     "type" : "IntegerProperty"
@@ -872,13 +896,13 @@ var vital_nlp_0_2_304_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasImageDate",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity", "http://vital.ai/ontology/vital-nlp#NormalizedTopic" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity", "http://vital.ai/ontology/vital-nlp#NlpNormalizedTopic" ],
     "shortName" : "imageDate",
     "multipleValues" : false,
     "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasImageURL",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#ImageReference", "http://vital.ai/ontology/vital-nlp#NormalizedEntity", "http://vital.ai/ontology/vital-nlp#NormalizedTopic" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#ImageReference", "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity", "http://vital.ai/ontology/vital-nlp#NlpNormalizedTopic" ],
     "shortName" : "imageURL",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -890,13 +914,13 @@ var vital_nlp_0_2_304_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasLength",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "shortName" : "length",
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasLengthInSentence",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "shortName" : "lengthInSentence",
     "multipleValues" : false,
     "type" : "IntegerProperty"
@@ -938,8 +962,14 @@ var vital_nlp_0_2_304_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasNameVariants",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity", "http://vital.ai/ontology/vital-nlp#NormalizedTopic" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity", "http://vital.ai/ontology/vital-nlp#NlpNormalizedTopic" ],
     "shortName" : "nameVariants",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasNlpEntityCategory",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntity", "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
+    "shortName" : "nlpEntityCategory",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -948,24 +978,6 @@ var vital_nlp_0_2_304_schema = {
     "shortName" : "normConfidence",
     "multipleValues" : false,
     "type" : "FloatProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasOffset",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
-    "shortName" : "offset",
-    "multipleValues" : false,
-    "type" : "IntegerProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasOffsetInSentence",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
-    "shortName" : "offsetInSentence",
-    "multipleValues" : false,
-    "type" : "IntegerProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasOpenCalaisURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Entity", "http://vital.ai/ontology/vital-nlp#NormalizedEntity", "http://vital.ai/ontology/vital-nlp#NormalizedTopic", "http://vital.ai/ontology/vital-nlp#Topic" ],
-    "shortName" : "openCalaisURI",
-    "multipleValues" : false,
-    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasPosTagsConfidenceString",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Sentence" ],
@@ -979,12 +991,6 @@ var vital_nlp_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasPublicationDate",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#Image", "http://vital.ai/ontology/vital-nlp#ImageReference" ],
-    "shortName" : "publicationDate",
-    "multipleValues" : false,
-    "type" : "DateProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasRelationRole",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Edge_hasRelationElement" ],
     "shortName" : "relationRole",
@@ -992,20 +998,14 @@ var vital_nlp_0_2_304_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasRelationType",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#RelationInstance" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpRelationInstance" ],
     "shortName" : "relationType",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasRelevance",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Entity" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntity" ],
     "shortName" : "relevance",
-    "multipleValues" : false,
-    "type" : "FloatProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasScore",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Topic" ],
-    "shortName" : "score",
     "multipleValues" : false,
     "type" : "FloatProperty"
   }, {
@@ -1016,7 +1016,7 @@ var vital_nlp_0_2_304_schema = {
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasSentimentScore",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "shortName" : "sentimentScore",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -1040,7 +1040,7 @@ var vital_nlp_0_2_304_schema = {
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasShortname",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity", "http://vital.ai/ontology/vital-nlp#NormalizedTopic" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity", "http://vital.ai/ontology/vital-nlp#NlpNormalizedTopic" ],
     "shortName" : "shortname",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -1057,14 +1057,8 @@ var vital_nlp_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasSourceName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
-    "shortName" : "sourceName",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasSpanType",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "shortName" : "spanType",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -1082,7 +1076,7 @@ var vital_nlp_0_2_304_schema = {
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasSymbol",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
     "shortName" : "symbol",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -1111,12 +1105,6 @@ var vital_nlp_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasText",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#TextBlock" ],
-    "shortName" : "text",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasTextBlockLength",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#TextBlock" ],
     "shortName" : "textBlockLength",
@@ -1129,15 +1117,15 @@ var vital_nlp_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasTicker",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
-    "shortName" : "ticker",
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasTextBlockText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#TextBlock" ],
+    "shortName" : "textBlockText",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasTitle",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#Image", "http://vital.ai/ontology/vital-nlp#ImageReference" ],
-    "shortName" : "title",
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasTicker",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
+    "shortName" : "ticker",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -1159,38 +1147,32 @@ var vital_nlp_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-nlp#hasTopicScore",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Topic" ],
+    "shortName" : "topicScore",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasTransformationVector",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#TextBlock" ],
     "shortName" : "transformationVector",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasUrl",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
-    "shortName" : "url",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-nlp#hasUrlRoot",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
-    "shortName" : "urlRoot",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasWidthPx",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Image", "http://vital.ai/ontology/vital-nlp#ImageReference", "http://vital.ai/ontology/vital-nlp#NormalizedEntity", "http://vital.ai/ontology/vital-nlp#NormalizedTopic" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Image", "http://vital.ai/ontology/vital-nlp#ImageReference", "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity", "http://vital.ai/ontology/vital-nlp#NlpNormalizedTopic" ],
     "shortName" : "widthPx",
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasWikipediaURL",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Entity", "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpEntity", "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
     "shortName" : "wikipediaURL",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#hasWordnetURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NormalizedEntity" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#NlpNormalizedEntity" ],
     "shortName" : "wordnetURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -1208,7 +1190,7 @@ var vital_nlp_0_2_304_schema = {
     "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-nlp#isSentimentMixed",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#EntityInstance" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-nlp#Document", "http://vital.ai/ontology/vital-nlp#NlpEntityInstance" ],
     "shortName" : "sentimentMixed",
     "multipleValues" : false,
     "type" : "BooleanProperty"

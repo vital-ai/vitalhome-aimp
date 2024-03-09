@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "310a3d6ce12912502a1ac70b138c413b",
+  "domainOWLHash" : "f80df97be3d24992c10bef890b3820a3",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -359,10 +359,10 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital#hasLoginURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasAuthSessionID" : {
@@ -571,6 +571,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AccountEvent",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasAccountEventAccountURI" : {
         "type" : "string"
       },
@@ -584,9 +587,6 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasAccountEventTypeURI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
         "type" : "string"
       }
     }
@@ -769,7 +769,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasDatascriptScope" : {
@@ -792,7 +792,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasBindingNames" : {
@@ -915,10 +915,10 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentObject",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital#hasLoginURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
@@ -1019,7 +1019,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AlexaLogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+      "http://vital.ai/ontology/vital#isRetired" : {
         "type" : "boolean"
       }
     }
@@ -1043,7 +1043,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AnonymousLogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+      "http://vital.ai/ontology/vital#isRetired" : {
         "type" : "boolean"
       }
     }
@@ -1928,7 +1928,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#DataModificationEvent",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasClassURI" : {
@@ -3520,9 +3520,6 @@ var vital_aimp_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#Entity" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Entity" ],
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#hasName" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasRelationshipSetURI" : {
         "type" : "string"
       }
@@ -3629,7 +3626,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#EmailLogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+      "http://vital.ai/ontology/vital#isRetired" : {
         "type" : "boolean"
       }
     }
@@ -3637,7 +3634,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#EmailMessage",
     "parent" : "http://vital.ai/ontology/vital-nlp#Document",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasAttachmentsCount" : {
@@ -3712,7 +3709,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#EmailSummary",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasAttachmentsCount" : {
@@ -3912,7 +3909,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#ErrorNode",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasMessageSerialized" : {
@@ -3984,7 +3981,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#FacebookLogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+      "http://vital.ai/ontology/vital#isRetired" : {
         "type" : "boolean"
       }
     }
@@ -5081,7 +5078,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#LinkedInLogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+      "http://vital.ai/ontology/vital#isRetired" : {
         "type" : "boolean"
       }
     }
@@ -5176,13 +5173,13 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#LoginDataEvent",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasEntityURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasEventType" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-aimp#hasLoginURI" : {
         "type" : "string"
       }
     }
@@ -6408,7 +6405,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#SlackLogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+      "http://vital.ai/ontology/vital#isRetired" : {
         "type" : "boolean"
       }
     }
@@ -6520,7 +6517,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#SmsLogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+      "http://vital.ai/ontology/vital#isRetired" : {
         "type" : "boolean"
       }
     }
@@ -6631,7 +6628,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Task",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
@@ -6862,7 +6859,7 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#TwitterLogin",
     "parent" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
-      "http://vital.ai/ontology/vital-aimp#isRetired" : {
+      "http://vital.ai/ontology/vital#isRetired" : {
         "type" : "boolean"
       }
     }
@@ -7382,12 +7379,6 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountStatusURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Account" ],
     "shortName" : "accountStatusURI",
-    "multipleValues" : false,
-    "type" : "URIProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AccountEvent", "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest", "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse", "http://vital.ai/ontology/vital-aimp#AgentObject", "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary", "http://vital.ai/ontology/vital-aimp#ErrorNode", "http://vital.ai/ontology/vital-aimp#Task" ],
-    "shortName" : "accountURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -8677,12 +8668,6 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#hasLoginURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#LoginDataEvent" ],
-    "shortName" : "loginURI",
-    "multipleValues" : false,
-    "type" : "URIProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasLongDescription",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage", "http://vital.ai/ontology/vital-aimp#Movie", "http://vital.ai/ontology/vital-aimp#SearchResult" ],
     "shortName" : "longDescription",
@@ -8789,12 +8774,6 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMultiChoiceQuestionInstruction",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#QuestionsPageMessage" ],
     "shortName" : "multiChoiceQuestionInstruction",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#hasName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Edge_hasRelationship" ],
-    "shortName" : "name",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -10607,12 +10586,6 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isRequestCompression",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
     "shortName" : "requestCompression",
-    "multipleValues" : false,
-    "type" : "BooleanProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#isRetired",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AlexaLogin", "http://vital.ai/ontology/vital-aimp#AnonymousLogin", "http://vital.ai/ontology/vital-aimp#EmailLogin", "http://vital.ai/ontology/vital-aimp#FacebookLogin", "http://vital.ai/ontology/vital-aimp#LinkedInLogin", "http://vital.ai/ontology/vital-aimp#SlackLogin", "http://vital.ai/ontology/vital-aimp#SmsLogin", "http://vital.ai/ontology/vital-aimp#TwitterLogin" ],
-    "shortName" : "retired",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {

@@ -60,6 +60,29 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital#hasAccountURI -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasAccountURI">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AccountEvent"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailSummary"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </rdf:Description>
+    
+
+
     <!-- http://vital.ai/ontology/vital#hasLoginURI -->
 
     <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasLoginURI">
@@ -68,6 +91,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LoginDataEvent"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -196,30 +220,6 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountStatusURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AccountStatus"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#hasAccountURI -->
-
-    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAccountURI">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AccountEvent"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DataModificationEvent"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailMessage"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailSummary"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ErrorNode"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Task"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Account"/>
     </owl:ObjectProperty>
     
 
@@ -659,15 +659,6 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLoginStatusURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital#Login"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#LoginStatus"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#hasLoginURI -->
-
-    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasLoginURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#LoginDataEvent"/>
-        <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Login"/>
     </owl:ObjectProperty>
     
 
@@ -1205,6 +1196,27 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
 
     <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasFileURL">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyFileDownloadMessage"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital#isRetired -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital#isRetired">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AlexaLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnonymousLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FacebookLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsLogin"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterLogin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </rdf:Description>
     
 
@@ -3708,15 +3720,6 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMultiChoiceQuestionInstruction">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#QuestionsPageMessage"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#hasName -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Edge_hasRelationship"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -7260,28 +7263,6 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isRequestCompression">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#isRetired -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isRetired">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AlexaLogin"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AnonymousLogin"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmailLogin"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FacebookLogin"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LinkedInLogin"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SlackLogin"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SmsLogin"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterLogin"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
