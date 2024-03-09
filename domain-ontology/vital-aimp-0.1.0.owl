@@ -1153,6 +1153,14 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital#hasExpirationDate -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasExpirationDate">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PushNotification"/>
+    </rdf:Description>
+    
+
+
     <!-- http://vital.ai/ontology/vital#hasFileLength -->
 
     <rdf:Description rdf:about="http://vital.ai/ontology/vital#hasFileLength">
@@ -2626,15 +2634,6 @@ for payments USD</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasExpirationDate -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasExpirationDate">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#PushNotification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-aimp#hasExpression -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasExpression">
@@ -2683,18 +2682,16 @@ for payments USD</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasFactClassName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFactClassName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#DialogQuestion"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#DialogQuestion"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#hasFactClassname -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasFactClassname">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#UnsetFactMessage"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">to remove facts matching class canonical name</rdfs:comment>
+        <rdfs:comment>for unset, to remove facts matching class canonical name</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -4424,24 +4421,6 @@ delete_entity_or_relationship , delete an entity ( or list of entities), or rela
         <rdfs:comment xml:lang="en">&apos;source&apos;
 &apos;relationship&apos;
 &apos;destination&apos;</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-aimp#hasQueryString -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQueryString">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLMessage"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Query"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -7546,6 +7525,23 @@ query timeout in seconds, default 10</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-core#hasQueryString -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#hasQueryString">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#MetaQLMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Query"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchRequestMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#TwitterQueryRequestMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </rdf:Description>
     
 
 
