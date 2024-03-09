@@ -5,6 +5,8 @@ if(typeof(VITAL_JSON_SCHEMAS) == 'undefined') {
 var vital_social_0_2_304_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-social",
   "name" : "vital-social-0.2.304",
+  "version" : "0.2.304",
+  "domainOWLHash" : "b4cbd23c84f17ba6cafb557504ed349d",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-nlp" ],
   "schemas" : [ {
@@ -120,10 +122,10 @@ var vital_social_0_2_304_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/vital-social#TwitterContext" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-social#TwitterAccount" ],
     "properties" : {
-      "http://vital.ai/ontology/vital-social#hasOAuthToken" : {
+      "http://vital.ai/ontology/vital-social#hasOAuthTokenSecret" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-social#hasOAuthTokenSecret" : {
+      "http://vital.ai/ontology/vital-social#hasTwitterOAuthToken" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#isStreamContextUser" : {
@@ -141,7 +143,7 @@ var vital_social_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-social#FacebookAccount",
     "parent" : "http://vital.ai/ontology/vital-social#SocialMediaAccount",
     "properties" : {
-      "http://vital.ai/ontology/vital-social#hasCategory" : {
+      "http://vital.ai/ontology/vital-social#hasFacebookCategory" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasFacebookID" : {
@@ -150,7 +152,7 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasPageFansCountry" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-social#hasUsername" : {
+      "http://vital.ai/ontology/vital-social#hasSocialUsername" : {
         "type" : "string"
       }
     }
@@ -158,7 +160,7 @@ var vital_social_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-social#FanCountry",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-social#hasLikesCount" : {
+      "http://vital.ai/ontology/vital-social#hasSocialLikeCount" : {
         "type" : "number"
       }
     }
@@ -191,7 +193,7 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasMediaCount" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-social#hasUsername" : {
+      "http://vital.ai/ontology/vital-social#hasSocialUsername" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasWebsite" : {
@@ -215,7 +217,7 @@ var vital_social_0_2_304_schema = {
         "required" : [ "longitude", "latitude" ],
         "additionalProperties" : false
       },
-      "http://vital.ai/ontology/vital-social#hasRadius" : {
+      "http://vital.ai/ontology/vital-social#hasLocationRadius" : {
         "type" : "number"
       }
     }
@@ -226,11 +228,11 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasAccessToken" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-social#hasLikesCount" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-social#hasPictureURL" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasSocialLikeCount" : {
+        "type" : "number"
       },
       "http://vital.ai/ontology/vital-social#isTokenValid" : {
         "type" : "boolean"
@@ -254,9 +256,6 @@ var vital_social_0_2_304_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasCountry" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-social#hasDescription" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasDiscogsName" : {
@@ -289,6 +288,12 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasRefreshToken" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-social#hasSocialDescription" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasSocialUsername" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-social#hasSoundCloudID" : {
         "type" : "number"
       },
@@ -297,9 +302,6 @@ var vital_social_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-social#hasTracksCount" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-social#hasUsername" : {
-        "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasWebsite" : {
         "type" : "string"
@@ -348,12 +350,6 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasInReplyToUserID" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-social#hasLatitude" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-social#hasLongitude" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-social#hasOriginalAuthorID" : {
         "type" : "number"
       },
@@ -372,6 +368,12 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasTweetStatus" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-social#hasTwitterLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-social#hasTwitterLongitude" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-social#isRetweet" : {
         "type" : "boolean"
       }
@@ -380,17 +382,11 @@ var vital_social_0_2_304_schema = {
     "id" : "http://vital.ai/ontology/vital-social#TwitterAccount",
     "parent" : "http://vital.ai/ontology/vital-social#SocialMediaAccount",
     "properties" : {
-      "http://vital.ai/ontology/vital-social#hasDescription" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-social#hasFollowersCount" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-social#hasFollowingCount" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-social#hasOAuthToken" : {
-        "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasOAuthTokenSecret" : {
         "type" : "string"
@@ -398,11 +394,17 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasScreenName" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-social#hasSocialDescription" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-social#hasTweetsCount" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-social#hasTwitterID" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-social#hasTwitterOAuthToken" : {
+        "type" : "string"
       }
     }
   }, {
@@ -437,9 +439,6 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasCountry" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-social#hasDescription" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-social#hasExpiresIn" : {
         "type" : "number"
       },
@@ -447,6 +446,9 @@ var vital_social_0_2_304_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-social#hasRefreshToken" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasSocialDescription" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasSubscriberCount" : {
@@ -472,7 +474,7 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasCommentID" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-social#hasLikeCount" : {
+      "http://vital.ai/ontology/vital-social#hasSocialLikeCount" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-social#hasVideoID" : {
@@ -514,12 +516,6 @@ var vital_social_0_2_304_schema = {
     "URI" : "http://vital.ai/ontology/vital-social#hasBio",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#InstagramAccount" ],
     "shortName" : "bio",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasCategory",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FacebookAccount" ],
-    "shortName" : "category",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -565,12 +561,6 @@ var vital_social_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasDescription",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#SoundCloudAccount", "http://vital.ai/ontology/vital-social#TwitterAccount", "http://vital.ai/ontology/vital-social#YouTubeAccount" ],
-    "shortName" : "description",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasDirectMessageID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#DirectMessage" ],
     "shortName" : "directMessageID",
@@ -588,6 +578,12 @@ var vital_social_0_2_304_schema = {
     "shortName" : "expiresIn",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasFacebookCategory",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FacebookAccount" ],
+    "shortName" : "facebookCategory",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasFacebookID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FacebookAccount" ],
@@ -637,33 +633,15 @@ var vital_social_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasLatitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
-    "shortName" : "latitude",
-    "multipleValues" : false,
-    "type" : "DoubleProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasLikeCount",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#YouTubeComment" ],
-    "shortName" : "likeCount",
-    "multipleValues" : false,
-    "type" : "IntegerProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasLikesCount",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FanCountry", "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
-    "shortName" : "likesCount",
-    "multipleValues" : false,
-    "type" : "IntegerProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasLocation",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Location" ],
     "shortName" : "location",
     "multipleValues" : false,
     "type" : "GeoLocationProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasLongitude",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
-    "shortName" : "longitude",
+    "URI" : "http://vital.ai/ontology/vital-social#hasLocationRadius",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Location" ],
+    "shortName" : "locationRadius",
     "multipleValues" : false,
     "type" : "DoubleProperty"
   }, {
@@ -682,12 +660,6 @@ var vital_social_0_2_304_schema = {
     "URI" : "http://vital.ai/ontology/vital-social#hasMyspaceName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#SoundCloudAccount" ],
     "shortName" : "myspaceName",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasOAuthToken",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Edge_hasTwitterAccount", "http://vital.ai/ontology/vital-social#TwitterAccount" ],
-    "shortName" : "oAuthToken",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -751,12 +723,6 @@ var vital_social_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "DateProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasRadius",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Location" ],
-    "shortName" : "radius",
-    "multipleValues" : false,
-    "type" : "DoubleProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasRecipientID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#DirectMessage" ],
     "shortName" : "recipientID",
@@ -790,6 +756,24 @@ var vital_social_0_2_304_schema = {
     "URI" : "http://vital.ai/ontology/vital-social#hasScreenName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#TwitterAccount" ],
     "shortName" : "screenName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasSocialDescription",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#SoundCloudAccount", "http://vital.ai/ontology/vital-social#TwitterAccount", "http://vital.ai/ontology/vital-social#YouTubeAccount" ],
+    "shortName" : "socialDescription",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasSocialLikeCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FanCountry", "http://vital.ai/ontology/vital-social#SocialMediaAccount", "http://vital.ai/ontology/vital-social#YouTubeComment" ],
+    "shortName" : "socialLikeCount",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasSocialUsername",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FacebookAccount", "http://vital.ai/ontology/vital-social#InstagramAccount", "http://vital.ai/ontology/vital-social#SoundCloudAccount" ],
+    "shortName" : "socialUsername",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -841,9 +825,21 @@ var vital_social_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "LongProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasUsername",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FacebookAccount", "http://vital.ai/ontology/vital-social#InstagramAccount", "http://vital.ai/ontology/vital-social#SoundCloudAccount" ],
-    "shortName" : "username",
+    "URI" : "http://vital.ai/ontology/vital-social#hasTwitterLatitude",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "shortName" : "twitterLatitude",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasTwitterLongitude",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "shortName" : "twitterLongitude",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasTwitterOAuthToken",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Edge_hasTwitterAccount", "http://vital.ai/ontology/vital-social#TwitterAccount" ],
+    "shortName" : "twitterOAuthToken",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -897,4 +893,10 @@ var vital_social_0_2_304_schema = {
   } ]
 };
 
- VITAL_JSON_SCHEMAS.push(vital_social_0_2_304_schema);
+VITAL_JSON_SCHEMAS.push(vital_social_0_2_304_schema);
+
+if(typeof(module) !== 'undefined') {
+
+  module.exports = vital_social_0_2_304_schema;
+
+}
