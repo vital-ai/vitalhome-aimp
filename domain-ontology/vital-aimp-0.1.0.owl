@@ -4969,24 +4969,6 @@ question:
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasSessionID -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSessionID">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">only in messages sent by the user</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-aimp#hasShippingFee -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasShippingFee">
@@ -7541,6 +7523,23 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-core#hasSessionID -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#hasSessionID">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment>for aimp, only in messages sent by the user</rdfs:comment>
     </rdf:Description>
     
 

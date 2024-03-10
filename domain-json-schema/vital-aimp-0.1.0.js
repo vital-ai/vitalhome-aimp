@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "aae928a7d0b39ed40e9727c4bf527499",
+  "domainOWLHash" : "9f46d05f7bb3bf53b05974ad46257005",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -456,9 +456,6 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasSenderIdentity" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#hasSignature" : {
         "type" : "string"
       },
@@ -524,6 +521,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isRequestCompression" : {
         "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-core#hasSessionID" : {
+        "type" : "string"
       }
     }
   }, {
@@ -927,7 +927,7 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
+      "http://vital.ai/ontology/vital-core#hasSessionID" : {
         "type" : "string"
       }
     }
@@ -6326,10 +6326,10 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasLastLeftAppMessageTime" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
+      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasUserID" : {
+      "http://vital.ai/ontology/vital-core#hasSessionID" : {
         "type" : "string"
       }
     }
@@ -9458,12 +9458,6 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasServiceName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogDatascript", "http://vital.ai/ontology/vital-aimp#DialogQuery" ],
     "shortName" : "serviceName",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#hasSessionID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AgentObject", "http://vital.ai/ontology/vital-aimp#Session" ],
-    "shortName" : "sessionID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
