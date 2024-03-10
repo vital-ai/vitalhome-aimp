@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "9f46d05f7bb3bf53b05974ad46257005",
+  "domainOWLHash" : "864c9358ad2be29a9cf33d3cf4b43313",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -486,9 +486,6 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasUserID" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-aimp#isAuthLoginTunnel" : {
         "type" : "boolean"
       },
@@ -523,6 +520,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-core#hasSessionID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasUsername" : {
         "type" : "string"
       }
     }
@@ -1380,7 +1380,7 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasUserID" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasUserName" : {
+      "http://vital.ai/ontology/vital-core#hasUsername" : {
         "type" : "string"
       }
     }
@@ -9944,12 +9944,6 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasUserID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#BaseProfile", "http://vital.ai/ontology/vital-aimp#Session", "http://vital.ai/ontology/vital-aimp#Task" ],
     "shortName" : "userID",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-aimp#hasUserName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#BaseProfile" ],
-    "shortName" : "userName",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {

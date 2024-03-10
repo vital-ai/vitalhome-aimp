@@ -6024,23 +6024,6 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-aimp#hasUserName -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasUserName">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">user name (amazon profile or other)</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-aimp#hasUuid -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasUuid">
@@ -7540,6 +7523,22 @@ query timeout in seconds, default 10</rdfs:comment>
             </owl:Class>
         </rdfs:domain>
         <rdfs:comment>for aimp, only in messages sent by the user</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-core#hasUsername -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#hasUsername">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#BaseProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment>for aimp, user name (amazon profile or other)</rdfs:comment>
     </rdf:Description>
     
 
