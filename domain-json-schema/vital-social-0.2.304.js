@@ -6,7 +6,7 @@ var vital_social_0_2_304_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-social",
   "name" : "vital-social-0.2.304",
   "version" : "0.2.304",
-  "domainOWLHash" : "b4cbd23c84f17ba6cafb557504ed349d",
+  "domainOWLHash" : "8ce69bafef21765db5e97c26c1211837",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-nlp" ],
   "schemas" : [ {
@@ -96,10 +96,10 @@ var vital_social_0_2_304_schema = {
     "properties" : {
     }
   }, {
-    "id" : "http://vital.ai/ontology/vital-social#Edge_hasLocation",
+    "id" : "http://vital.ai/ontology/vital-social#Edge_hasSocialLocation",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-social#SocialMediaCampaign" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-social#Location" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-social#SocialLocation" ],
     "properties" : {
     }
   }, {
@@ -201,10 +201,10 @@ var vital_social_0_2_304_schema = {
       }
     }
   }, {
-    "id" : "http://vital.ai/ontology/vital-social#Location",
+    "id" : "http://vital.ai/ontology/vital-social#SocialLocation",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
-      "http://vital.ai/ontology/vital-social#hasLocation" : {
+      "http://vital.ai/ontology/vital-social#hasSocialLocation" : {
         "type" : "object",
         "properties" : {
           "longitude" : {
@@ -217,7 +217,7 @@ var vital_social_0_2_304_schema = {
         "required" : [ "longitude", "latitude" ],
         "additionalProperties" : false
       },
-      "http://vital.ai/ontology/vital-social#hasLocationRadius" : {
+      "http://vital.ai/ontology/vital-social#hasSocialLocationRadius" : {
         "type" : "number"
       }
     }
@@ -633,18 +633,6 @@ var vital_social_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasLocation",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Location" ],
-    "shortName" : "location",
-    "multipleValues" : false,
-    "type" : "GeoLocationProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-social#hasLocationRadius",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Location" ],
-    "shortName" : "locationRadius",
-    "multipleValues" : false,
-    "type" : "DoubleProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasMediaCount",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#InstagramAccount" ],
     "shortName" : "mediaCount",
@@ -770,6 +758,18 @@ var vital_social_0_2_304_schema = {
     "shortName" : "socialLikeCount",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasSocialLocation",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#SocialLocation" ],
+    "shortName" : "socialLocation",
+    "multipleValues" : false,
+    "type" : "GeoLocationProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasSocialLocationRadius",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#SocialLocation" ],
+    "shortName" : "socialLocationRadius",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasSocialUsername",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FacebookAccount", "http://vital.ai/ontology/vital-social#InstagramAccount", "http://vital.ai/ontology/vital-social#SoundCloudAccount" ],

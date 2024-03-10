@@ -13,7 +13,7 @@
         <vital-core:hasDefaultArtifactId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vital-social</vital-core:hasDefaultArtifactId>
         <vital-core:hasDefaultGroupId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitalai-com</vital-core:hasDefaultGroupId>
         <vital-core:hasDefaultPackage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">com.vitalai.domain.social</vital-core:hasDefaultPackage>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2.304</owl:versionInfo>
+        <owl:versionInfo>0.2.304</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -344,24 +344,6 @@ stopped</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-social#hasLocation -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasLocation">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Location"/>
-        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-core#geoLocation"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-social#hasLocationRadius -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasLocationRadius">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Location"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-social#hasMediaCount -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasMediaCount">
@@ -579,6 +561,24 @@ stopped</rdfs:comment>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasSocialLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasSocialLocation">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#SocialLocation"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-core#geoLocation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasSocialLocationRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasSocialLocationRadius">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#SocialLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
 
@@ -883,11 +883,11 @@ sent</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-social#Edge_hasLocation -->
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasSocialLocation -->
 
-    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasLocation">
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasSocialLocation">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge"/>
-        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#Location"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialLocation"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaCampaign"/>
     </owl:Class>
     
@@ -974,9 +974,9 @@ sent</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-social#Location -->
+    <!-- http://vital.ai/ontology/vital-social#SocialLocation -->
 
-    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Location">
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#SocialLocation">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
