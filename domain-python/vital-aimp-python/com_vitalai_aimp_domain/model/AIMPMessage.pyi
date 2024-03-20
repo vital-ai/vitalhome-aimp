@@ -1,0 +1,59 @@
+
+import datetime
+from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
+
+
+class AIMPMessage(VITAL_Node):
+        accountURI: str
+        loginURI: str
+        authSessionID: str
+        botURI: str
+        channelURI: str
+        channelsHistory: str
+        destinationAccountName: str
+        destinationAccountURI: str
+        deviceInfo: str
+        encryptedPayload: str
+        endpointURI: str
+        geoAPIJSON: str
+        geolocation: str
+        ipAddress: str
+        keyHash: str
+        localTime: str
+        masterUserID: str
+        partialResultMessageCount: int
+        partialResultPayloadCount: int
+        partialResultTotalMessageCount: int
+        partialResultTotalPayloadCount: int
+        payload: str
+        payloadStyleTypeURI: str
+        queueName: str
+        reactionToSessionID: str
+        recipientIdentity: str
+        requestURI: str
+        requestedPayloadStyleTypeURI: str
+        senderIdentity: str
+        signature: str
+        sourceAccountName: str
+        sourceAccountURI: str
+        sourceUserID: str
+        sourceUserName: str
+        text: str
+        textToSpeak: str
+        threadURI: str
+        timezone: str
+        userID: str
+        authLoginTunnel: bool
+        broadcastOnly: bool
+        compressed: bool
+        containsPII: bool
+        finalResponse: bool
+        historyMessage: bool
+        interactMode: bool
+        internalOnly: bool
+        partialResult: bool
+        replyTo: str
+        requestCompression: bool
+        sessionID: str
+        username: str
+
