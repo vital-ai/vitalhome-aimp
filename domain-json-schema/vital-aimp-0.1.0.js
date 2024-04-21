@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "24faf418489867f82b63ee10eef654d5",
+  "domainOWLHash" : "2c29f55c2052f9254c40086b23576498",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -764,6 +764,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isActivityCancelEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isActivityCanceled" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isActivityComplete" : {
@@ -4290,6 +4293,12 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyActivityMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#isActivityCanceled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isActivityComplete" : {
+        "type" : "boolean"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyArticleMessage",
@@ -10062,8 +10071,14 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isActivityCanceled",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ActivityCard", "http://vital.ai/ontology/vital-aimp#HaleyActivityMessage" ],
+    "shortName" : "activityCanceled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isActivityComplete",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ActivityCard" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ActivityCard", "http://vital.ai/ontology/vital-aimp#HaleyActivityMessage" ],
     "shortName" : "activityComplete",
     "multipleValues" : false,
     "type" : "BooleanProperty"

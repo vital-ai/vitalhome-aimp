@@ -6166,10 +6166,33 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isActivityCanceled -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isActivityCanceled">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ActivityCard"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyActivityMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isActivityComplete -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isActivityComplete">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ActivityCard"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ActivityCard"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyActivityMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
