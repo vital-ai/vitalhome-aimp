@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "f069ac7c8b017c22255b1985d6434213",
+  "domainOWLHash" : "fa9c6900326305fc75e69b10c4c5b516",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -761,6 +761,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#isActivityCancelEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isActivityComplete" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#isActivitySpinnerEnabled" : {
@@ -10047,6 +10050,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#isActivityCancelEnabled",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ActivityCard" ],
     "shortName" : "activityCancelEnabled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isActivityComplete",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ActivityCard" ],
+    "shortName" : "activityComplete",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
