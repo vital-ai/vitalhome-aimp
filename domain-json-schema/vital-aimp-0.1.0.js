@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "2c29f55c2052f9254c40086b23576498",
+  "domainOWLHash" : "cc96c2eccd54214ed82825771fc97b4b",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -4495,6 +4495,11 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyKnowledgeExtractionMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInInviteMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyLinkedInMessage",
     "properties" : {
@@ -5064,6 +5069,14 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#JoinChannel",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#KnowledgeExtractionCard",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Card",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasKnowledgeExtractionJSON" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#LeaveChannel",
@@ -8524,6 +8537,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasKeyHash",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
     "shortName" : "keyHash",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasKnowledgeExtractionJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#KnowledgeExtractionCard" ],
+    "shortName" : "knowledgeExtractionJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
