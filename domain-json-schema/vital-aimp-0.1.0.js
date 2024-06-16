@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "cc96c2eccd54214ed82825771fc97b4b",
+  "domainOWLHash" : "945b2c14b201f2cf9d9d237f6ed87989",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -330,6 +330,36 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isSignedVersion" : {
         "type" : "boolean"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPCommand",
+    "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAIMPCommandOperationType" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPCommandTargetClassURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPCommandTargetObjectURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPCommandTargetRootURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPCommandType" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPCommandOperationType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPCommandType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPDevice",
@@ -7279,6 +7309,36 @@ var vital_aimp_0_1_0_schema = {
     }
   } ],
   "properties" : [ {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPCommandOperationType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPCommand" ],
+    "shortName" : "aIMPCommandOperationType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPCommandTargetClassURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPCommand" ],
+    "shortName" : "aIMPCommandTargetClassURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPCommandTargetObjectURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPCommand" ],
+    "shortName" : "aIMPCommandTargetObjectURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPCommandTargetRootURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPCommand" ],
+    "shortName" : "aIMPCommandTargetRootURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPCommandType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPCommand" ],
+    "shortName" : "aIMPCommandType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAccountEventAccountURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AccountEvent" ],
     "shortName" : "accountEventAccountURI",
