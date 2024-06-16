@@ -21,3 +21,8 @@ class Edge_hasEntityInstance(VITAL_TaxonomyEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasEntityInstance._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-nlp#Edge_hasEntityInstance'
+
+

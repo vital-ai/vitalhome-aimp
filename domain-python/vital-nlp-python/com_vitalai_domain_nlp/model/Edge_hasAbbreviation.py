@@ -21,3 +21,8 @@ class Edge_hasAbbreviation(VITAL_TaxonomyEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasAbbreviation._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-nlp#Edge_hasAbbreviation'
+
+
