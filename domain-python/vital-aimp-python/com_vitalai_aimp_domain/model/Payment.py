@@ -26,3 +26,8 @@ class Payment(AIMPThing):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Payment._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-aimp#Payment'
+
+

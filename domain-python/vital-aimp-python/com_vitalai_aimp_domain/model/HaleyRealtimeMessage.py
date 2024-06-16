@@ -21,3 +21,8 @@ class HaleyRealtimeMessage(AIMPMessage):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + HaleyRealtimeMessage._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-aimp#HaleyRealtimeMessage'
+
+

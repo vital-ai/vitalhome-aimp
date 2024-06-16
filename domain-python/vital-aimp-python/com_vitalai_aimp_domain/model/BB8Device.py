@@ -21,3 +21,8 @@ class BB8Device(SpheroDevice):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + BB8Device._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-aimp#BB8Device'
+
+

@@ -17,6 +17,7 @@ class AIMPMessage(VITAL_Node):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/vital#hasAccountURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital#hasLoginURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasActivityTaskIdentifier', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasAuthSessionID', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasBotURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasChannelURI', 'prop_class': URIProperty}, 
@@ -72,4 +73,9 @@ class AIMPMessage(VITAL_Node):
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + AIMPMessage._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-aimp#AIMPMessage'
+
 

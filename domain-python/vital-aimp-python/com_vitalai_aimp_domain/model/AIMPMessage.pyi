@@ -6,6 +6,7 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 class AIMPMessage(VITAL_Node):
         accountURI: str
         loginURI: str
+        activityTaskIdentifier: str
         authSessionID: str
         botURI: str
         channelURI: str

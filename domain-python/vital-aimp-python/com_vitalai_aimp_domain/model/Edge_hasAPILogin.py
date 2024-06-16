@@ -21,3 +21,8 @@ class Edge_hasAPILogin(VITAL_TaxonomyEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasAPILogin._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-aimp#Edge_hasAPILogin'
+
+

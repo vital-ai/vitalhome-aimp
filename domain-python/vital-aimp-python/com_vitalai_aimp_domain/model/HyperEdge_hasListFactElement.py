@@ -22,3 +22,8 @@ class HyperEdge_hasListFactElement(VITAL_HyperEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + HyperEdge_hasListFactElement._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-aimp#HyperEdge_hasListFactElement'
+
+
