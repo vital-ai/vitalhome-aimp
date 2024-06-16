@@ -5,4 +5,7 @@ domains:
       ontology: "vital-nlp-0.2.304.owl"
     - domain: "vital-social-python"
       ontology: "vital-social-0.2.304.owl"
+    - domain: "vital-wordnet-python"
+      ontology: "vital-wordnet-0.2.304.owl"
+      
  
