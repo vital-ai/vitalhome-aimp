@@ -21,3 +21,8 @@ class Edge_hasSocialMediaCampaign(VITAL_TaxonomyEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasSocialMediaCampaign._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/vital-social#Edge_hasSocialMediaCampaign'
+
+
