@@ -1,1 +1,2 @@
-# vital-ai-aimp
+# vital-wordnet
+
