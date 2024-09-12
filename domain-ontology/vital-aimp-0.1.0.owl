@@ -831,6 +831,25 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasObjectStatusType -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasObjectStatusType">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_Edge"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#ObjectStatusType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasObjectURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasObjectURI">
@@ -12034,6 +12053,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ObjectStatusType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ObjectStatusType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#OpenIFrame -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#OpenIFrame">
@@ -13887,6 +13914,46 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#MessageService_TWILIO">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#MessageService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ObjectStatusType_ACTIVE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#ObjectStatusType_ACTIVE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#ObjectStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ObjectStatusType_DELETED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#ObjectStatusType_DELETED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#ObjectStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ObjectStatusType_INACTIVE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#ObjectStatusType_INACTIVE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#ObjectStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ObjectStatusType_INVALID -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#ObjectStatusType_INVALID">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#ObjectStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ObjectStatusType_PENDING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#ObjectStatusType_PENDING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#ObjectStatusType"/>
     </owl:NamedIndividual>
     
 

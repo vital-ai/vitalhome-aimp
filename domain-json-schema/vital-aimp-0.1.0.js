@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "69d52da8f3ce5b4282773c05fac6153d",
+  "domainOWLHash" : "ea26af7c2701f22af20726af9ebd93aa",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -124,6 +124,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasObjectStatusType" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
       },
@@ -166,6 +169,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasObjectStatusType" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
@@ -215,6 +221,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasObjectStatusType" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
@@ -271,6 +280,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-aimp#hasObjectStatusType" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
       },
@@ -319,6 +331,9 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectCreationTime" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasObjectStatusType" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasObjectUpdateTime" : {
         "type" : "number"
@@ -5540,6 +5555,11 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ObjectStatusType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#OpenIFrame",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
@@ -9046,6 +9066,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "objectCreationTime",
     "multipleValues" : false,
     "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasObjectStatusType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "objectStatusType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasObjectURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DataModificationEvent", "http://vital.ai/ontology/vital-aimp#EntityCommandMessage", "http://vital.ai/ontology/vital-aimp#EntityMessage", "http://vital.ai/ontology/vital-aimp#GetObjectMessage", "http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage", "http://vital.ai/ontology/vital-aimp#Opportunity", "http://vital.ai/ontology/vital-aimp#RelationshipCommandMessage", "http://vital.ai/ontology/vital-aimp#RelationshipMessage" ],
