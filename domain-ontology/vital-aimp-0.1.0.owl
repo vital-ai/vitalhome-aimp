@@ -377,6 +377,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasAgentMessagePayloadTypeURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentMessagePayloadTypeURI">
@@ -975,6 +984,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasProcessorResponseTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasProcessorResponseTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorResponseType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasQuestionURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasQuestionURI">
@@ -1056,7 +1074,6 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
-                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -5102,6 +5119,15 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasSerializedMessage -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSerializedMessage">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasServiceName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasServiceName">
@@ -7890,6 +7916,14 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContainer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContent -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent">
@@ -9644,6 +9678,7 @@ text(AgentContext context -&gt; String)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Agent"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstall"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstance"/>
     </owl:Class>
     
 
@@ -12256,6 +12291,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ProcessorInterruptMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorInterruptMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorRequestMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ProcessorJoinedMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorJoinedMessage">
@@ -12281,6 +12324,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ProcessorRequestKeepAliveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorRequestKeepAliveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ProcessorRequestMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorRequestMessage">
@@ -12295,6 +12346,30 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorMessage"/>
         <rdfs:comment xml:lang="en">standard processor response</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ProcessorResponseType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ProcessorSendMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorSendMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ProcessorSendReplyMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorSendReplyMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorRequestMessage"/>
     </owl:Class>
     
 
@@ -14034,6 +14109,22 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#PermittedSenderType_SMS_IMESSAGE">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#PermittedSenderType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ProcessorResponseType_FINAL_RESULT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseType_FINAL_RESULT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorResponseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ProcessorResponseType_PARTIAL_RESULT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#ProcessorResponseType_PARTIAL_RESULT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#ProcessorResponseType"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
