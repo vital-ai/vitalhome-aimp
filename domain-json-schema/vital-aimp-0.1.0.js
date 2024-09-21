@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "879de74e058703e428903b527d6daf31",
+  "domainOWLHash" : "3e57995eb6038f1f5dbbf6c8203a858c",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -1032,20 +1032,91 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentInstance",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAgentInstanceIdentifier" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasAgentInstanceTypeURI" : {
         "type" : "string"
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAgentInstanceContainerDeploymentStatusTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerClusterName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerImageIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerLaunchDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerLoadBalancerName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerLoadBalancerURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerRepository" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerServiceName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerStoppedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerTaskMaximumCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerTaskMinimumCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasContainerTaskName" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeploymentStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAgentInstanceContainerDeploymentStatusMessage" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentInstanceContainerDeploymentStatusTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeploymentStatusType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentImplTypeURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentPathURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentTypeURI" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentImplType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath",
@@ -1427,6 +1498,19 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#ApnsEndpoint",
     "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AppService",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AppServiceInstance",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAppServiceURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ArticleObject",
@@ -3204,10 +3288,24 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceContainerDeployment",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceDeployment",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AgentInstance" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceDeploymentBotImplementation",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
     "properties" : {
     }
   }, {
@@ -3222,6 +3320,13 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Endpoint" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceGithubAuthorization",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AgentInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
     "properties" : {
     }
   }, {
@@ -3257,6 +3362,13 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AnonymousLogin" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasAppServiceInstance",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#AppServiceInstance" ],
     "properties" : {
     }
   }, {
@@ -3320,13 +3432,6 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#isEnabled" : {
         "type" : "boolean"
       }
-    }
-  }, {
-    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasBotImplementation",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment" ],
-    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Bot" ],
-    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasBusinessRelationshipWith",
@@ -3570,6 +3675,13 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account", "http://vital.ai/ontology/vital-aimp#Folder" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#Folder" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasGithubAuthorization",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
     "properties" : {
     }
   }, {
@@ -4441,6 +4553,20 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isIncludeDependentObjects" : {
         "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#GithubAuthorization",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasGithubInstallationIdentifier" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGithubOrganization" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGithubRepository" : {
+        "type" : "string"
       }
     }
   }, {
@@ -7782,6 +7908,24 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentInstanceContainerDeploymentStatusMessage",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeploymentStatus" ],
+    "shortName" : "agentInstanceContainerDeploymentStatusMessage",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentInstanceContainerDeploymentStatusTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment", "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeploymentStatus" ],
+    "shortName" : "agentInstanceContainerDeploymentStatusTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentImplTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment" ],
+    "shortName" : "agentInstanceDeploymentImplTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentPathURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment" ],
     "shortName" : "agentInstanceDeploymentPathURI",
@@ -7795,10 +7939,16 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeploymentStatus", "http://vital.ai/ontology/vital-aimp#Channel" ],
     "shortName" : "agentInstanceDeploymentURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentInstanceIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstance" ],
+    "shortName" : "agentInstanceIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAgentInstanceTypeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstance" ],
@@ -7863,6 +8013,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAnswerURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Answer" ],
     "shortName" : "answerURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAppServiceURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AppServiceInstance" ],
+    "shortName" : "appServiceURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -8278,6 +8434,72 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasConstraints",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Question" ],
     "shortName" : "constraints",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerClusterName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerClusterName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerImageIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerImageIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerLaunchDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerLaunchDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerLoadBalancerName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerLoadBalancerName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerLoadBalancerURL",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerLoadBalancerURL",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerRepository",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerRepository",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerServiceName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerServiceName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerStoppedDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerStoppedDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerTaskMaximumCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerTaskMaximumCount",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerTaskMinimumCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerTaskMinimumCount",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasContainerTaskName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentInstanceContainerDeployment" ],
+    "shortName" : "containerTaskName",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -8698,6 +8920,24 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGettingStartedText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint" ],
     "shortName" : "gettingStartedText",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGithubInstallationIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
+    "shortName" : "githubInstallationIdentifier",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGithubOrganization",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
+    "shortName" : "githubOrganization",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGithubRepository",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
+    "shortName" : "githubRepository",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
