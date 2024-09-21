@@ -358,6 +358,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentDistributionTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentDistributionTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Agent"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentDistributionType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasAgentGeneratorURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentGeneratorURI">
@@ -377,11 +386,47 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentInstallTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentInstallTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstall"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstallType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentPathURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentPathURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentInstanceTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentInstanceTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstance"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceType"/>
     </owl:ObjectProperty>
     
 
@@ -400,6 +445,15 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentMessageTypeURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceMessageDeployment"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentMessageType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentStatusTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentStatusTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Agent"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentStatusType"/>
     </owl:ObjectProperty>
     
 
@@ -1510,6 +1564,24 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentConfigurationIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentConfigurationIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAgentConfigurationVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAgentConfigurationVersion">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentConfiguration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -8196,6 +8268,14 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AgentDistributionType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentDistributionType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AgentError -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentError">
@@ -8228,6 +8308,14 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstallType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstallType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AgentInstance -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstance">
@@ -8244,6 +8332,22 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceMessageDeployment -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceMessageDeployment">
@@ -8255,6 +8359,14 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#AgentInstancePayloadDeployment -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstancePayloadDeployment">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceType">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
@@ -8320,6 +8432,14 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#AgentStatusResponse -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentStatusType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusType">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
@@ -9703,6 +9823,17 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstance -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstance">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstance"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstall"/>
+        <rdfs:comment>Used to link agent install to agent instance within the same account, which applies when agent is installed locally either when the account owns the agent or when the deployment is a reference copy of a global agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceDeployment -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceDeployment">
@@ -9718,6 +9849,16 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceDeploymentChannel">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceDeploymentEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasAgentInstanceDeploymentEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment"/>
     </owl:Class>
     
@@ -9860,7 +10001,7 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasBotImplementation">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
-        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstance"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeployment"/>
     </owl:Class>
     
 
@@ -13751,6 +13892,134 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AgentDistributionType_ACCOUNT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentDistributionType_ACCOUNT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentDistributionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentDistributionType_GLOBAL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentDistributionType_GLOBAL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentDistributionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentDistributionType_INTRA_ACCOUNT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentDistributionType_INTRA_ACCOUNT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentDistributionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstallType_ACCOUNT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstallType_ACCOUNT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstallType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstallType_GLOBAL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstallType_GLOBAL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstallType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstallType_INTRA_ACCOUNT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstallType_INTRA_ACCOUNT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstallType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath_CHANNEL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath_CHANNEL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath_ENDPOINT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath_ENDPOINT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentPath"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType_ACCOUNT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType_ACCOUNT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType_ACCOUNT_REFERENCE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType_ACCOUNT_REFERENCE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType_GLOBAL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType_GLOBAL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType_GLOBAL_REFERENCE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType_GLOBAL_REFERENCE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceDeploymentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceType_ACCOUNT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceType_ACCOUNT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceType_GLOBAL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceType_GLOBAL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceType_GLOBAL_REFERENCE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceType_GLOBAL_REFERENCE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentInstanceType_INTRA_ACCOUNT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentInstanceType_INTRA_ACCOUNT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstanceType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AgentMessagePayloadType_OBJECT -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentMessagePayloadType_OBJECT">
@@ -13779,6 +14048,38 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentMessageType_SEND_RECEIVE">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentMessageType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentStatusType_ACTIVE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusType_ACTIVE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentStatusType_INACTIVE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusType_INACTIVE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentStatusType_NEW -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusType_NEW">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentStatusType_REMOVED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusType_REMOVED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AgentStatusType"/>
     </owl:NamedIndividual>
     
 
