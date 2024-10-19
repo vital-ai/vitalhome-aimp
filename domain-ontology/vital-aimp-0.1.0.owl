@@ -2274,6 +2274,8 @@ history (default)</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Choice"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Device"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebFrameEndpoint"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -3291,11 +3293,12 @@ create_file_from_fact</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FacebookEndpoint"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebFrameEndpoint"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">set via curl, appears in the getting started page</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -6866,7 +6869,15 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebFrameEndpoint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -7463,7 +7474,15 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#isOpenInitially -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isOpenInitially">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#IFrameEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebEndpoint"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#WebFrameEndpoint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">if true the iframe will be open on first load</rdfs:comment>
     </owl:DatatypeProperty>
@@ -13778,6 +13797,22 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WeatherForecast">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#WebEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WebEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#WebFrameEndpoint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#WebFrameEndpoint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Endpoint"/>
     </owl:Class>
     
 

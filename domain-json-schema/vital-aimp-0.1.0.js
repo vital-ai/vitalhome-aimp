@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "3e57995eb6038f1f5dbbf6c8203a858c",
+  "domainOWLHash" : "78d3aa52d9db3432d9328336f58891bb",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -7611,6 +7611,40 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#WebEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasColor" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGreetingText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isOpenInitially" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasColor" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGreetingText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isOpenInitially" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#WebviewCard",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
@@ -8384,7 +8418,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasColor",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Choice", "http://vital.ai/ontology/vital-aimp#Device", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Choice", "http://vital.ai/ontology/vital-aimp#Device", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint", "http://vital.ai/ontology/vital-aimp#WebEndpoint", "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint" ],
     "shortName" : "color",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -8948,7 +8982,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGreetingText",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint", "http://vital.ai/ontology/vital-aimp#WebEndpoint", "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint" ],
     "shortName" : "greetingText",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -10816,7 +10850,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint", "http://vital.ai/ontology/vital-aimp#WebEndpoint", "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint" ],
     "shortName" : "customerServiceEnabled",
     "multipleValues" : false,
     "type" : "BooleanProperty"
@@ -11128,7 +11162,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isOpenInitially",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint", "http://vital.ai/ontology/vital-aimp#WebEndpoint", "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint" ],
     "shortName" : "openInitially",
     "multipleValues" : false,
     "type" : "BooleanProperty"
