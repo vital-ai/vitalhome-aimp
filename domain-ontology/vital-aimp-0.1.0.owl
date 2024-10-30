@@ -12372,6 +12372,22 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#ListEndpointsRequestMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListEndpointsRequestMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ListEndpointsResponseMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListEndpointsResponseMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#ListFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ListFact">
