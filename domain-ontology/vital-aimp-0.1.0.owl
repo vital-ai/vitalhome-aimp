@@ -3617,6 +3617,139 @@ numerical</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasJweEncryptedString -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJweEncryptedString">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasJweKeyIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJweKeyIdentifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWEPubKey"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasJweProviderIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJweProviderIdentifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWEPubKey"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasJwePubKeyString -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJwePubKeyString">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#JWEPubKey"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasJwtEncodedString -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJwtEncodedString">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasJwtJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJwtJSON">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasJwtKeyIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJwtKeyIdentifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTContainer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTPubKey"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasJwtProviderIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJwtProviderIdentifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital#Account"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTContainer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#JWTPubKey"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasJwtPubKeyString -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasJwtPubKeyString">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#JWTPubKey"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasKeyHash -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasKeyHash">
@@ -7357,6 +7490,15 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#isJwtVerified -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isJwtVerified">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#JWTContainer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#isKeepChannelEntryText -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isKeepChannelEntryText">
@@ -8696,6 +8838,15 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentType">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AgentVariant -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AgentVariant">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <rdfs:comment>Requests to an agent may specify a variant to affect the behavior of an agent or determine the resources it may use in a given request.  These are defined on a per agent basis.</rdfs:comment>
     </owl:Class>
     
 
@@ -10679,6 +10830,26 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasJWEPubKey -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasJWEPubKey">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#JWEPubKey"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasJWTPubKey -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasJWTPubKey">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#JWTPubKey"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasLinkedCustomer -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasLinkedCustomer">
@@ -12237,6 +12408,30 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#IosDeviceProfile">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#EndpointProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#JWEPubKey -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#JWEPubKey">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#JWTContainer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#JWTContainer">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#JWTPubKey -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#JWTPubKey">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
 
