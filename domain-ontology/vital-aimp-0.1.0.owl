@@ -5522,6 +5522,15 @@ question:
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasServerSentEventJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasServerSentEventJSON">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyRealtimeMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasServiceName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasServiceName">

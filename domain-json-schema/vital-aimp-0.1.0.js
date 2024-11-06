@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "3f0cfd62421e90b83608c1f7619fe524",
+  "domainOWLHash" : "39eed271a7d2657ff20c2c5864967da7",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -4994,6 +4994,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyRealtimeMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasServerSentEventJSON" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleySearchResultsMessage",
@@ -10302,6 +10305,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSerializedMessage",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "serializedMessage",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasServerSentEventJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyRealtimeMessage" ],
+    "shortName" : "serverSentEventJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
