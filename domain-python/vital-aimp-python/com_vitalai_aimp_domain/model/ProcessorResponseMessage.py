@@ -15,7 +15,7 @@ from com_vitalai_aimp_domain.model.ProcessorMessage import ProcessorMessage
 
 class ProcessorResponseMessage(ProcessorMessage):
     _allowed_properties = [
-        {'uri': 'http://vital.ai/ontology/vital-aimp#hasRequestURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasProcessorResponseTypeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasStatus', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasStatusMessage', 'prop_class': StringProperty}, 
     ]
@@ -27,5 +27,4 @@ class ProcessorResponseMessage(ProcessorMessage):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#ProcessorResponseMessage'
-
 

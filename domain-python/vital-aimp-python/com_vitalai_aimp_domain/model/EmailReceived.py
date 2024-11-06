@@ -26,4 +26,3 @@ class EmailReceived(AIMPEmailMessage):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#EmailReceived'
 
-

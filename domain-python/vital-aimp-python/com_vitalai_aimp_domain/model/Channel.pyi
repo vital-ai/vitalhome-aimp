@@ -4,6 +4,7 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 
 
 class Channel(VITAL_Node):
+        agentInstanceDeploymentURI: str
         botURI: str
         channelTypeURI: str
         lastActivityTime: int

@@ -25,4 +25,3 @@ class PredictionFact(ListFact):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#PredictionFact'
 
-

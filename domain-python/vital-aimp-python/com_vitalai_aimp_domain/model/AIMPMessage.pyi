@@ -19,6 +19,11 @@ class AIMPMessage(VITAL_Node):
         geoAPIJSON: str
         geolocation: str
         ipAddress: str
+        jweEncryptedString: str
+        jweKeyIdentifier: str
+        jwtEncodedString: str
+        jwtJSON: str
+        jwtKeyIdentifier: str
         keyHash: str
         localTime: str
         masterUserID: str

@@ -15,6 +15,7 @@ from com_vitalai_aimp_domain.model.AIMPMessage import AIMPMessage
 
 class HaleyRealtimeMessage(AIMPMessage):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasServerSentEventJSON', 'prop_class': StringProperty}, 
     ]
 
     @classmethod
@@ -24,5 +25,4 @@ class HaleyRealtimeMessage(AIMPMessage):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#HaleyRealtimeMessage'
-
 

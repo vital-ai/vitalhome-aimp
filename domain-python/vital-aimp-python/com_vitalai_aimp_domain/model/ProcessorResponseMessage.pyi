@@ -4,7 +4,7 @@ from com_vitalai_aimp_domain.model.ProcessorMessage import ProcessorMessage
 
 
 class ProcessorResponseMessage(ProcessorMessage):
-        requestURI: str
+        processorResponseTypeURI: str
         status: str
         statusMessage: str
 

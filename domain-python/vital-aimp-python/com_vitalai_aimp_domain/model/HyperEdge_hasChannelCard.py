@@ -25,4 +25,3 @@ class HyperEdge_hasChannelCard(VITAL_HyperEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#HyperEdge_hasChannelCard'
 
-

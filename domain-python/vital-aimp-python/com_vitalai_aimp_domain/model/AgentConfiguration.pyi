@@ -4,4 +4,6 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 
 
 class AgentConfiguration(VITAL_Node):
-    pass
+        agentConfigurationIdentifier: str
+        agentConfigurationVersion: str
+

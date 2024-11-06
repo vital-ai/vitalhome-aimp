@@ -30,6 +30,11 @@ class AIMPMessage(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasGeolocation', 'prop_class': GeoLocationProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasIpAddress', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasJweEncryptedString', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasJweKeyIdentifier', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasJwtEncodedString', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasJwtJSON', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasJwtKeyIdentifier', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasKeyHash', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasLocalTime', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasMasterUserID', 'prop_class': StringProperty}, 
@@ -77,5 +82,4 @@ class AIMPMessage(VITAL_Node):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#AIMPMessage'
-
 

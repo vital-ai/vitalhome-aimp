@@ -25,4 +25,3 @@ class Edge_hasAgentConfiguration(VITAL_PeerEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#Edge_hasAgentConfiguration'
 
-

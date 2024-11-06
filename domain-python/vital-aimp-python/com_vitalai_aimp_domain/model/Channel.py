@@ -15,6 +15,7 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 
 class Channel(VITAL_Node):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasAgentInstanceDeploymentURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasBotURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasChannelTypeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasLastActivityTime', 'prop_class': LongProperty}, 
@@ -37,5 +38,4 @@ class Channel(VITAL_Node):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#Channel'
-
 

@@ -15,6 +15,8 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 
 class AgentInstance(VITAL_Node):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasAgentInstanceIdentifier', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasAgentInstanceTypeURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod
@@ -24,5 +26,4 @@ class AgentInstance(VITAL_Node):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#AgentInstance'
-
 

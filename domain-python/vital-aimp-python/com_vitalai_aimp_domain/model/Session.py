@@ -31,4 +31,3 @@ class Session(VITAL_Node):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#Session'
 
-

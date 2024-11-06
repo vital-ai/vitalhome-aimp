@@ -25,4 +25,3 @@ class Edge_hasChannel(VITAL_TaxonomyEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#Edge_hasChannel'
 
-

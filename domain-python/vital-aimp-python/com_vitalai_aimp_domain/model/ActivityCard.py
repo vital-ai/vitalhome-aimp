@@ -32,4 +32,3 @@ class ActivityCard(Card):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#ActivityCard'
 
-

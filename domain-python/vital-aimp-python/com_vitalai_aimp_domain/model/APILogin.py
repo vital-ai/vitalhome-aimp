@@ -25,4 +25,3 @@ class APILogin(Login):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-aimp#APILogin'
 
-
