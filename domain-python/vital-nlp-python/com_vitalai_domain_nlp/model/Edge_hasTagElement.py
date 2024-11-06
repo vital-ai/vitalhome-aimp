@@ -25,4 +25,3 @@ class Edge_hasTagElement(VITAL_TaxonomyEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-nlp#Edge_hasTagElement'
 
-

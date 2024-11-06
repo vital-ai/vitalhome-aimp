@@ -15,7 +15,20 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 
 class AIMPMessageContainer(VITAL_Node):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/vital#hasAccountURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital#hasLoginURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasAIMPMessageContainerTypeURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasChannelURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasDestinationAccountName', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasDestinationAccountURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasRecipientIdentity', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasSenderIdentity', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasSerializedMessage', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasSourceAccountName', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasSourceAccountURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasSourceUserID', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasSourceUserName', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#isReplyTo', 'prop_class': URIProperty}, 
     ]
 
     @classmethod

@@ -25,4 +25,3 @@ class Edge_hasTranslation(VITAL_PeerEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/vital-nlp#Edge_hasTranslation'
 
-
