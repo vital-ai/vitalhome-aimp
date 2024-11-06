@@ -67,6 +67,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AccountEvent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
@@ -90,6 +91,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LoginDataEvent"/>
                 </owl:unionOf>
@@ -172,6 +174,60 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPIntentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAIMPMessageContainerTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAIMPMessageContainerTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAIMPTaskProgressURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAIMPTaskProgressURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAIMPTaskStatusURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAIMPTaskStatusURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAIMPTaskTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAIMPTaskTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskType"/>
     </owl:ObjectProperty>
     
 
@@ -634,6 +690,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Task"/>
                 </owl:unionOf>
@@ -673,7 +730,14 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <!-- http://vital.ai/ontology/vital-aimp#hasDestinationAccountURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDestinationAccountURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Account"/>
     </owl:ObjectProperty>
     
@@ -892,6 +956,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#InvalidateMessage"/>
@@ -1269,7 +1334,14 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <!-- http://vital.ai/ontology/vital-aimp#hasSourceAccountURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSourceAccountURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Account"/>
     </owl:ObjectProperty>
     
@@ -1343,7 +1415,14 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <!-- http://vital.ai/ontology/vital-aimp#isReplyTo -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#isReplyTo">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:comment xml:lang="en">contains the URI of the message that triggered this message (reply)</rdfs:comment>
     </owl:ObjectProperty>
@@ -2132,6 +2211,15 @@ submit</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatCompletionTokenCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatCompletionTokenCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasChatMessage -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatMessage">
@@ -2154,6 +2242,15 @@ submit</rdfs:comment>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">ChatModeMessage values: &apos;on&apos;, &apos;off&apos;</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatPromptTokenCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatPromptTokenCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
@@ -2214,6 +2311,60 @@ process_input_fact_text_with_a_single_selected_ruleset</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatRulesOutputFactName">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Question"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatTaskDeltaTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatTaskDeltaTime">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatTaskEndDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatTaskEndDateTime">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatTaskStagesJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatTaskStagesJSON">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatTaskStartDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatTaskStartDateTime">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatTaskUpdateDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatTaskUpdateDateTime">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChatTotalTokenCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChatTotalTokenCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
@@ -2624,7 +2775,14 @@ for payments USD</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasDestinationAccountName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasDestinationAccountName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2920,6 +3078,15 @@ for payments USD</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasEncodedVoiceData -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEncodedVoiceData">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasEncryptedPayload -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasEncryptedPayload">
@@ -3207,6 +3374,24 @@ create_file_from_fact</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGender">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#FacebookProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasGeneratedAccumulatedText -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGeneratedAccumulatedText">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasGeneratedText -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGeneratedText">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -4218,6 +4403,15 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasMessageContentJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMessageContentJSON">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasMessageID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasMessageID">
@@ -5182,7 +5376,14 @@ read-only</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasRecipientIdentity -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRecipientIdentity">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">true external recipient of the message</rdfs:comment>
     </owl:DatatypeProperty>
@@ -5481,7 +5682,14 @@ question:
     <!-- http://vital.ai/ontology/vital-aimp#hasSenderIdentity -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSenderIdentity">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">true external sender of the message</rdfs:comment>
     </owl:DatatypeProperty>
@@ -5825,7 +6033,14 @@ question:
     <!-- http://vital.ai/ontology/vital-aimp#hasSourceAccountName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSourceAccountName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -5913,7 +6128,14 @@ question:
     <!-- http://vital.ai/ontology/vital-aimp#hasSourceUserID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSourceUserID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -5922,7 +6144,14 @@ question:
     <!-- http://vital.ai/ontology/vital-aimp#hasSourceUserName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSourceUserName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -6355,7 +6584,14 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasTimezone -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasTimezone">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">optional timezone (if available)</rdfs:comment>
     </owl:DatatypeProperty>
@@ -7020,6 +7256,15 @@ query timeout in seconds, default 10</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#isDaylightSavingsTime -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#isDaylightSavingsTime">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -8352,9 +8597,25 @@ query timeout in seconds, default 10</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContent -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContentType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContentType">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
@@ -8396,6 +8657,38 @@ query timeout in seconds, default 10</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPResponseMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTask -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTask">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskProgress -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
 
@@ -14172,6 +14465,166 @@ the payload contains Login object if an auth login exists or empty</rdfs:comment
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPIntentType_CHAT">
         <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPIntentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_AGENT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_AGENT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_INCOMING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_INCOMING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_INCOMING_AGENT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_INCOMING_AGENT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_INTRA_AGENT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_INTRA_AGENT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_OUTGOING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_OUTGOING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_OUTGOING_AGENT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType_OUTGOING_AGENT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_COMPLETE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_COMPLETE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_INIT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_INIT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_ONGOING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_ONGOING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_PAUSED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_PAUSED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_PENDING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_PENDING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_STOPPED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress_STOPPED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskProgress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_CANCELED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_CANCELED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_COMPLETE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_COMPLETE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_ERROR -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_ERROR">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_FAIL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_FAIL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_PENDING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_PENDING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_TERMINATED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_TERMINATED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_UNKNOWN -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus_UNKNOWN">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPTaskType_GENERATION_TEXT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTaskType_GENERATION_TEXT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTaskType"/>
     </owl:NamedIndividual>
     
 
