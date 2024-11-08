@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "968ed16b8b65a8462a3446a681daefe5",
+  "domainOWLHash" : "d400cf5cbf27a08dfa874e753c08afd2",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -684,7 +684,16 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContent",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasEncodedVoiceData" : {
@@ -696,10 +705,16 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasGeneratedText" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasMessageContentJSON" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasSessionID" : {
         "type" : "string"
       }
     }
@@ -8558,7 +8573,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasChannelURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer", "http://vital.ai/ontology/vital-aimp#AgentObject", "http://vital.ai/ontology/vital-aimp#Task" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer", "http://vital.ai/ontology/vital-aimp#AIMPMessageContent", "http://vital.ai/ontology/vital-aimp#AgentObject", "http://vital.ai/ontology/vital-aimp#Task" ],
     "shortName" : "channelURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -9278,7 +9293,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContent" ],
     "shortName" : "geoAPIJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
