@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-aimp',
-    version='0.1.12',
+    version='0.1.13',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns aimp domain',
