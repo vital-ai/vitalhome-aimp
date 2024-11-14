@@ -68,6 +68,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AccountEvent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
@@ -92,6 +93,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#LoginDataEvent"/>
                 </owl:unionOf>
@@ -652,6 +654,14 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasCancelCommandObjectURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCancelCommandObjectURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#CancelCommandMessage"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasCardURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCardURI">
@@ -691,6 +701,7 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContainer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Task"/>
                 </owl:unionOf>
@@ -3409,7 +3420,14 @@ create_file_from_fact</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -8416,6 +8434,7 @@ query timeout in seconds, default 10</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Session"/>
                 </owl:unionOf>

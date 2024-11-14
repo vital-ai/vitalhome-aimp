@@ -16,6 +16,7 @@ from com_vitalai_aimp_domain.model.UserCommandMessage import UserCommandMessage
 class CancelCommandMessage(UserCommandMessage):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasCancelCommandMessageURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasCancelCommandObjectURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod
