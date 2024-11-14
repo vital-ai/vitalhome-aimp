@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "530b193204572010b65c56f4eba043bc",
+  "domainOWLHash" : "73d381042f8f8af134e4c67d09027abf",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -1326,6 +1326,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentMessageContent",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContent",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMessageAgentInstallURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentMessagePayloadType",
@@ -2037,6 +2040,14 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#CalendarProfile",
     "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfile",
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CallingAgentMessageContent",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContent",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMessageAgentInstallURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CancelCommandMessage",
@@ -6800,6 +6811,14 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#RespondingAgentMessageContent",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContent",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMessageAgentInstallURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ResultListFact",
     "parent" : "http://vital.ai/ontology/vital-aimp#ListFact",
     "properties" : {
@@ -9804,6 +9823,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMenuURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#MenuClickedMessage" ],
     "shortName" : "menuURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageAgentInstallURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentMessageContent", "http://vital.ai/ontology/vital-aimp#CallingAgentMessageContent", "http://vital.ai/ontology/vital-aimp#RespondingAgentMessageContent" ],
+    "shortName" : "messageAgentInstallURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
