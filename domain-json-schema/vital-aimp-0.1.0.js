@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "d400cf5cbf27a08dfa874e753c08afd2",
+  "domainOWLHash" : "530b193204572010b65c56f4eba043bc",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2043,6 +2043,9 @@ var vital_aimp_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasCancelCommandMessageURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasCancelCommandObjectURI" : {
         "type" : "string"
       }
     }
@@ -8533,6 +8536,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasCancelCommandMessageURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CancelCommandMessage" ],
     "shortName" : "cancelCommandMessageURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasCancelCommandObjectURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CancelCommandMessage" ],
+    "shortName" : "cancelCommandObjectURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
