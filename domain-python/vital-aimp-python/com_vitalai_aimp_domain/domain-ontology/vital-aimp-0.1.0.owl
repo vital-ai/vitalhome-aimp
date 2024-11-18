@@ -201,7 +201,14 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     <!-- http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPTask"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Card"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
     </owl:ObjectProperty>
     
@@ -2129,6 +2136,15 @@ submit</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCardHeader">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#ThingCard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasCardText -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasCardText">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
