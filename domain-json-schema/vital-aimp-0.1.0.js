@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "73d381042f8f8af134e4c67d09027abf",
+  "domainOWLHash" : "06eaf1c7a627597d4dd770fca4ee4b47",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2064,6 +2064,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Card",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasCardText" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasIndex" : {
         "type" : "number"
       },
@@ -8567,6 +8570,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasCardHeader",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ThingCard" ],
     "shortName" : "cardHeader",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasCardText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Card" ],
+    "shortName" : "cardText",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
