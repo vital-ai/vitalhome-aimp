@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "06eaf1c7a627597d4dd770fca4ee4b47",
+  "domainOWLHash" : "24e67683d1a3c14cd25b0a952ece1337",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -2064,6 +2064,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Card",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasCardText" : {
         "type" : "string"
       },
@@ -7997,7 +8000,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask", "http://vital.ai/ontology/vital-aimp#Card" ],
     "shortName" : "aIMPMessageContentURI",
     "multipleValues" : false,
     "type" : "URIProperty"
