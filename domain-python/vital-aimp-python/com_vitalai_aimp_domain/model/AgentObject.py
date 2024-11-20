@@ -19,6 +19,7 @@ class AgentObject(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/vital#hasLoginURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasChannelURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasRequestURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasSourceRequestURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-core#hasSessionID', 'prop_class': StringProperty}, 
     ]
 

@@ -691,6 +691,17 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasChannelHistoryItem -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChannelHistoryItem">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <vital-core:hasMultipleValues rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vital-core:hasMultipleValues>
+        <rdfs:comment>Multi-value property for a list of channels.  The values form an unordered list.  hasChannelHistoryListJSON is meant to be an ordered list of these values.  Currently the RDF List type is not used.  A value of this property can be searched for a channel URI using sparql.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasChannelTypeURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChannelTypeURI">
@@ -1259,6 +1270,16 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#hasReplyChannelURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasReplyChannelURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <rdfs:comment>Value represents the channel that should be used when replying to this message.  This is meant to be used for messaging within an account (not inter-account).  An example use case is a child sending a message to an agent on a deployment channel where the reply should be sent to the parent of this child.  The request URI will further identify the source request.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#hasRequestURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasRequestURI">
@@ -1378,6 +1399,25 @@ as example, a node class such as &quot;AIMP_Person&quot; may have a common name 
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasSourceRequestURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasSourceRequestURI">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentStatusResponse"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+        <rdfs:comment>Contains the URI of the message that originated a request, which may be one or more steps removed from the current message being handled.  For instance, if an executive agent receives a message, that message is the source request URI for messages sent to supporting agents, which may in turn send to further supporting agents.  Each agent may maintain a table of requests to refer to within that one hop, but ideally the source request uri is mainained all the way down the change, at least within an account.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -2186,6 +2226,15 @@ submit</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasChannelHistoryListJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasChannelHistoryListJSON">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     

@@ -23,6 +23,7 @@ class AgentDatascriptCallResponse(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasOffset', 'prop_class': IntegerProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasRequestURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasScriptName', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasSourceRequestURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasStatus', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasStatusMessage', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasThreadURI', 'prop_class': URIProperty}, 

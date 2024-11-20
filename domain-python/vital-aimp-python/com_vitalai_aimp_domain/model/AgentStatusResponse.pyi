@@ -7,6 +7,7 @@ class AgentStatusResponse(VITAL_Node):
         id: str
         json: str
         requestURI: str
+        sourceRequestURI: str
         status: str
         statusMessage: str
 

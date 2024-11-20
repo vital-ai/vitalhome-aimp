@@ -8,5 +8,6 @@ class AgentObject(VITAL_Node):
         loginURI: str
         channelURI: str
         requestURI: str
+        sourceRequestURI: str
         sessionID: str
 

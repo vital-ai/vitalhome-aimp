@@ -9,6 +9,8 @@ class AIMPMessage(VITAL_Node):
         activityTaskIdentifier: str
         authSessionID: str
         botURI: str
+        channelHistoryItem: str
+        channelHistoryListJSON: str
         channelURI: str
         channelsHistory: str
         destinationAccountName: str
@@ -36,12 +38,14 @@ class AIMPMessage(VITAL_Node):
         queueName: str
         reactionToSessionID: str
         recipientIdentity: str
+        replyChannelURI: str
         requestURI: str
         requestedPayloadStyleTypeURI: str
         senderIdentity: str
         signature: str
         sourceAccountName: str
         sourceAccountURI: str
+        sourceRequestURI: str
         sourceUserID: str
         sourceUserName: str
         text: str

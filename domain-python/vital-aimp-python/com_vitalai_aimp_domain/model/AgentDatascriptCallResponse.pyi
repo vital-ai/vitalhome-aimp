@@ -12,6 +12,7 @@ class AgentDatascriptCallResponse(VITAL_Node):
         offset: int
         requestURI: str
         scriptName: str
+        sourceRequestURI: str
         status: str
         statusMessage: str
         threadURI: str
