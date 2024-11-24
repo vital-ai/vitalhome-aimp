@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "df9b6ae28779655150b2360da74ba200",
+  "domainOWLHash" : "6df904fe0b4d87821c7c6e57b08b6b2c",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -4952,6 +4952,16 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyDialogAppMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyDirectiveMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#HaleyDirectiveResponseMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
     "properties" : {
     }
   }, {

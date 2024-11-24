@@ -12175,6 +12175,24 @@ new implementation stores just the fileNodeURI</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:comment>Used for cases when Haley as asking the app to do something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyDirectiveResponseMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyDirectiveResponseMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:comment>Used in response to a HaleyDirectriveMessage</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HaleyEmailsListMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyEmailsListMessage">
