@@ -4382,6 +4382,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Movie"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
@@ -5684,6 +5685,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridResultsList"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
@@ -5873,6 +5875,7 @@ question:
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#CalendarEntry"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#CalendarEvent"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageGallery"/>
@@ -6120,6 +6123,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
                 </owl:unionOf>
@@ -6706,6 +6710,7 @@ query timeout in seconds, default 10</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
@@ -6884,6 +6889,7 @@ query timeout in seconds, default 10</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmbeddedCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EnclosingPageURLButtonClickedMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
@@ -12012,6 +12018,22 @@ new implementation stores just the fileNodeURI</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#GridItemResult -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GridResultsList -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GridResultsList">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#GroupStringPropertyFact -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GroupStringPropertyFact">
@@ -12230,6 +12252,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#HaleyFileUploadMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyFileUploadMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyGridResultsMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyGridResultsMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
     </owl:Class>
     
@@ -13758,6 +13788,14 @@ create/update/remove/get/query</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SearchResultsList">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SelectGridItemCommand -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SelectGridItemCommand">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
     </owl:Class>
     
 
