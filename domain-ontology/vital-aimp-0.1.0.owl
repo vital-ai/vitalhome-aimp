@@ -3546,7 +3546,14 @@ create_file_from_fact</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasGithubInstallationIdentifier -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGithubInstallationIdentifier">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GithubAccount"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -3555,7 +3562,14 @@ create_file_from_fact</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasGithubOrganization -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGithubOrganization">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GithubAccount"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -11232,12 +11246,23 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasGithubAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasGithubAccount">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAccount"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasGithubAuthorization -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasGithubAuthorization">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAccount"/>
     </owl:Class>
     
 
@@ -12006,6 +12031,14 @@ new implementation stores just the fileNodeURI</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GetObjectResultsMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GithubAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GithubAccount">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
 

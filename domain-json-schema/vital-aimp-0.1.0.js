@@ -6,7 +6,7 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "3989f01cd1ac8d6b87a9be0108cd5c5e",
+  "domainOWLHash" : "4368223a4d5b44ac7b3362ce9ba39add",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
@@ -3899,9 +3899,16 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
-    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasGithubAuthorization",
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasGithubAccount",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#GithubAccount" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasGithubAuthorization",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account", "http://vital.ai/ontology/vital-aimp#GithubAccount" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
     "properties" : {
     }
@@ -4793,6 +4800,17 @@ var vital_aimp_0_1_0_schema = {
       },
       "http://vital.ai/ontology/vital-aimp#isIncludeDependentObjects" : {
         "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#GithubAccount",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasGithubInstallationIdentifier" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGithubOrganization" : {
+        "type" : "string"
       }
     }
   }, {
@@ -9505,13 +9523,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGithubInstallationIdentifier",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GithubAccount", "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
     "shortName" : "githubInstallationIdentifier",
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGithubOrganization",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#GithubAccount", "http://vital.ai/ontology/vital-aimp#GithubAuthorization" ],
     "shortName" : "githubOrganization",
     "multipleValues" : false,
     "type" : "StringProperty"
