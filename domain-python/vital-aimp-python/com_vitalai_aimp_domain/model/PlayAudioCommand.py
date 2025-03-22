@@ -10,10 +10,10 @@ from vital_ai_vitalsigns.model.properties.OtherProperty import OtherProperty
 from vital_ai_vitalsigns.model.properties.StringProperty import StringProperty
 from vital_ai_vitalsigns.model.properties.TruthProperty import TruthProperty
 from vital_ai_vitalsigns.model.properties.URIProperty import URIProperty
-from com_vitalai_aimp_domain.model.UserCommandMessage import UserCommandMessage
+from com_vitalai_aimp_domain.model.UserInterfaceCommandMessage import UserInterfaceCommandMessage
 
 
-class PlayAudioCommand(UserCommandMessage):
+class PlayAudioCommand(UserInterfaceCommandMessage):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasCardURI', 'prop_class': URIProperty}, 
     ]

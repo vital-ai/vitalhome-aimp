@@ -10,10 +10,10 @@ from vital_ai_vitalsigns.model.properties.OtherProperty import OtherProperty
 from vital_ai_vitalsigns.model.properties.StringProperty import StringProperty
 from vital_ai_vitalsigns.model.properties.TruthProperty import TruthProperty
 from vital_ai_vitalsigns.model.properties.URIProperty import URIProperty
-from com_vitalai_aimp_domain.model.UserCommandMessage import UserCommandMessage
+from com_vitalai_aimp_domain.model.AIMPCommandMessage import AIMPCommandMessage
 
 
-class AIMPIntent(UserCommandMessage):
+class AIMPIntent(AIMPCommandMessage):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasAIMPIntent', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/vital-aimp#hasAIMPIntentType', 'prop_class': URIProperty}, 

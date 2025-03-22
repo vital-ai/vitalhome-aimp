@@ -1,9 +1,9 @@
 
 import datetime
-from com_vitalai_aimp_domain.model.UserCommandMessage import UserCommandMessage
+from com_vitalai_aimp_domain.model.AIMPCommandMessage import AIMPCommandMessage
 
 
-class AIMPIntent(UserCommandMessage):
+class AIMPIntent(AIMPCommandMessage):
         aIMPIntent: str
         aIMPIntentType: str
 

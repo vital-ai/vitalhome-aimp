@@ -3546,7 +3546,14 @@ create_file_from_fact</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasGithubInstallationIdentifier -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGithubInstallationIdentifier">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GithubAccount"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -3555,7 +3562,14 @@ create_file_from_fact</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#hasGithubOrganization -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasGithubOrganization">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GithubAccount"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -4382,6 +4396,7 @@ last time the non-heartbeat or non-loggedin/loggedout message was sent by the cl
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Movie"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
@@ -5684,6 +5699,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridResultsList"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyMapMessage"/>
@@ -5873,6 +5889,7 @@ question:
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#CalendarEntry"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#CalendarEvent"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageGallery"/>
@@ -6120,6 +6137,7 @@ question:
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#SearchResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#VideoObject"/>
                 </owl:unionOf>
@@ -6282,7 +6300,7 @@ question:
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-aimp#hasStateManager">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">&apos;archive&apos; (default), &apos;dialog&apos;</rdfs:comment>
+        <rdfs:comment xml:lang="en">&apos;archive&apos; (default), &apos;dialog&apos;, &apos;interaction&apos;</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -6706,6 +6724,7 @@ query timeout in seconds, default 10</rdfs:comment>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ArticleObject"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AudioObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
@@ -6884,6 +6903,7 @@ query timeout in seconds, default 10</rdfs:comment>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EmbeddedCard"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#EnclosingPageURLButtonClickedMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#FileAnswer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyArticleMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#HaleyImageMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ImageObject"/>
@@ -8613,6 +8633,14 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#AIMPCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPCommand">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#AIMPCommandMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPCommandMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
     </owl:Class>
     
@@ -8669,7 +8697,7 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#AIMPIntent -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#AIMPIntent">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPCommandMessage"/>
     </owl:Class>
     
 
@@ -9658,7 +9686,7 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#CancelCommandMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#CancelCommandMessage">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
         <rdfs:comment>Attempt to cancel the action of a message previously sent. This could apply to a query which the original requestor no longer needs (such as a user navigating away from a page).  This may only apply to stateless requests or requests that have not yet started processing.  The cancel message should be sent to the same channel that received the messaging being canceled.</rdfs:comment>
     </owl:Class>
     
@@ -9831,7 +9859,15 @@ query timeout in seconds, default 10</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#ClosePanelCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ClosePanelCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ClosePanelDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ClosePanelDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -11210,12 +11246,23 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#Edge_hasGithubAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasGithubAccount">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAccount"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#Edge_hasGithubAuthorization -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#Edge_hasGithubAuthorization">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAccount"/>
     </owl:Class>
     
 
@@ -11702,7 +11749,15 @@ text(AgentContext context -&gt; String)</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#EnlargeCardCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EnlargeCardCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#EnlargeCardDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#EnlargeCardDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -11980,6 +12035,14 @@ new implementation stores just the fileNodeURI</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#GithubAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GithubAccount">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#GithubAuthorization -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GithubAuthorization">
@@ -12008,6 +12071,22 @@ new implementation stores just the fileNodeURI</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GraphObjectFact">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital#VITAL_Fact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GridItemResult -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GridItemResult">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#GridResultsList -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#GridResultsList">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
     </owl:Class>
     
 
@@ -12175,6 +12254,24 @@ new implementation stores just the fileNodeURI</rdfs:comment>
     
 
 
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+        <rdfs:comment>Used for cases when Haley as asking the app to do something.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyDirectiveResponseMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyDirectiveResponseMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:comment>Used in response to a HaleyDirectriveMessage</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-aimp#HaleyEmailsListMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyEmailsListMessage">
@@ -12212,6 +12309,14 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#HaleyFileUploadMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyFileUploadMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#HaleyGridResultsMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#HaleyGridResultsMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
     </owl:Class>
     
@@ -13141,7 +13246,15 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#NextAudioCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#NextAudioCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#NextAudioDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#NextAudioDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -13175,7 +13288,15 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#OpenPanelCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#OpenPanelCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#OpenPanelDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#OpenPanelDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -13295,7 +13416,15 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#PlayAudioCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PlayAudioCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PlayAudioDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PlayAudioDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -13303,7 +13432,15 @@ depending on file scope it may either have publicURL or fileNodeURI</rdfs:commen
     <!-- http://vital.ai/ontology/vital-aimp#PlayVideoCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PlayVideoCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#PlayVideoDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#PlayVideoDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -13598,7 +13735,15 @@ with error message</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#RefreshChannelCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RefreshChannelCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#RefreshChannelDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RefreshChannelDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -13649,7 +13794,7 @@ create/update/remove/get/query</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#RemoveCardCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#RemoveCardCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
     </owl:Class>
     
 
@@ -13740,6 +13885,22 @@ create/update/remove/get/query</rdfs:comment>
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SearchResultsList">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Card"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SelectGridItemCommand -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SelectGridItemCommand">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#SelectGridItemDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#SelectGridItemDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -13855,7 +14016,15 @@ create/update/remove/get/query</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#ShrinkCardCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ShrinkCardCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#ShrinkCardDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#ShrinkCardDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -14015,7 +14184,15 @@ create/update/remove/get/query</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#StopAudioCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#StopAudioCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#StopAudioDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#StopAudioDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -14023,7 +14200,15 @@ create/update/remove/get/query</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-aimp#StopVideoCommand -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#StopVideoCommand">
-        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#StopVideoDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#StopVideoDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage"/>
     </owl:Class>
     
 
@@ -14299,6 +14484,22 @@ create/update/remove/get/query</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserDialogAppMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyMessage"/>
         <vital-core:hasEdgeSrcDomain xml:lang="en">text user dialog message originating from the user</vital-core:hasEdgeSrcDomain>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserInterfaceCommandMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#UserCommandMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-aimp#UserInterfaceDirectiveMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#HaleyDirectiveMessage"/>
     </owl:Class>
     
 
